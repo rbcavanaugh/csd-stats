@@ -88,6 +88,12 @@ I have not proofread this page closely and you have probably realized by now tha
 **Failing to report contrast coding or incorrect interpretation of contrasts**
 - https://www.sciencedirect.com/science/article/abs/pii/S0749596X22000213 
 
+## Writing about statistics
+
+- **Basic Statistical Reporting for Articles Published in Biomedical Journals: The “Statistical Analyses and Methods in the Published Literature” or The SAMPL Guidelines”** https://www.equator-network.org/wp-content/uploads/2013/03/SAMPL-Guidelines-3-13-13.pdf
+
+- **Guidance on Statistical Reporting to Help Improve Your Chances of a Favorable Statistical Review** https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7193848/pdf/rccm.202003-0477ED.pdf
+
 ## Mixed-effects models
 
 For better or worse, the bread and butter of psycholinguistic and other CSD research. Conceptually fantastic, but often tricky to implement *well*. My suggestion is to start with the first link below, and then pick an introductory paper to read and go through examples (e.g., Brown 2021). Then, if you're feeling good about things, I highly suggest working through the examples in Debruine & Barr (2021). Then go apply what you've learned to your own data. Then, when you're feeling really accomplished, write it up for publication, incorporating recommendations from Meteyard & Davies (2020) as you write. Or take a class at your institution. Or take one of the workshops linked below. 
@@ -140,11 +146,15 @@ You should learn how to do Bayesian stats. If you've never tried to use bayes, I
 
 ## Open Science & Reproducibility
 
-Make your data as sharable as possible. And then put your analytical scripts in your supplemental materials. Or better yet, put them all together on osf.io in an R project using {renv}. 
-
 - Strand, J. F. (2023). Error tight: Exercises for lab groups to prevent research mistakes. Psychological Methods.
 
 - Brown, V. A., & Strand, J. F. (2023). Preregistration: Practical Considerations for Speech, Language, and Hearing Research. Journal of Speech, Language, and Hearing Research, 66(6), 1889-1898.
+
+- Stanford Psychology guide to doing open science: https://poldrack.github.io/psych-open-science-guide/4_reproducibleanalysis.html
+
+- - The Turing Way: https://book.the-turing-way.org
+
+- Alston, J. M., & Rick, J. A. (2021). A beginner’s guide to conducting reproducible research. Bulletin of the Ecological Society of America, 102(2), 1-14.
 
 - https://www.open-csd.com/resources
 
