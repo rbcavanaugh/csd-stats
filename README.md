@@ -25,6 +25,10 @@ Learning R or any of the stats below, especially for anyone who has never writte
 
 Also, its *really* helpful to have a mentor who knows a little bit more R or stats than you, even if only to check in with occasionally or give yourself some external accountability. If you don't have that person, then its worth spending the time and effort to go find them (small plug for ASHA's [MARC](https://www.asha.org/students/mentoring/marc/) program, which I have benefited greatly from, and the many mentors who have and continue to help me learn).
 
+**A word of caution:**
+
+I have not proofread this page closely and you have probably realized by now that it's full of run-on sentences and inconsistent punctuation and grammar and the like.
+
 ## Learning R 
 
 - https://psyteachr.github.io* This is a set of resources and they are fantastic
