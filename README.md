@@ -9,17 +9,17 @@ https://www.experimental-history.com/p/things-could-be-better
 
 ## About this page
 
-...Ok, now that you've had a quick laugh, and remember  how fun science is, and you're ready to do cool stuff, let's get to the resources.
+My recommendation is that you use this list of resources in a very ad-hoc fashion. Some of the sections I have ordered so that the resource I find myself recommending most often for the total notice is at the top (indicated with an asterisk). Others are just lists of resources or people that I have learned a great deal from and that I think you might find useful. But if they're on this list, then minimally I have found them helpful at some point or another. 
 
-I suggest that you use this list of resources in a very ad-hoc fashion. Some of the sections I have ordered so that the resource I find myself most often recommending for the total notice is at the top (indicated with an asterisk). Others are just lists of resources or people that I have learned a great deal from and that I think you might find useful. But if they're on this list, then minimally I have found them helpful at some point or another. 
+These resources focus on R and statistics in R, but this is mostly because its what I was trained in, what I know the most about, and probably the scripted language used most often in CSD research. Python is cool too sometimes. I wish I knew Julia. (But if you asked me which additional language I thought researchers might find useful on top of R...its probably SQL...unless you're thinking about an alt-ac career, in which case its definitely python...and SQL...but really once you know one of these fairly well its easy enough to pick up the others. Also you should probably learn some very basic git.). 
 
-These resources focus on R and statistics in R, but this is mostly because its what I was trained in, what I know the most about, and probably the scripted language used most often in CSD research. Python is cool too sometimes. I wish I knew Julia. (But if you asked me which additional language I thought researchers might find useful on top of R...its probably SQL...unless you're thinking about an alt-ac career, in which case its definitely python...and SQL...but really once you know one of these fairly well its easy enough to pick up the others). 
+Anyways, point is that this list is for R but its not an exclusive endorsement of R. Perhaps someone will go put together the equivalent for Python. If you really don't want to learn a scripted/statistical language like R (or python, Julia, SQL...), then I suggest you go check out [JASP](https://jasp-stats.org), which is a free and open-source GUI build on top of R. If none of these options work for you, then I'm not really sure what you're doing here.
 
-Anyways, point is that this list is for R but its not an exclusive endorsement of R. Perhaps someone will go put together the equivalent for Python. If you really don't want to learn a scripted/statistical language like R (or python, Julia, SQL...), then I suggest you go check out JASP, which is a free and open-source GUI build on top of R (https://jasp-stats.org). If none of these options work for you, then I'm not really sure what you're doing here.
+**Contributing**
 
-If you have a resource to contribute, please do! The way to add a resource to this list is to open an issue in the github repository with 3 things: (1) a link or reference, (2) which section it belongs in, (3) and why you found it so helpful. Also if any links are broken or out of date, the github issues are a good place to let me know that so I can fix it or delete the resource. 
+If you have a resource to contribute, please do! Here's how: Go open an issue at the top of this github repository (the "issues" tab) and include 3 things: (1) a link or reference, (2) which section it belongs in, (3) and why you found it so helpful. Also if any links are broken or out of date, the github issues are a good place to let me know that so I can fix it or delete the resource. 
 
-**A word of advice:**
+**A word of advice**
 
 Learning R or any of the stats below, especially for anyone who has never written any code before, can be a daunting task. But it is a skill that is worth learning. The best way to learn R is to use it. The best way to use it is to have a project that you need to use it for. The resources below are fantastic - but I highly suggest you use them in tandem with a project you are highly motivated to do in R. For example, you do a few chapters or sections of one of these resources, then you go try to apply that knowledge in your own project and with your own data. 
 
@@ -27,7 +27,7 @@ Learning R or any of the stats below, especially for anyone who has never writte
 
 Also, its *really* helpful to have a mentor who knows a little bit more R or stats than you, even if only to check in with occasionally or give yourself some external accountability. If you don't have that person, then its worth spending the time and effort to go find them (small plug for ASHA's [MARC](https://www.asha.org/students/mentoring/marc/) program, which I have benefited greatly from, and the many mentors who have and continue to help me learn).
 
-**A word of caution:**
+**A word of caution**
 
 I have not proofread this page closely and you have probably realized by now that it's full of run-on sentences and inconsistent punctuation and grammar and the like.
 
