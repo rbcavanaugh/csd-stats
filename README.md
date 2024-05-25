@@ -1,7 +1,7 @@
 
 # Statistics resources for the CSD researcher
 
-Resources are located here: http://rbcavanaugh.github.io/csd-stats
+Resources are located here: https://rbcavanaugh.github.io/csd-stats
 
 **Contributing**
 
