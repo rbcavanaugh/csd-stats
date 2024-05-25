@@ -25,7 +25,7 @@ If you have a resource to contribute, please do! Here's how: Go open an issue at
 
 Learning R or any of the stats below, especially for anyone who has never written any code before, can be a daunting task. But it is a skill that is worth learning. The best way to learn R is to use it. The best way to use it is to have a project that you need to use it for. The resources below are fantastic - but I highly suggest you use them in tandem with a project you are highly motivated to do in R. For example, you do a few chapters or sections of one of these resources, then you go try to apply that knowledge in your own project and with your own data. 
 
-*Disclosure: github co-pilot wrote most of this section for me, but I don't disagree with it and based on how I understand LLM's to work, then probably this is the most common advice for learning R, or programming langauges, or whatever the internet is saying about learning these days.*
+*Disclosure: github co-pilot wrote most of this section, and I think its pretty spot on, and based on how I understand LLM's to work, then probably this is the most common advice for learning R, or programming languages, or whatever the internet is saying about learning these days.*
 
 Also, its *really* helpful to have a mentor who knows a little bit more R or stats than you, even if only to check in with occasionally or give yourself some external accountability. If you don't have that person, then its worth spending the time and effort to go find them (small plug for ASHA's [MARC](https://www.asha.org/students/mentoring/marc/) program, which I have benefited greatly from, and the many mentors who have and continue to help me learn).
 
