@@ -69,15 +69,20 @@ I have not proofread this page closely and you have probably realized by now tha
 
 ## Some papers about common statistical errors I've come across in CSD research
 
-- Anderson, S. F. (2020). Misinterpreting p: The discrepancy between p values and the probability the null hypothesis is true, the influence of multiple testing, and implications for the replication crisis. Psychological methods, 25(5), 596. **Questionable interpretations of p-values**
+**Questionable interpretations of p-values**
+- https://pubmed.ncbi.nlm.nih.gov/31829657/
 
-- https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/ **And questionable reporting of p-values**
+**And questionable reporting of p-values**
+- https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/
 
-- http://www.stat.columbia.edu/~gelman/research/published/signif4.pdf **The Difference Between “Significant” and “Not Significant” is not Itself Statistically Significant. Often known as, 'yes you do need that interaction in your model'.**
+**The Difference Between “Significant” and “Not Significant” is not Itself Statistically Significant. Often known as, 'yes you do need that interaction in your model'.**
+- http://www.stat.columbia.edu/~gelman/research/published/signif4.pdf
 
-- https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0271668 **But do your best to interpret interactions correctly**
+ **But do your best to interpret interactions correctly**
+- https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0271668
 
-- https://www.sciencedirect.com/science/article/abs/pii/S0749596X22000213 **Failing to report contrast coding or incorrect interpretation of contrasts**
+**Failing to report contrast coding or incorrect interpretation of contrasts**
+- https://www.sciencedirect.com/science/article/abs/pii/S0749596X22000213 
 
 ## Mixed-effects models
 
