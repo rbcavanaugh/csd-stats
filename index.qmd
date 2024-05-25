@@ -2,12 +2,13 @@
 title: "Statistics resources for the CSD researcher"
 format: html
 toc: true
-editor: visual
 ---
+
+## About 
 
 This is a repository for resources related to learning and doing statistics and data analysis and open science and using R and other important things collected for (but certainly not limited to) new and seasoned researchers in the field of Communication Sciences and Disorders. Before you get bogged down in this overwhelming list of resources, I suggest you entertain yourself with this highly enjoyable scientific article (or at least listen to it during your commute this week, there is an audio version narrated by the authors) and remember that your goal is to do science, and these are just tools you might find useful along the way.
 
-https://www.experimental-history.com/p/things-could-be-better
+https://www.experimental-history.com/p/things-could-be-better 
 
 These resources are generally based on R, but this is mostly because its what I was trained in, what I know the most about, and probably the scripted language used most often in CSD research. Python is cool too sometimes. I wish I knew Julia. (But if you asked me which additional language I thought researchers might find useful on top of R...its probably SQL...unless you're thinking about an alt-ac career, in which case its definitely python...and SQL...but really once you know one of these fairly well its easy enough to pick up the others. Also you should probably learn some very basic git.).
 
@@ -19,7 +20,15 @@ My recommendation is that you use this list of resources in a very ad-hoc fashio
 
 **Contributing**
 
-If you have a resource to contribute, please do! Here's how: Go open an issue at the top of this github repository (the "issues" tab) and include 3 things: (1) a link or reference, (2) which section it belongs in, (3) and why you found it so helpful. Or if you want to be really fancy you can create a pull request for the README (but also include these 3 things in the comment box). Also if any links are broken or out of date, the github issues are a good place to let me know that so I can fix it or delete the resource.
+Please contribute!! Here's how: 
+
+Go open an issue in the [github repository](https://github.com/rbcavanaugh/csd-stats) (the "issues" tab) and include 3 things: 
+
+1. a link or reference
+2. which section it belongs in
+3. and how you found it useful
+
+Or if you want to be really fancy you can create a pull request for the README (but also include these 3 things in the comment box). Also if any links are broken or out of date, the github issues are a good place to let me know that so I can fix it or delete the resource. 
 
 *Contributors:*
 

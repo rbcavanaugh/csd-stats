@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  title: "CSD-stats"
+  navbar:
+    search: true
+    tools:
+      - icon: github
+        menu:
+          - text: Contribute!
+            href: https://github.com/rbcavanaugh/csd-stats/issues
+          - text: Source Repository
+            href:  https://github.com/rbcavanaugh/csd-stats
+  
+    
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: superhero
+    toc: true
