@@ -1,6 +1,17 @@
 
 # Statistics and R and stuff for the CSD researcher
 
+<body onload="myFunction()">
+  Last updated on <span id="demo"></span>
+  
+  <script>
+    function myFunction() {
+      var x = document.lastModified;
+      document.getElementById("demo").innerHTML = new Date(document.lastModified).toISOString().substr(0, 10);
+    }
+  </script>
+</body>
+
 ## About this page
 
 This is a repository for resources related to learning and doing statistics and data analysis and open science and using R and other important things collected for (but certainly not limited to) new and seasoned researchers in the field of Communication Sciences and Disorders. Before you get bogged down in this overwhelming list of resources, I suggest you entertain yourself with this highly enjoyable scientific article (or at least listen to it during your commute this week, there is an audio version narrated by the authors) and remember that your goal is to do science, and these are just tools you might find useful along the way. 
