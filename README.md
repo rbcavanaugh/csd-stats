@@ -3,7 +3,7 @@
 
 ## Getting started
 
-This is a repository for resources related to statistics and data analysis and open science and other important things collected for (but certainly not limited to) new and seasoned researchers in the field of Communication Sciences and Disorders. Before you get bogged down in this overwhelming list of resources, I suggest you entertain yourself with this highly enjoyable scientific article (or at least listen to it during your commute this week, there is an audio version narrated by the authors) and remember that your goal is to do science, and these are just tools you might find useful along the way. But they are just one, sometimes painful but definitely necessary part of a bigger endeavor. 
+This is a repository for resources related to statistics and data analysis and open science and other important things collected for (but certainly not limited to) new and seasoned researchers in the field of Communication Sciences and Disorders. Before you get bogged down in this overwhelming list of resources, I suggest you entertain yourself with this highly enjoyable scientific article (or at least listen to it during your commute this week, there is an audio version narrated by the authors) and remember that your goal is to do science, and these are just tools you might find useful along the way. 
 
 https://www.experimental-history.com/p/things-could-be-better
 
