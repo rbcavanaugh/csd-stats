@@ -163,7 +163,7 @@ For me, a good blog post is the necessary on ramp to actually understanding a st
 
 - Michael Clark: https://m-clark.github.io/code.html
 
-- Daniel Lakens: https://sites.google.com/site/lakens2/
+- Daniel Lakens: http://daniellakens.blogspot.com
 
 - Gavin Simpson: https://fromthebottomoftheheap.net
 
