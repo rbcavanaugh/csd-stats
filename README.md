@@ -71,7 +71,7 @@ I have not proofread this page closely and you have probably realized by now tha
 
 For better or worse, the bread and butter of psycholinguistic and other CSD research. Conceptually fantastic, but often tricky to implement *well*. My suggestion is to start with the first link below, and then pick an introductory paper to read and go through examples (e.g., Brown 2021). Then, if you're feeling good about things, I highly suggest working through the examples in Debruine & Barr (2021). Then go apply what you've learned to your own data. Then, when you're feeling really accomplished, write it up for publication, incorporating recommendations from Meteyard & Davies (2020) as you write. Or take a class at your institution. Or take one of the workshops linked below. 
 
-- http://mfviz.com/hierarchical-models/* (This is a great visual explanation of what a mixed-effects model is. START HERE)
+- http://mfviz.com/hierarchical-models/* (Fantastic visual demonstration)
 
 - Brown VA. An Introduction to Linear Mixed-Effects Modeling in R. Advances in Methods and Practices in Psychological Science. 2021;4(1). doi:10.1177/2515245920960351
 
