@@ -19,6 +19,10 @@ Anyways, point is that this list is for R but its not an exclusive endorsement o
 
 If you have a resource to contribute, please do! Here's how: Go open an issue at the top of this github repository (the "issues" tab) and include 3 things: (1) a link or reference, (2) which section it belongs in, (3) and why you found it so helpful. Or if you want to be really fancy you can create a pull request for the README (but also include these 3 things in the comment box). Also if any links are broken or out of date, the github issues are a good place to let me know that so I can fix it or delete the resource. 
 
+*Contributors:*
+
+- Your name could be here!
+
 **A word of advice**
 
 Learning R or any of the stats below, especially for anyone who has never written any code before, can be a daunting task. But it is a skill that is worth learning. The best way to learn R is to use it. The best way to use it is to have a project that you need to use it for. The resources below are fantastic - but I highly suggest you use them in tandem with a project you are highly motivated to do in R. For example, you do a few chapters or sections of one of these resources, then you go try to apply that knowledge in your own project and with your own data. 
@@ -30,6 +34,12 @@ Also, its *really* helpful to have a mentor who knows a little bit more R or sta
 **A word of caution**
 
 I have not proofread this page closely and you have probably realized by now that it's full of run-on sentences and inconsistent punctuation and grammar and the like.
+
+<br>
+
+*I hope you find this useful* \~ [Rob](http://rbcavanaugh.github.io)
+
+<br>
 
 ## Learning R 
 
