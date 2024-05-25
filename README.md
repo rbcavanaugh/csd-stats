@@ -1,5 +1,5 @@
 
-# Statistics and R and related resources for the CSD researcher
+# Statistics and R and stuff for the CSD researcher
 
 ## Getting started
 
