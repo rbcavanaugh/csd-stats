@@ -115,7 +115,7 @@ You should learn how to do Bayesian stats. If you've never tried to use bayes, I
 
 ## Open Science & Reproducibility
 
-- Make your data as sharable as possible. And then put your analytical scripts in your supplemental materials. Or better yet, put them all together on osf.io in an R project using {renv}. 
+Make your data as sharable as possible. And then put your analytical scripts in your supplemental materials. Or better yet, put them all together on osf.io in an R project using {renv}. 
 
 - Strand, J. F. (2023). Error tight: Exercises for lab groups to prevent research mistakes. Psychological Methods.
 
