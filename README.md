@@ -67,7 +67,7 @@ I have not proofread this page closely and you have probably realized by now tha
 
 - https://debruine.github.io/faux/articles/contrasts.html (At some point you will have questions about contrast coding for categorical variables, and the answer is inevitably going to be here)
 
-## Some papers about common statistical errors I've come across in CSD research
+## Common statistical errors I've come across in CSD research
 
 **Questionable interpretations of p-values**
 - https://pubmed.ncbi.nlm.nih.gov/31829657/
