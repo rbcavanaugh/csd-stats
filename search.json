@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "",
+    "text": "This is a repository for resources related to learning and doing statistics and data analysis and open science and using R and other important things collected for (but certainly not limited to) new and seasoned researchers in the field of Communication Sciences and Disorders. Before you get bogged down in this overwhelming list of resources, I suggest you entertain yourself with this highly enjoyable scientific article (or at least listen to it during your commute this week, there is an audio version narrated by the authors) and remember that your goal is to do science, and these are just tools you might find useful along the way.\nhttps://www.experimental-history.com/p/things-could-be-better\nThese resources are generally based on R, but this is mostly because its what I was trained in, what I know the most about, and probably the scripted language used most often in CSD research. Python is cool too sometimes. I wish I knew Julia. (But if you asked me which additional language I thought researchers might find useful on top of R…its probably SQL…unless you’re thinking about an alt-ac career, in which case its definitely python…and SQL…but really once you know one of these fairly well its easy enough to pick up the others. Also you should probably learn some very basic git.).\nAnyways, point is that this list is for R but its not an exclusive endorsement of R. Perhaps someone will add a section for Python and Julia. If you really don’t want to learn a scripted/statistical language like R (or python, Julia, SQL…), then I suggest you go check out JASP, which is a free and open-source GUI build on top of R."
+  },
+  {
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "Getting started",
+    "text": "Getting started\nMy recommendation is that you use this list of resources in a very ad-hoc fashion. Some of the sections I have ordered so that the resource I find myself recommending most often for the total notice is at the top (indicated with an asterisk). Others are just lists of resources or people that I have learned a great deal from and that I think you might find useful. But if they’re on this list, then minimally I have found them helpful at some point or another.\nContributing\nPlease contribute!! Here’s how:\nGo open an issue in the github repository (the “issues” tab) and include 3 things:\n\na link or reference\nwhich section it belongs in\nand how you found it useful\n\nOr if you want to be really fancy you can create a pull request for the README (but also include these 3 things in the comment box). Also if any links are broken or out of date, the github issues are a good place to let me know that so I can fix it or delete the resource.\nContributors:\n\nYour name could be here!\n\nA word of advice\nLearning R or any of the stats below, especially for anyone who has never written any code before, can be a daunting task. But it is a skill that is worth learning. The best way to learn R is to use it. The best way to use it is to have a project that you need to use it for. The resources below are fantastic - but I highly suggest you use them in tandem with a project you are highly motivated to do in R. For example, you do a few chapters or sections of one of these resources, then you go try to apply that knowledge in your own project and with your own data.\nDisclosure: github co-pilot wrote most of this section, and I think its pretty spot on, and based on how I understand LLM’s to work, then probably this is the most common advice for learning R, or programming languages, or whatever the internet is saying about learning these days.\nAlso, its really helpful to have a mentor who knows a little bit more R or stats than you, even if only to check in with occasionally or give yourself some external accountability. If you don’t have that person, then its worth spending the time and effort to go find them (small plug for ASHA’s MARC program, which I have benefited greatly from, and the many mentors who have and continue to help me learn).\nA word of caution\nI have not proofread this page closely and you have probably realized by now that it’s full of run-on sentences and inconsistent punctuation and grammar and the like.\n\nI hope you find this useful ~ Rob"
+  },
+  {
+    "objectID": "index.html#learning-r",
+    "href": "index.html#learning-r",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "Learning R",
+    "text": "Learning R\n\nhttps://psyteachr.github.io* This is a set of resources and they are fantastic\nhttps://r4ds.had.co.nz (R for Data Science by Hadley Wickham and Garrett Grolemund - the standard)\nhttps://www.tidyverse.org/blog/2017/12/workflow-vs-script/, https://here.r-lib.org. These are not really R resources but these are things everyone should do when using R, so I’m just going to plug them here.\nhttps://reprex.tidyverse.org. When you’re stuck on something and want to ask for help from someone, if you do it this way, you will get the most helpful response but also probably you will figure out why you’re stuck halfway through doing this.\nhttps://happygitwithr.com In case you want/need to also incorporate git into your workflow."
+  },
+  {
+    "objectID": "index.html#general-stats-tutorials-resources",
+    "href": "index.html#general-stats-tutorials-resources",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "General Stats tutorials & resources",
+    "text": "General Stats tutorials & resources\n\nhttps://learningstatisticswithr.com* (Danielle Navarro) This also has some great resources on learning to use R. I think Danielle is a fantastic writer and this is my go to recommendation for new R users who want to focus on stats.\nWinter, B. (2019). Statistics for linguists: An introduction using R. Routledge. (https://appliedstatisticsforlinguists.org/bwinter_stats_proofs.pdf)\nCommon statistical tests are linear models (or: how to teach stats): https://lindeloev.github.io/tests-as-linear/\nThere is only one test: http://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html implemented in an R package here: https://infer.netlify.app\nRegression and other Stories: https://avehtari.github.io/ROS-Examples/\nIntroduction to Modern Statistics: https://openintro-ims.netlify.app\nJames, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). An introduction to statistical learning (Vol. 112, p. 18). New York: springer.\nhttps://quantpsych.net/stats_modeling/\nhttps://debruine.github.io/faux/articles/contrasts.html (At some point you will have questions about contrast coding for categorical variables, and the answer is inevitably going to be here)"
+  },
+  {
+    "objectID": "index.html#common-statistical-errors-ive-come-across-in-csd-research",
+    "href": "index.html#common-statistical-errors-ive-come-across-in-csd-research",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "Common statistical errors I’ve come across in CSD research",
+    "text": "Common statistical errors I’ve come across in CSD research\nQuestionable interpretations of p-values - https://pubmed.ncbi.nlm.nih.gov/31829657/\nAnd questionable reporting of p-values - https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/\nThe Difference Between “Significant” and “Not Significant” is not Itself Statistically Significant. Often known as, ‘yes you do need that interaction in your model’. - http://www.stat.columbia.edu/~gelman/research/published/signif4.pdf\nBut do your best to interpret interactions correctly - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0271668\nFailing to report contrast coding or incorrect interpretation of contrasts - https://www.sciencedirect.com/science/article/abs/pii/S0749596X22000213"
+  },
+  {
+    "objectID": "index.html#writing-about-statistics",
+    "href": "index.html#writing-about-statistics",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "Writing about statistics",
+    "text": "Writing about statistics\n\nBasic Statistical Reporting for Articles Published in Biomedical Journals: The “Statistical Analyses and Methods in the Published Literature” or The SAMPL Guidelines” https://www.equator-network.org/wp-content/uploads/2013/03/SAMPL-Guidelines-3-13-13.pdf\nGuidance on Statistical Reporting to Help Improve Your Chances of a Favorable Statistical Review https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7193848/pdf/rccm.202003-0477ED.pdf"
+  },
+  {
+    "objectID": "index.html#mixed-effects-models",
+    "href": "index.html#mixed-effects-models",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "Mixed-effects models",
+    "text": "Mixed-effects models\nFor better or worse, the bread and butter of psycholinguistic and other CSD research. Conceptually fantastic, but often tricky to implement well. My suggestion is to start with the first link below, and then pick an introductory paper to read and go through examples (e.g., Brown 2021). Then, if you’re feeling good about things, I highly suggest working through the examples in Debruine & Barr (2021). Then go apply what you’ve learned to your own data. Then, when you’re feeling really accomplished, write it up for publication, incorporating recommendations from Meteyard & Davies (2020) as you write. Or take a class at your institution. Or take one of the workshops linked below.\n\nhttp://mfviz.com/hierarchical-models/* (Fantastic visual demonstration)\nBrown VA. An Introduction to Linear Mixed-Effects Modeling in R. Advances in Methods and Practices in Psychological Science. 2021;4(1). doi:10.1177/2515245920960351\nDeBruine, L. M., & Barr, D. J. (2021). Understanding mixed-effects models through data simulation. Advances in Methods and Practices in Psychological Science, 4(1), 2515245920965119.\nMeteyard, L., & Davies, R. A. (2020). Best practice guidance for linear mixed-effects models in psychological science. Journal of Memory and Language, 112, 104092.\nWinter, B. (2013). Linear models and linear mixed effects models in R with linguistic applications. arXiv preprint arXiv:1308.5499.\nMirman, D. (2017). Growth curve analysis and visualization using R. Chapman and Hall/CRC."
+  },
+  {
+    "objectID": "index.html#bayesian-statistics",
+    "href": "index.html#bayesian-statistics",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "Bayesian statistics",
+    "text": "Bayesian statistics\nYou should learn how to do Bayesian stats. If you’ve never tried to use bayes, I promise it’s more intuitive than you think. And because of modern computing and R packages like {brms}, its arguably just as easy to implement as frequentist mixed models. If you know how to use lme4, then you’re already 75% of the way to using {brms}.\n\nhttps://easystats.github.io/bayestestR/articles/bayestestR.html*\nhttps://m-clark.github.io/bayesian-basics/example.html\nhttps://vasishth.github.io/bayescogsci/book/\nNalborczyk, L., Batailler, C., Lœvenbruck, H., Vilain, A., & Bürkner, P. C. (2019). An introduction to Bayesian multilevel models using brms: A case study of gender effects on vowel variability in standard Indonesian. Journal of Speech, Language, and Hearing Research, 62(5), 1225-1242\nVasishth, S., Nicenboim, B., Beckman, M. E., Li, F., & Kong, E. J. (2018). Bayesian data analysis in the phonetic sciences: A tutorial introduction. Journal of phonetics, 71, 147-161.\nSchad, D. J., Betancourt, M., & Vasishth, S. (2021). Toward a principled Bayesian workflow in cognitive science. Psychological methods, 26(1), 103.\nhttps://xcelab.net/rm/statistical-rethinking/ (Statistical Rethinking by Richard McElreath)"
+  },
+  {
+    "objectID": "index.html#other-modeling-approaches",
+    "href": "index.html#other-modeling-approaches",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "Other modeling approaches",
+    "text": "Other modeling approaches\n\nWinter, B., & Wieling, M. (2016). How to analyze linguistic change using mixed models, Growth Curve Analysis and Generalized Additive Modeling. Journal of Language Evolution, 1(1), 7-18.\nWinter, B., & Bürkner, P. C. (2021). Poisson regression for linguists: A tutorial introduction to modelling count data with brms. Language and Linguistics Compass, 15(11), e12439\nBürkner, P. C. (2019). Bayesian item response modeling in R with brms and Stan. arXiv preprint arXiv:1905.09501.\nReaction time: https://lindeloev.github.io/shiny-rt/"
+  },
+  {
+    "objectID": "index.html#data-viz-please-add-more-to-this-section",
+    "href": "index.html#data-viz-please-add-more-to-this-section",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "Data Viz (please add more to this section!)",
+    "text": "Data Viz (please add more to this section!)\n\nNordmann, E., McAleer, P., Toivo, W., Paterson, H., & DeBruine, L. M. (2022). Data visualization using R for researchers who do not use R. Advances in Methods and Practices in Psychological Science, 5(2), 25152459221074654.\nggplot2 workshop (Thomas Lin Pedersen) https://www.youtube.com/watch?v=h29g21z0a68"
+  },
+  {
+    "objectID": "index.html#open-science-reproducibility",
+    "href": "index.html#open-science-reproducibility",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "Open Science & Reproducibility",
+    "text": "Open Science & Reproducibility\n\nStrand, J. F. (2023). Error tight: Exercises for lab groups to prevent research mistakes. Psychological Methods.\nBrown, V. A., & Strand, J. F. (2023). Preregistration: Practical Considerations for Speech, Language, and Hearing Research. Journal of Speech, Language, and Hearing Research, 66(6), 1889-1898.\nStanford Psychology guide to doing open science: https://poldrack.github.io/psych-open-science-guide/4_reproducibleanalysis.html\n\nThe Turing Way: https://book.the-turing-way.org\n\nAlston, J. M., & Rick, J. A. (2021). A beginner’s guide to conducting reproducible research. Bulletin of the Ecological Society of America, 102(2), 1-14.\nhttps://www.open-csd.com/resources\nhttps://www.csdisseminate.com"
+  },
+  {
+    "objectID": "index.html#blogs-people-to-follow-on-twitterblueskymastodon-please-add-more",
+    "href": "index.html#blogs-people-to-follow-on-twitterblueskymastodon-please-add-more",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "Blogs & People to follow on Twitter/Bluesky/Mastodon (please add more!)",
+    "text": "Blogs & People to follow on Twitter/Bluesky/Mastodon (please add more!)\nFor me, a good blog post is the necessary on ramp to actually understanding a statistics paper and implementing an approach with my own data. Many of these writers/researchers are fantastic at distilling complex ideas into short(ish) blog posts that almsot anyone can understand.\n\nSolomon Kurz: https://solomonkurz.netlify.app/blog/\nAndrew Heiss: https://www.andrewheiss.com/blog/\nDanielle Navarro: https://djnavarro.net\nAllison Horst: https://allisonhorst.com\nJamie Reilly: https://www.reilly-coglab.com/reilly\nShravan Vasishth: https://vasishth.github.io\nJulia Silge: https://juliasilge.com/blog/\nLisa Debruine: https://debruine.github.io\nTJ Mahr: https://www.tjmahr.com/year-archive/\nMichael Clark: https://m-clark.github.io/code.html\nDaniel Lakens: http://daniellakens.blogspot.com\nGavin Simpson: https://fromthebottomoftheheap.net\nAndrew Gelman: https://statmodeling.stat.columbia.edu\nKieran Healy: https://kieranhealy.org\nKristoffer Magnusson: https://rpsychologist.com/posts"
+  },
+  {
+    "objectID": "index.html#workshops-please-add-more",
+    "href": "index.html#workshops-please-add-more",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "Workshops (please add more!)",
+    "text": "Workshops (please add more!)\n\nhttps://debruine.github.io/data-sim-workshops/\nhttps://smart-workshops.com\nhttps://centerstat.org\nhttps://causalab.sph.harvard.edu/courses/\nAnnual statistics summer school: https://vasishth.github.io"
+  },
+  {
+    "objectID": "index.html#r-packages",
+    "href": "index.html#r-packages",
+    "title": "Statistics resources for the CSD researcher",
+    "section": "R packages",
+    "text": "R packages\nThese are R packages that I use frequently.\n\nhttps://tidyverse.tidyverse.org\nhttps://easystats.github.io/easystats/\nhttps://github.com/sfirke/janitor\nhttps://rstudio.github.io/renv/articles/renv.html\nhttps://here.r-lib.org\nhttps://www.tidytextmining.com\nhttps://cran.r-project.org/package=lme4\nhttps://paul-buerkner.github.io/brms/\nhttps://debruine.github.io/faux/\nhttps://mjskay.github.io/ggdist/\nhttps://glue.tidyverse.org\nhttps://www.tidymodels.org\nhttps://strengejacke.github.io/sjPlot/\nhttps://usethis.r-lib.org\nhttps://books.ropensci.org/targets/"
+  }
+]
