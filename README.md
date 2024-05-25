@@ -35,6 +35,7 @@ Also, its *really* helpful to have a mentor who knows a little bit more R or sta
 
 - https://reprex.tidyverse.org. When you're stuck on something and want to ask for help from someone, if you do it this way, you will get the most helpful response but also probably you will figure out why you're stuck halfway through doing this. 
 
+- https://happygitwithr.com In case you want/need to also incorporate git into your workflow.
 
 ## General Stats tutorials & resources
 
@@ -175,5 +176,7 @@ These are R packages that I use frequently.
 - https://www.tidymodels.org
 
 - https://strengejacke.github.io/sjPlot/
+
+- https://usethis.r-lib.org
 
 - https://books.ropensci.org/targets/
