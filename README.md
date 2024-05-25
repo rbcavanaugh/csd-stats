@@ -59,7 +59,13 @@ I have not proofread this page closely and you have probably realized by now tha
 
 - Winter, B. (2019). Statistics for linguists: An introduction using R. Routledge. (https://appliedstatisticsforlinguists.org/bwinter_stats_proofs.pdf)
 
-- https://avehtari.github.io/ROS-Examples/
+- Common statistical tests are linear models (or: how to teach stats): https://lindeloev.github.io/tests-as-linear/
+
+- There is only one test: http://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html implemented in an R package here: https://infer.netlify.app
+
+- Regression and other Stories: https://avehtari.github.io/ROS-Examples/
+
+- Introduction to Modern Statistics: https://openintro-ims.netlify.app
 
 - James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). An introduction to statistical learning (Vol. 112, p. 18). New York: springer.
 
@@ -125,6 +131,8 @@ You should learn how to do Bayesian stats. If you've never tried to use bayes, I
 - Winter, B., & Bürkner, P. C. (2021). Poisson regression for linguists: A tutorial introduction to modelling count data with brms. Language and Linguistics Compass, 15(11), e12439
 
 - Bürkner, P. C. (2019). Bayesian item response modeling in R with brms and Stan. arXiv preprint arXiv:1905.09501.
+
+- Reaction time: https://lindeloev.github.io/shiny-rt/
 
 ## Data Viz (please add more to this section!)
 
