@@ -1,19 +1,19 @@
 
 # Statistics and R and stuff for the CSD researcher
 
-## Getting started
+## About this page
 
 This is a repository for resources related to statistics and data analysis and open science and other important things collected for (but certainly not limited to) new and seasoned researchers in the field of Communication Sciences and Disorders. Before you get bogged down in this overwhelming list of resources, I suggest you entertain yourself with this highly enjoyable scientific article (or at least listen to it during your commute this week, there is an audio version narrated by the authors) and remember that your goal is to do science, and these are just tools you might find useful along the way. 
 
 https://www.experimental-history.com/p/things-could-be-better
 
-## About this page
-
-My recommendation is that you use this list of resources in a very ad-hoc fashion. Some of the sections I have ordered so that the resource I find myself recommending most often for the total notice is at the top (indicated with an asterisk). Others are just lists of resources or people that I have learned a great deal from and that I think you might find useful. But if they're on this list, then minimally I have found them helpful at some point or another. 
-
 These resources are generally based on R, but this is mostly because its what I was trained in, what I know the most about, and probably the scripted language used most often in CSD research. Python is cool too sometimes. I wish I knew Julia. (But if you asked me which additional language I thought researchers might find useful on top of R...its probably SQL...unless you're thinking about an alt-ac career, in which case its definitely python...and SQL...but really once you know one of these fairly well its easy enough to pick up the others. Also you should probably learn some very basic git.). Either way, if you're looking to learn R, I hope these will be very useful, and if not, then they still might be useful anyway. 
 
 Anyways, point is that this list is for R but its not an exclusive endorsement of R. Perhaps someone will add a section for Python and Julia. If you really don't want to learn a scripted/statistical language like R (or python, Julia, SQL...), then I suggest you go check out [JASP](https://jasp-stats.org), which is a free and open-source GUI build on top of R. 
+
+## Getting started
+
+My recommendation is that you use this list of resources in a very ad-hoc fashion. Some of the sections I have ordered so that the resource I find myself recommending most often for the total notice is at the top (indicated with an asterisk). Others are just lists of resources or people that I have learned a great deal from and that I think you might find useful. But if they're on this list, then minimally I have found them helpful at some point or another. 
 
 **Contributing**
 
