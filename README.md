@@ -67,6 +67,18 @@ I have not proofread this page closely and you have probably realized by now tha
 
 - https://debruine.github.io/faux/articles/contrasts.html (At some point you will have questions about contrast coding for categorical variables, and the answer is inevitably going to be here)
 
+## Some papers about common statistical errors I've come across in CSD research
+
+- Anderson, S. F. (2020). Misinterpreting p: The discrepancy between p values and the probability the null hypothesis is true, the influence of multiple testing, and implications for the replication crisis. Psychological methods, 25(5), 596. **Questionable interpretations of p-values**
+
+- https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/ **And questionable reporting of p-values**
+
+- http://www.stat.columbia.edu/~gelman/research/published/signif4.pdf **The Difference Between “Significant” and “Not Significant” is not Itself Statistically Significant. Often known as, 'yes you do need that interaction in your model'.**
+
+- https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0271668 **But do your best to interpret interactions correctly**
+
+- https://www.sciencedirect.com/science/article/abs/pii/S0749596X22000213 **Failing to report contrast coding or incorrect interpretation of contrasts**
+
 ## Mixed-effects models
 
 For better or worse, the bread and butter of psycholinguistic and other CSD research. Conceptually fantastic, but often tricky to implement *well*. My suggestion is to start with the first link below, and then pick an introductory paper to read and go through examples (e.g., Brown 2021). Then, if you're feeling good about things, I highly suggest working through the examples in Debruine & Barr (2021). Then go apply what you've learned to your own data. Then, when you're feeling really accomplished, write it up for publication, incorporating recommendations from Meteyard & Davies (2020) as you write. Or take a class at your institution. Or take one of the workshops linked below. 
@@ -90,6 +102,8 @@ You should learn how to do Bayesian stats. If you've never tried to use bayes, I
 - https://easystats.github.io/bayestestR/articles/bayestestR.html*
 
 - https://m-clark.github.io/bayesian-basics/example.html
+
+- https://vasishth.github.io/bayescogsci/book/
 
 - Nalborczyk, L., Batailler, C., Lœvenbruck, H., Vilain, A., & Bürkner, P. C. (2019). An introduction to Bayesian multilevel models using brms: A case study of gender effects on vowel variability in standard Indonesian. Journal of Speech, Language, and Hearing Research, 62(5), 1225-1242
 
@@ -139,6 +153,8 @@ For me, a good blog post is the necessary on ramp to actually understanding a st
 
 - Jamie Reilly: https://www.reilly-coglab.com/reilly
 
+- Shravan Vasishth: https://vasishth.github.io
+
 - Julia Silge: https://juliasilge.com/blog/
 
 - Lisa Debruine: https://debruine.github.io
@@ -147,11 +163,15 @@ For me, a good blog post is the necessary on ramp to actually understanding a st
 
 - Michael Clark: https://m-clark.github.io/code.html
 
+- Daniel Lakens: https://sites.google.com/site/lakens2/
+
 - Gavin Simpson: https://fromthebottomoftheheap.net
 
 - Andrew Gelman: https://statmodeling.stat.columbia.edu
 
 - Kieran Healy: https://kieranhealy.org
+
+- Kristoffer Magnusson: https://rpsychologist.com/posts
 
 ## Workshops (please add more!)
 
@@ -162,6 +182,8 @@ For me, a good blog post is the necessary on ramp to actually understanding a st
 - https://centerstat.org
 
 - https://causalab.sph.harvard.edu/courses/
+
+- Annual statistics summer school: https://vasishth.github.io
 
 ## R packages
 
