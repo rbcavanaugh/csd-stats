@@ -3,6 +3,10 @@ project:
 
 website:
   title: "CSD-stats"
+  google-analytics: 
+    tracking-id: "G-4YDRXVCBFQ"
+    storage: "none"
+    anonymize-ip: true
   navbar:
     search: true
     tools:
@@ -17,6 +21,6 @@ website:
 format:
   html:
     theme:
-      light: cosmo
       dark: superhero
+      light: cosmo
     toc: true
