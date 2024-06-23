@@ -132,10 +132,12 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
   <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a></li>
   <li><a href="#learning-r" id="toc-learning-r" class="nav-link" data-scroll-target="#learning-r">Learning R</a></li>
   <li><a href="#general-stats-tutorials-resources" id="toc-general-stats-tutorials-resources" class="nav-link" data-scroll-target="#general-stats-tutorials-resources">General Stats tutorials &amp; resources</a></li>
+  <li><a href="#stats-books" id="toc-stats-books" class="nav-link" data-scroll-target="#stats-books">Stats books</a></li>
   <li><a href="#common-statistical-errors-ive-come-across-in-csd-research" id="toc-common-statistical-errors-ive-come-across-in-csd-research" class="nav-link" data-scroll-target="#common-statistical-errors-ive-come-across-in-csd-research">Common statistical errors I’ve come across in CSD research</a></li>
   <li><a href="#writing-about-statistics" id="toc-writing-about-statistics" class="nav-link" data-scroll-target="#writing-about-statistics">Writing about statistics</a></li>
   <li><a href="#mixed-effects-models" id="toc-mixed-effects-models" class="nav-link" data-scroll-target="#mixed-effects-models">Mixed-effects models</a></li>
   <li><a href="#bayesian-statistics" id="toc-bayesian-statistics" class="nav-link" data-scroll-target="#bayesian-statistics">Bayesian statistics</a></li>
+  <li><a href="#methods-papers-resources-specific-to-csd" id="toc-methods-papers-resources-specific-to-csd" class="nav-link" data-scroll-target="#methods-papers-resources-specific-to-csd">Methods papers &amp; resources specific to CSD</a></li>
   <li><a href="#other-modeling-approaches" id="toc-other-modeling-approaches" class="nav-link" data-scroll-target="#other-modeling-approaches">Other modeling approaches</a></li>
   <li><a href="#data-viz-please-add-more-to-this-section" id="toc-data-viz-please-add-more-to-this-section" class="nav-link" data-scroll-target="#data-viz-please-add-more-to-this-section">Data Viz (please add more to this section!)</a></li>
   <li><a href="#open-science-reproducibility" id="toc-open-science-reproducibility" class="nav-link" data-scroll-target="#open-science-reproducibility">Open Science &amp; Reproducibility</a></li>
@@ -199,8 +201,7 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 <p>Also, its <em>really</em> helpful to have a mentor who knows a little bit more R or stats than you, even if only to check in with occasionally or give yourself some external accountability. If you don’t have that person, then its worth spending the time and effort to go find them (small plug for ASHA’s <a href="https://www.asha.org/students/mentoring/marc/">MARC</a> program, which I have benefited greatly from, and the many mentors who have and continue to help me learn).</p>
 <p><strong>A word of caution</strong></p>
 <p>I have not proofread this page closely and you have probably realized by now that it’s full of run-on sentences and inconsistent punctuation and grammar and the like.</p>
-<p><br></p>
-<p><em>I hope you find this useful</em> ~ <a href="http://rbcavanaugh.github.io">Rob</a></p>
+<p>~ <a href="http://rbcavanaugh.github.io">Rob</a></p>
 <p><br></p>
 </section>
 <section id="learning-r" class="level2">
@@ -220,20 +221,29 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 <li><p>Winter, B. (2019). Statistics for linguists: An introduction using R. Routledge. (https://appliedstatisticsforlinguists.org/bwinter_stats_proofs.pdf)</p></li>
 <li><p>Common statistical tests are linear models (or: how to teach stats): https://lindeloev.github.io/tests-as-linear/</p></li>
 <li><p>There is only one test: http://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html implemented in an R package here: https://infer.netlify.app</p></li>
+<li><p>Regression, Fire, and Dangerous Things: https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/*</p></li>
+<li><p>https://debruine.github.io/faux/articles/contrasts.html (At some point you will have questions about contrast coding for categorical variables, and the answer is inevitably going to be here)</p></li>
+</ul>
+</section>
+<section id="stats-books" class="level2">
+<h2 class="anchored" data-anchor-id="stats-books">Stats books</h2>
+<ul>
+<li><p>Statistical Rethinking: http://xcelab.net/rm/ (2024 online lectures: https://github.com/rmcelreath/stat_rethinking_2024)*</p></li>
 <li><p>Regression and other Stories: https://avehtari.github.io/ROS-Examples/</p></li>
 <li><p>Introduction to Modern Statistics: https://openintro-ims.netlify.app</p></li>
-<li><p>James, G., Witten, D., Hastie, T., &amp; Tibshirani, R. (2013). An introduction to statistical learning (Vol. 112, p.&nbsp;18). New York: springer.</p></li>
-<li><p>https://quantpsych.net/stats_modeling/</p></li>
-<li><p>https://debruine.github.io/faux/articles/contrasts.html (At some point you will have questions about contrast coding for categorical variables, and the answer is inevitably going to be here)</p></li>
+<li><p>An introduction to statistical learning: https://www.statlearning.com</p></li>
+<li><p>The Order of the Statistical Jedi: Responsibilities, Routines, and Rituals: https://quantpsych.net/stats_modeling*</p></li>
 </ul>
 </section>
 <section id="common-statistical-errors-ive-come-across-in-csd-research" class="level2">
 <h2 class="anchored" data-anchor-id="common-statistical-errors-ive-come-across-in-csd-research">Common statistical errors I’ve come across in CSD research</h2>
-<p><strong>Questionable interpretations of p-values</strong> - https://pubmed.ncbi.nlm.nih.gov/31829657/</p>
-<p><strong>And questionable reporting of p-values</strong> - https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/</p>
-<p><strong>The Difference Between “Significant” and “Not Significant” is not Itself Statistically Significant. Often known as, ‘yes you do need that interaction in your model’.</strong> - http://www.stat.columbia.edu/~gelman/research/published/signif4.pdf</p>
-<p><strong>But do your best to interpret interactions correctly</strong> - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0271668</p>
-<p><strong>Failing to report contrast coding or incorrect interpretation of contrasts</strong> - https://www.sciencedirect.com/science/article/abs/pii/S0749596X22000213</p>
+<ul>
+<li><p><strong>Questionable interpretations of p-values</strong> - https://pubmed.ncbi.nlm.nih.gov/31829657/</p></li>
+<li><p><strong>And questionable reporting of p-values</strong> - https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/</p></li>
+<li><p><strong>The Difference Between “Significant” and “Not Significant” is not Itself Statistically Significant. Often known as, ‘yes you do need that interaction in your model’.</strong> - http://www.stat.columbia.edu/~gelman/research/published/signif4.pdf</p></li>
+<li><p><strong>But do your best to interpret interactions correctly</strong> - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0271668</p></li>
+<li><p><strong>Failing to report contrast coding or incorrect interpretation of contrasts</strong> - https://www.sciencedirect.com/science/article/abs/pii/S0749596X22000213</p></li>
+</ul>
 </section>
 <section id="writing-about-statistics" class="level2">
 <h2 class="anchored" data-anchor-id="writing-about-statistics">Writing about statistics</h2>
@@ -261,10 +271,32 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 <li><p>https://easystats.github.io/bayestestR/articles/bayestestR.html*</p></li>
 <li><p>https://m-clark.github.io/bayesian-basics/example.html</p></li>
 <li><p>https://vasishth.github.io/bayescogsci/book/</p></li>
-<li><p>Nalborczyk, L., Batailler, C., Lœvenbruck, H., Vilain, A., &amp; Bürkner, P. C. (2019). An introduction to Bayesian multilevel models using brms: A case study of gender effects on vowel variability in standard Indonesian. Journal of Speech, Language, and Hearing Research, 62(5), 1225-1242</p></li>
 <li><p>Vasishth, S., Nicenboim, B., Beckman, M. E., Li, F., &amp; Kong, E. J. (2018). Bayesian data analysis in the phonetic sciences: A tutorial introduction. Journal of phonetics, 71, 147-161.</p></li>
 <li><p>Schad, D. J., Betancourt, M., &amp; Vasishth, S. (2021). Toward a principled Bayesian workflow in cognitive science. Psychological methods, 26(1), 103.</p></li>
 <li><p>https://xcelab.net/rm/statistical-rethinking/ (Statistical Rethinking by Richard McElreath)</p></li>
+</ul>
+</section>
+<section id="methods-papers-resources-specific-to-csd" class="level2">
+<h2 class="anchored" data-anchor-id="methods-papers-resources-specific-to-csd">Methods papers &amp; resources specific to CSD</h2>
+<ul>
+<li><p>Stats/Methods JSLHR Special issue: https://pubs.asha.org/toc/jslhr/62/3</p></li>
+<li><p>Bothe, A. K., &amp; Richardson, J. D. (2011). Statistical, Practical, Clinical, and Personal Significance: Definitions and Applications in Speech-Language Pathology. In American Journal of Speech-Language Pathology (Vol. 20, Issue 3, pp.&nbsp;233–242). American Speech Language Hearing Association. https://doi.org/10.1044/1058-0360(2011/10-0034)</p></li>
+<li><p>Morrow, E. L., Duff, M. C., &amp; Mayberry, L. S. (2022). Mediators, moderators, and covariates: Matching analysis approach for improved precision in cognitive-communication rehabilitation research. Journal of Speech, Language, and Hearing Research, 65(11), 4159-4171.</p></li>
+<li><p>Nalborczyk, L., Batailler, C., Lœvenbruck, H., Vilain, A., &amp; Bürkner, P. C. (2019). An introduction to Bayesian multilevel models using brms: A case study of gender effects on vowel variability in standard Indonesian. Journal of Speech, Language, and Hearing Research, 62(5), 1225-1242</p></li>
+<li><p>Cavanaugh, R., Quique, Y. M., Swiderski, A. M., Kallhoff, L., Terhorst, L., Wambaugh, J., Hula, W.D., &amp; Evans, W. S. (2023). Reproducibility in small-N treatment research: A tutorial using examples from aphasiology. Journal of Speech, Language, and Hearing Research, 66(6), 1908-1927.</p>
+<ul>
+<li>https://rb-cavanaugh.shinyapps.io/reproducible-small-N/</li>
+<li>https://osf.io/7fp3x/</li>
+<li>https://robcavanaugh.com/images/cavanaugh2022-reproducibility.pdf</li>
+</ul></li>
+<li><p>Oleson, J. J., Jones, M. A., Jorgensen, E. J., &amp; Wu, Y. H. (2022). Statistical considerations for analyzing ecological momentary assessment data. Journal of speech, language, and hearing research, 65(1), 344-360.</p></li>
+<li><p>Wiley, R. W., &amp; Rapp, B. (2019). Statistical analysis in Small-N Designs: using linear mixed-effects modeling for evaluating intervention effectiveness. Aphasiology, 33(1), 1-30.</p></li>
+<li><p>Brydges, C. R., &amp; Gaeta, L. (2019). An introduction to calculating Bayes factors in JASP for speech, language, and hearing research. Journal of speech, language, and hearing research, 62(12), 4523-4533.</p></li>
+<li><p>Max, L., &amp; Onghena, P. (1999). Some issues in the statistical analysis of completely randomized and repeated measures designs for speech, language, and hearing research. Journal of Speech, Language, and Hearing Research, 42(2), 261-270.</p></li>
+<li><p>Letué, F., Martinez, M. J., Samson, A., Vilain, A., &amp; Vilain, C. (2018). Statistical methodology for the analysis of repeated duration data in behavioral studies. Journal of Speech, Language, and Hearing Research, 61(3), 561-582.</p></li>
+<li><p>Gruber, F. A. (1999). Tutorial: Survival analysis—A statistic for clinical, efficacy, and theoretical applications. Journal of speech, language, and hearing research, 42(2), 432-447.</p></li>
+<li><p>https://www.open-csd.com/resources</p></li>
+<li><p>https://www.csdisseminate.com</p></li>
 </ul>
 </section>
 <section id="other-modeling-approaches" class="level2">
@@ -289,12 +321,8 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 <li><p>Strand, J. F. (2023). Error tight: Exercises for lab groups to prevent research mistakes. Psychological Methods.</p></li>
 <li><p>Brown, V. A., &amp; Strand, J. F. (2023). Preregistration: Practical Considerations for Speech, Language, and Hearing Research. Journal of Speech, Language, and Hearing Research, 66(6), 1889-1898.</p></li>
 <li><p>Stanford Psychology guide to doing open science: https://poldrack.github.io/psych-open-science-guide/4_reproducibleanalysis.html</p></li>
-<li><ul>
-<li>The Turing Way: https://book.the-turing-way.org</li>
-</ul></li>
+<li><p>The Turing Way: https://book.the-turing-way.org</p></li>
 <li><p>Alston, J. M., &amp; Rick, J. A. (2021). A beginner’s guide to conducting reproducible research. Bulletin of the Ecological Society of America, 102(2), 1-14.</p></li>
-<li><p>https://www.open-csd.com/resources</p></li>
-<li><p>https://www.csdisseminate.com</p></li>
 </ul>
 </section>
 <section id="blogs-people-to-follow-on-twitterblueskymastodon-please-add-more" class="level2">
@@ -305,6 +333,7 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 <li><p>Andrew Heiss: https://www.andrewheiss.com/blog/</p></li>
 <li><p>Danielle Navarro: https://djnavarro.net</p></li>
 <li><p>Allison Horst: https://allisonhorst.com</p></li>
+<li><p>Richard McElreath: https://xcelab.net/rm/</p></li>
 <li><p>Jamie Reilly: https://www.reilly-coglab.com/reilly</p></li>
 <li><p>Shravan Vasishth: https://vasishth.github.io</p></li>
 <li><p>Julia Silge: https://juliasilge.com/blog/</p></li>
