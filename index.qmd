@@ -12,11 +12,7 @@ Before you get bogged down in this overwhelming list of resources, I suggest you
 
 [Things Could Be Better by Adam Mastroianni](https://www.experimental-history.com/p/things-could-be-better)
 
-These resources are generally based around the statistical programming language R, but this is mostly because its what I was trained in, what I know the most about, and probably the scripted language used most often in CSD research. Python is cool too sometimes. I wish I knew Julia. 
-
-(But if you asked me which additional language I thought researchers might find useful on top of R...its probably SQL...unless you're thinking about an alt-ac career, in which case its definitely python...and SQL...but really once you know one of these fairly well its easy enough to pick up the others. Also you should probably learn some very basic git.).
-
-Anyways, point is that this list is for R but its not an exclusive endorsement of R. Perhaps someone will add a section for Python and Julia. If you really don't want to learn a scripted/statistical language like R (or python, Julia, SQL...), then I suggest you go check out [JASP](https://jasp-stats.org), which is a free and open-source GUI build on top of R.
+These resources are generally based around the statistical programming language R, but this is mostly because its what I was trained in, what I know the most about, and probably the scripted language used most often in CSD research. Python is cool too sometimes. I wish I knew Julia. Perhaps someone will add a section for Python and Julia. If you really don't want to learn a scripted/statistical language like R (or python, Julia, SQL...), then I suggest you go check out [JASP](https://jasp-stats.org), which is a free and open-source GUI build on top of R.
 
 ## Getting started
 
@@ -38,7 +34,8 @@ If any links are broken or out of date, the github issues are a good place to le
 
 *Contributors:*
 
--   Your name could be here!
+- [Yina Quique](https://yinaquique.netlify.app)
+- [Courtney Jewell](https://www.linkedin.com/in/courtney-jewell/)
 
 
 **A word of advice**
@@ -62,6 +59,8 @@ I have not proofread this page closely and you have probably realized by now tha
 -   **psyTeachR**: https://psyteachr.github.io\* This is a set of resources and they are fantastic
 
 -   **R for Data Science**: https://r4ds.had.co.nz (Hadley Wickham and Garrett Grolemund - the standard)
+
+-   **R for Reproducible Scientific Analysis by Software Carpentry**: https://swcarpentry.github.io/r-novice-gapminder. Step-by-step guide on introducing R and R-studio with the basic fundamentals. The information is pretty replicable to tutorials found in R for Data Science, but I found it slightly more approachable for novices (-Courtney Jewell).
 
 -   **Workflow recommendations**: https://www.tidyverse.org/blog/2017/12/workflow-vs-script/, https://here.r-lib.org. These are not really R resources but these are things everyone should do when using R, so I'm just going to plug them here.
 
