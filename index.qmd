@@ -94,6 +94,8 @@ I have not proofread this page closely and you have probably realized by now tha
 
 -   **The Order of the Statistical Jedi: Responsibilities, Routines, and Rituals**:  https://quantpsych.net/stats_modeling\*
 
+-   **Improving Your Statistical Inferences**: https://lakens.github.io/statistical_inferences/
+
 
 ## Common statistical errors I've come across in CSD research
 
@@ -213,6 +215,8 @@ For me, a good blog post is the necessary on ramp to actually understanding a st
 -   **Andrew Heiss**: https://www.andrewheiss.com/blog/
 
 -   **Danielle Navarro**: https://djnavarro.net
+
+-   **Julia Rohrer & colleagues**: https://www.the100.ci
 
 -   **Allison Horst**: https://allisonhorst.com
 
