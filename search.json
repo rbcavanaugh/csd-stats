@@ -214,7 +214,7 @@
     "href": "quant-methods.html#psychometrics",
     "title": "Home",
     "section": "Psychometrics",
-    "text": "Psychometrics\n\nTen Hove, D., Jorgensen, T. D., & van der Ark, L. A. (2022). Updated guidelines on selecting an intraclass correlation coefficient for interrater reliability, with applications to incomplete observational designs. Psychological Methods.\nTen Hove, D., Jorgensen, T. D., & Van der Ark, L. A. (2025). How to estimate intraclass correlation coefficients for interrater reliability from planned incomplete data. Multivariate Behavioral Research, 1-20.\nBürkner, P. C. (2019). Bayesian item response modeling in R with brms and Stan. arXiv preprint arXiv:1905.09501."
+    "text": "Psychometrics\n\nRevelle, W. (2009). An introduction to psychometric theory with applications in R. https://personality-project.org/r/book/\nTen Hove, D., Jorgensen, T. D., & van der Ark, L. A. (2022). Updated guidelines on selecting an intraclass correlation coefficient for interrater reliability, with applications to incomplete observational designs. Psychological Methods.\nTen Hove, D., Jorgensen, T. D., & Van der Ark, L. A. (2025). How to estimate intraclass correlation coefficients for interrater reliability from planned incomplete data. Multivariate Behavioral Research, 1-20.\nBürkner, P. C. (2019). Bayesian item response modeling in R with brms and Stan. arXiv preprint arXiv:1905.09501.\nMcNeish, D. (2018). Thanks coefficient alpha, we’ll take it from here. Psychological methods, 23(3), 412."
   },
   {
     "objectID": "quant-methods.html#bayesian-statistics",
