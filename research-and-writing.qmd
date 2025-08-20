@@ -1,0 +1,99 @@
+---
+format: html
+toc: true
+---
+
+## Philosophy of science and writing research questions
+
+- Horoscopes (Richard McElreath), https://share.eva.mpg.de/index.php/s/9KEzTJg6oZ5dZZb
+ 
+- Writing research questions: Peters, M.A.K. *How to develop good research questions.* Nat Hum Behav (2025). https://doi.org/10.1038/s41562-025-02292-5 (a.k.a., read...a lot)
+
+## Writing about statistics
+
+-   **Basic Statistical Reporting for Articles Published in Biomedical Journals: The “Statistical Analyses and Methods in the Published Literature” or The SAMPL Guidelines”** https://www.equator-network.org/wp-content/uploads/2013/03/SAMPL-Guidelines-3-13-13.pdf
+
+-   **Guidance on Statistical Reporting to Help Improve Your Chances of a Favorable Statistical Review** https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7193848/pdf/rccm.202003-0477ED.pdf
+
+## Common statistical errors I've come across in CSD research
+
+- **Questionable interpretations of p-values** - https://pubmed.ncbi.nlm.nih.gov/31829657/
+
+- **And questionable reporting of p-values** - https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/
+
+- **The Difference Between “Significant” and “Not Significant” is not Itself Statistically Significant. Often known as, 'yes you do need that interaction in your model'.** - http://www.stat.columbia.edu/\~gelman/research/published/signif4.pdf
+
+- **But do your best to interpret interactions correctly** - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0271668
+
+- **Failing to report contrast coding or incorrect interpretation of contrasts** - https://www.sciencedirect.com/science/article/abs/pii/S0749596X22000213
+
+- **A long list of common statistical myths**: https://discourse.datamethods.org/t/reference-collection-to-push-back-against-common-statistical-myths/1787
+
+- **Ill-defined esimands**: 
+  - Lundberg, I., Johnson, R., & Stewart, B. M. (2021). *What is your estimand? Defining the target quantity connects statistical evidence to theory.* American Sociological Review, 86(3), 532-565.
+  - Kahan, B. C., Hindley, J., Edwards, M., Cro, S., & Morris, T. P. (2024). *The estimands framework: a primer on the ICH E9 (R1) addendum.* bmj, 384.
+
+## Open Science & Reproducibility
+
+-   Strand, J. F. (2023). **Error tight: Exercises for lab groups to prevent research mistakes.** Psychological Methods.\*
+
+-   Brown, V. A., & Strand, J. F. (2023). **Preregistration: Practical Considerations for Speech, Language, and Hearing Research.** Journal of Speech, Language, and Hearing Research, 66(6), 1889-1898.
+
+-   **Stanford Psychology guide to doing open science:** https://poldrack.github.io/psych-open-science-guide/4_reproducibleanalysis.html
+
+-   **The Turing Way:** https://book.the-turing-way.org
+
+-   Alston, J. M., & Rick, J. A. (2021). **A beginner’s guide to conducting reproducible research.** Bulletin of the Ecological Society of America, 102(2), 1-14.
+
+## Blogs & Podcasts & People to follow on Socials (please add more!)
+
+For me, a good blog post is the necessary on ramp to actually understanding a statistics paper and implementing an approach with my own data. Many of these writers/researchers are fantastic at distilling complex ideas into short(ish) blog posts that almsot anyone can understand.
+
+-   **Quantitude**: https://quantitudepod.org
+
+-   **Solomon Kurz**: https://solomonkurz.netlify.app/blog/
+
+-   **Andrew Heiss**: https://www.andrewheiss.com/blog/
+
+-   **Danielle Navarro**: https://djnavarro.net
+
+-   **Julia Rohrer & colleagues**: https://www.the100.ci
+
+-   **Allison Horst**: https://allisonhorst.com
+
+-   **Richard McElreath**: https://xcelab.net/rm/
+
+-   **Jamie Reilly**: https://www.reilly-coglab.com/reilly
+
+-   **Shravan Vasishth**: https://vasishth.github.io
+
+-   **Julia Silge**: https://juliasilge.com/blog/
+
+-   **Lisa Debruine**: https://debruine.github.io
+
+-   **TJ Mahr**: https://www.tjmahr.com/year-archive/
+
+-   **Michael Clark**: https://m-clark.github.io/code.html
+
+-   **Daniel Lakens**: http://daniellakens.blogspot.com
+
+-   **Gavin Simpson**: https://fromthebottomoftheheap.net
+
+-   **Andrew Gelman**: https://statmodeling.stat.columbia.edu
+
+-   **Kieran Healy**: https://kieranhealy.org
+
+-   **Kristoffer Magnusson**: https://rpsychologist.com/posts
+
+## Workshops (please add more!)
+
+-   https://debruine.github.io/data-sim-workshops/
+
+-   https://smart-workshops.com
+
+-   https://centerstat.org
+
+-   https://causalab.sph.harvard.edu/courses/
+
+-   Annual statistics summer school: https://vasishth.github.io
+

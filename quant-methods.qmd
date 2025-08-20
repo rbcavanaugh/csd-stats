@@ -1,0 +1,110 @@
+---
+format: html
+toc: true
+---
+
+## Mixed-effects models
+
+For better or worse, the bread and butter of psycholinguistic and other CSD research. Conceptually fantastic, but often tricky to implement *well*. My suggestion is to start with the first link below, and then pick an introductory paper to read and go through examples (e.g., Brown 2021). Then, if you're feeling good about things, I highly suggest working through the examples in Debruine & Barr (2021). Then go apply what you've learned to your own data. Then, when you're feeling really accomplished, write it up for publication, incorporating recommendations from Meteyard & Davies (2020) as you write. Or take a class at your institution. Or take one of the workshops linked below.
+
+-   **An Introduction to Hierarchical Modeling**: http://mfviz.com/hierarchical-models/\* (Fantastic visual demonstration)
+
+-   Brown VA. **An Introduction to Linear Mixed-Effects Modeling in R.** Advances in Methods and Practices in Psychological Science. 2021;4(1). doi:10.1177/2515245920960351
+
+-   DeBruine, L. M., & Barr, D. J. (2021). U**nderstanding mixed-effects models through data simulation.** Advances in Methods and Practices in Psychological Science, 4(1), 2515245920965119.
+
+-   Meteyard, L., & Davies, R. A. (2020). **Best practice guidance for linear mixed-effects models in psychological science.** Journal of Memory and Language, 112, 104092.
+
+-   Winter, B. (2013). **Linear models and linear mixed effects models in R with linguistic applications.** arXiv preprint arXiv:1308.5499.
+
+-   Mirman, D. (2017). **Growth curve analysis and visualization using R.** Chapman and Hall/CRC.
+
+## Psychometrics
+
+- Ten Hove, D., Jorgensen, T. D., & van der Ark, L. A. (2022). *Updated guidelines on selecting an intraclass correlation coefficient for interrater reliability, with applications to incomplete observational designs.* Psychological Methods.
+
+- Ten Hove, D., Jorgensen, T. D., & Van der Ark, L. A. (2025). *How to estimate intraclass correlation coefficients for interrater reliability from planned incomplete data.* Multivariate Behavioral Research, 1-20.
+
+- Bürkner, P. C. (2019). **Bayesian item response modeling in R with brms and Stan.** arXiv preprint arXiv:1905.09501.
+
+## Bayesian statistics
+
+You should learn how to do Bayesian stats. If you've never tried to use bayes, I promise it's more intuitive than you think. And because of modern computing and R packages like {brms}, its arguably just as easy to implement as frequentist mixed models. If you know how to use lme4, then you're already 75% of the way to using {brms}.
+
+-   **Get Started with Bayesian Analysis**: https://easystats.github.io/bayestestR/articles/bayestestR.html\*
+
+-   **Bayesian Basics**: https://m-clark.github.io/bayesian-basics
+
+-   **An Introduction to Bayesian Data Analysis for Cognitive Science**: https://vasishth.github.io/bayescogsci/book/
+
+-   Vasishth, S., Nicenboim, B., Beckman, M. E., Li, F., & Kong, E. J. (2018). **Bayesian data analysis in the phonetic sciences: A tutorial introduction.** Journal of phonetics, 71, 147-161.
+
+-   Nalborczyk, L., Batailler, C., Lœvenbruck, H., Vilain, A., & Bürkner, P. C. (2019). **An introduction to Bayesian multilevel models using brms: A case study of gender effects on vowel variability in standard Indonesian.** Journal of Speech, Language, and Hearing Research, 62(5), 1225-1242
+
+-   Schad, D. J., Betancourt, M., & Vasishth, S. (2021). **Toward a principled Bayesian workflow in cognitive science**. Psychological methods, 26(1), 103.
+
+-   **Statistical Rethinking**: https://xcelab.net/rm/statistical-rethinking/ (Statistical Rethinking by Richard McElreath)
+
+## Basics of causal inference
+
+- Regression, Fire, and Dangerous Things by Richard McElreath: https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/
+
+- Rohrer, J. M. (2024). *Causal inference for psychologists who think that causal inference is not for them.* Social and Personality Psychology Compass, 18(3), e12948.
+
+- Wysocki AC, Lawson KM, Rhemtulla M. **Statistical Control Requires Causal Justification. Advances in Methods and Practices in Psychological Science.** 2022;5(2). doi:10.1177/25152459221095823
+
+## Sample size planning and Statistical Power
+
+[If you're going to read anything on power, read this one]{.aside}
+
+- Hancock GR, Feng Y. *nmax and the quest to restore caution, integrity, and practicality to the sample size planning process.* Psychol Methods. 2025 Aug 11. doi: 10.1037/met0000776. Epub ahead of print. PMID: 40788705.
+
+- Ying, X., Freedland, K. E., Powell, L. H., Stuart, E. A., Ehrhardt, S., & Mayo-Wilson, E. (2025). *Determining sample size for pilot trials: a tutorial.* bmj, 390.
+
+- Powering Your Interaction: https://approachingblog.wordpress.com/2018/01/24/powering-your-interaction-2/
+
+
+## Methods papers & resources specific to Rehabilitaiton Research
+
+-   **Stats/Methods JSLHR Special issue**: https://pubs.asha.org/toc/jslhr/62/3
+
+-   Bothe, A. K., & Richardson, J. D. (2011). **Statistical, Practical, Clinical, and Personal Significance: Definitions and Applications in Speech-Language Pathology.** In American Journal of Speech-Language Pathology (Vol. 20, Issue 3, pp. 233–242). American Speech Language Hearing Association. https://doi.org/10.1044/1058-0360(2011/10-0034)
+
+-   Morrow, E. L., Duff, M. C., & Mayberry, L. S. (2022). **Mediators, moderators, and covariates: Matching analysis approach for improved precision in cognitive-communication rehabilitation research**. Journal of Speech, Language, and Hearing Research, 65(11), 4159-4171.
+
+-   Nalborczyk, L., Batailler, C., Lœvenbruck, H., Vilain, A., & Bürkner, P. C. (2019). **An introduction to Bayesian multilevel models using brms: A case study of gender effects on vowel variability in standard Indonesian.** Journal of Speech, Language, and Hearing Research, 62(5), 1225-1242
+
+-   Cavanaugh, R., Quique, Y. M., Swiderski, A. M., Kallhoff, L., Terhorst, L., Wambaugh, J., Hula, W.D., & Evans, W. S. (2023). **Reproducibility in small-N treatment research: A tutorial using examples from aphasiology**. Journal of Speech, Language, and Hearing Research, 66(6), 1908-1927.
+    - https://rb-cavanaugh.shinyapps.io/reproducible-small-N/
+    - https://osf.io/7fp3x/
+    - https://robcavanaugh.com/images/cavanaugh2022-reproducibility.pdf
+    
+-   Oleson, J. J., Jones, M. A., Jorgensen, E. J., & Wu, Y. H. (2022). **Statistical considerations for analyzing ecological momentary assessment data.** Journal of speech, language, and hearing research, 65(1), 344-360.
+    
+-   Wiley, R. W., & Rapp, B. (2019). **Statistical analysis in Small-N Designs: using linear mixed-effects modeling for evaluating intervention effectiveness.** Aphasiology, 33(1), 1-30.
+
+-   Brydges, C. R., & Gaeta, L. (2019). **An introduction to calculating Bayes factors in JASP for speech, language, and hearing research.** Journal of speech, language, and hearing research, 62(12), 4523-4533.
+
+-   Max, L., & Onghena, P. (1999). **Some issues in the statistical analysis of completely randomized and repeated measures designs for speech, language, and hearing research.** Journal of Speech, Language, and Hearing Research, 42(2), 261-270.
+
+-   Letué, F., Martinez, M. J., Samson, A., Vilain, A., & Vilain, C. (2018). **Statistical methodology for the analysis of repeated duration data in behavioral studies.** Journal of Speech, Language, and Hearing Research, 61(3), 561-582.
+
+-   Gruber, F. A. (1999). **Tutorial: Survival analysis—A statistic for clinical, efficacy, and theoretical applications.** Journal of speech, language, and hearing research, 42(2), 432-447.
+
+-   Winter, B., & Bürkner, P. C. (2021). **Poisson regression for linguists: A tutorial introduction to modelling count data with brms.** Language and Linguistics Compass, 15(11), e12439
+
+-   Winter, B., & Wieling, M. (2016). **How to analyze linguistic change using mixed models, Growth Curve Analysis and Generalized Additive Modeling.** Journal of Language Evolution, 1(1), 7-18.
+
+-   **Open CSD**: https://www.open-csd.com/resources
+
+-   **CSD Disseminate**: https://www.csdisseminate.com
+
+## Random useful things
+
+-   **Contrast Coding**: https://debruine.github.io/faux/articles/contrasts.html (At some point you will have questions about contrast coding for categorical variables, and the answer is inevitably going to be here)
+
+-   **Reaction time**: https://lindeloev.github.io/shiny-rt/
+
+-   **Complex survey analysis:** Zimmer, S. A., Powell, R. J., & Velásquez, I. C. (2024). Exploring Complex Survey Data Analysis Using R: A Tidy Introduction with {srvyr} and {survey}. Chapman & Hall: CRC Press. https://tidy-survey-r.github.io/tidy-survey-book/
+
+-   **Fantastic and accessible primer on longitudinal analysis:** McCormick, E. M., Byrne, M. L., Flournoy, J. C., Mills, K. L., & Pfeifer, J. H. (2023). **The Hitchhiker’s guide to longitudinal models: A primer on model selection for repeated-measures methods.** Developmental Cognitive Neuroscience, 63, 101281. doi:10.1016/j.dcn.2023.101281

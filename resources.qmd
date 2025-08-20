@@ -1,0 +1,279 @@
+---
+format: html
+toc: true
+---
+
+## Learning R
+
+-   **psyTeachR**: https://psyteachr.github.io\* This is a set of resources and they are fantastic. Also for learning statistics. 
+
+-   **R for Data Science**: https://r4ds.had.co.nz (Hadley Wickham and Garrett Grolemund - the standard)
+
+-   **R for Reproducible Scientific Analysis by Software Carpentry**: https://swcarpentry.github.io/r-novice-gapminder. Step-by-step guide on introducing R and R-studio with the basic fundamentals. The information is pretty replicable to tutorials found in R for Data Science, but I found it slightly more approachable for novices (-Courtney Jewell).
+
+-   **Workflow recommendations**: https://www.tidyverse.org/blog/2017/12/workflow-vs-script/, https://here.r-lib.org. These are not really R resources but these are things everyone should do when using R, so I'm just going to plug them here.
+
+-   **How to ask for help**: https://reprex.tidyverse.org. When you're stuck on something and want to ask for help from someone, if you do it this way, you will get the most helpful response but also probably you will figure out why you're stuck halfway through doing this.
+
+-   **Happy Git with R**: https://happygitwithr.com In case you want/need to also incorporate git into your workflow.
+
+## General Stats tutorials & resources
+
+-   **Learning Statistics with R**: https://learningstatisticswithr.com\*
+
+-   Winter, B. (2019). Statistics for linguists: An introduction using R. Routledge. (https://appliedstatisticsforlinguists.org/bwinter_stats_proofs.pdf)
+
+-   **Common statistical tests are linear models (or: how to teach stats)**: https://lindeloev.github.io/tests-as-linear/
+
+-   **There is only one test**: http://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html implemented in an R package here: https://infer.netlify.app
+
+-   **Regression, Fire, and Dangerous Things**: https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/\*
+
+-   **Contrast Coding**: https://debruine.github.io/faux/articles/contrasts.html (At some point you will have questions about contrast coding for categorical variables, and the answer is inevitably going to be here)
+
+## Stats books
+
+-   **Statistical Rethinking**: http://xcelab.net/rm/ (2024 online lectures: https://github.com/rmcelreath/stat_rethinking_2024)\*
+
+-   **Regression and other Stories**: https://avehtari.github.io/ROS-Examples/
+
+-   **Introduction to Modern Statistics**: https://openintro-ims.netlify.app
+
+-   **An introduction to statistical learning**: https://www.statlearning.com
+
+-   **The Order of the Statistical Jedi: Responsibilities, Routines, and Rituals**:  https://quantpsych.net/stats_modeling\*
+
+-   **Improving Your Statistical Inferences**: https://lakens.github.io/statistical_inferences/
+
+## Philosophy of science and writing research questions
+
+- Horoscopes (Richard McElreath), https://share.eva.mpg.de/index.php/s/9KEzTJg6oZ5dZZb
+ 
+- Writing research questions: Peters, M.A.K. *How to develop good research questions.* Nat Hum Behav (2025). https://doi.org/10.1038/s41562-025-02292-5 (a.k.a., read...a lot)
+
+- Lundberg, I., Johnson, R., & Stewart, B. M. (2021). *What is your estimand? Defining the target quantity connects statistical evidence to theory.* American Sociological Review, 86(3), 532-565.
+
+- Kahan, B. C., Hindley, J., Edwards, M., Cro, S., & Morris, T. P. (2024). *The estimands framework: a primer on the ICH E9 (R1) addendum.* bmj, 384.
+
+## Common statistical errors I've come across in CSD research
+
+- **Questionable interpretations of p-values** - https://pubmed.ncbi.nlm.nih.gov/31829657/
+
+- **And questionable reporting of p-values** - https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/
+
+- **The Difference Between “Significant” and “Not Significant” is not Itself Statistically Significant. Often known as, 'yes you do need that interaction in your model'.** - http://www.stat.columbia.edu/\~gelman/research/published/signif4.pdf
+
+- **But do your best to interpret interactions correctly** - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0271668
+
+- **Failing to report contrast coding or incorrect interpretation of contrasts** - https://www.sciencedirect.com/science/article/abs/pii/S0749596X22000213
+
+- **A long list of common statistical myths**: https://discourse.datamethods.org/t/reference-collection-to-push-back-against-common-statistical-myths/1787
+
+## Sample size planning and Statistical Power
+
+[If you're going to read anything on power, read this one]{.aside}
+
+- Hancock GR, Feng Y. *nmax and the quest to restore caution, integrity, and practicality to the sample size planning process.* Psychol Methods. 2025 Aug 11. doi: 10.1037/met0000776. Epub ahead of print. PMID: 40788705.
+
+- Ying, X., Freedland, K. E., Powell, L. H., Stuart, E. A., Ehrhardt, S., & Mayo-Wilson, E. (2025). *Determining sample size for pilot trials: a tutorial.* bmj, 390.
+
+- Powering Your Interaction: https://approachingblog.wordpress.com/2018/01/24/powering-your-interaction-2/
+
+## Writing about statistics
+
+-   **Basic Statistical Reporting for Articles Published in Biomedical Journals: The “Statistical Analyses and Methods in the Published Literature” or The SAMPL Guidelines”** https://www.equator-network.org/wp-content/uploads/2013/03/SAMPL-Guidelines-3-13-13.pdf
+
+-   **Guidance on Statistical Reporting to Help Improve Your Chances of a Favorable Statistical Review** https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7193848/pdf/rccm.202003-0477ED.pdf
+
+## Mixed-effects models
+
+For better or worse, the bread and butter of psycholinguistic and other CSD research. Conceptually fantastic, but often tricky to implement *well*. My suggestion is to start with the first link below, and then pick an introductory paper to read and go through examples (e.g., Brown 2021). Then, if you're feeling good about things, I highly suggest working through the examples in Debruine & Barr (2021). Then go apply what you've learned to your own data. Then, when you're feeling really accomplished, write it up for publication, incorporating recommendations from Meteyard & Davies (2020) as you write. Or take a class at your institution. Or take one of the workshops linked below.
+
+-   **An Introduction to Hierarchical Modeling**: http://mfviz.com/hierarchical-models/\* (Fantastic visual demonstration)
+
+-   Brown VA. **An Introduction to Linear Mixed-Effects Modeling in R.** Advances in Methods and Practices in Psychological Science. 2021;4(1). doi:10.1177/2515245920960351
+
+-   DeBruine, L. M., & Barr, D. J. (2021). U**nderstanding mixed-effects models through data simulation.** Advances in Methods and Practices in Psychological Science, 4(1), 2515245920965119.
+
+-   Meteyard, L., & Davies, R. A. (2020). **Best practice guidance for linear mixed-effects models in psychological science.** Journal of Memory and Language, 112, 104092.
+
+-   Winter, B. (2013). **Linear models and linear mixed effects models in R with linguistic applications.** arXiv preprint arXiv:1308.5499.
+
+-   Mirman, D. (2017). **Growth curve analysis and visualization using R.** Chapman and Hall/CRC.
+
+## Psychometrics
+
+- Ten Hove, D., Jorgensen, T. D., & van der Ark, L. A. (2022). *Updated guidelines on selecting an intraclass correlation coefficient for interrater reliability, with applications to incomplete observational designs.* Psychological Methods.
+
+- Ten Hove, D., Jorgensen, T. D., & Van der Ark, L. A. (2025). *How to estimate intraclass correlation coefficients for interrater reliability from planned incomplete data.* Multivariate Behavioral Research, 1-20.
+
+## Bayesian statistics
+
+You should learn how to do Bayesian stats. If you've never tried to use bayes, I promise it's more intuitive than you think. And because of modern computing and R packages like {brms}, its arguably just as easy to implement as frequentist mixed models. If you know how to use lme4, then you're already 75% of the way to using {brms}.
+
+-   **Get Started with Bayesian Analysis**: https://easystats.github.io/bayestestR/articles/bayestestR.html\*
+
+-   **Bayesian Basics**: https://m-clark.github.io/bayesian-basics
+
+-   **An Introduction to Bayesian Data Analysis for Cognitive Science**: https://vasishth.github.io/bayescogsci/book/
+
+-   Vasishth, S., Nicenboim, B., Beckman, M. E., Li, F., & Kong, E. J. (2018). **Bayesian data analysis in the phonetic sciences: A tutorial introduction.** Journal of phonetics, 71, 147-161.
+
+-   Schad, D. J., Betancourt, M., & Vasishth, S. (2021). **Toward a principled Bayesian workflow in cognitive science**. Psychological methods, 26(1), 103.
+
+-   **Statistical Rethinking**: https://xcelab.net/rm/statistical-rethinking/ (Statistical Rethinking by Richard McElreath)
+
+## Some basics of causal inference everyone should know
+
+- Regression, Fire, and Dangerous Things by Richard McElreath: https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/
+
+- Rohrer, J. M. (2024). *Causal inference for psychologists who think that causal inference is not for them.* Social and Personality Psychology Compass, 18(3), e12948.
+
+- Wysocki AC, Lawson KM, Rhemtulla M. **Statistical Control Requires Causal Justification. Advances in Methods and Practices in Psychological Science.** 2022;5(2). doi:10.1177/25152459221095823
+
+## Methods papers & resources specific to CSD
+
+-   **Stats/Methods JSLHR Special issue**: https://pubs.asha.org/toc/jslhr/62/3
+
+-   Bothe, A. K., & Richardson, J. D. (2011). **Statistical, Practical, Clinical, and Personal Significance: Definitions and Applications in Speech-Language Pathology.** In American Journal of Speech-Language Pathology (Vol. 20, Issue 3, pp. 233–242). American Speech Language Hearing Association. https://doi.org/10.1044/1058-0360(2011/10-0034)
+
+-   Morrow, E. L., Duff, M. C., & Mayberry, L. S. (2022). **Mediators, moderators, and covariates: Matching analysis approach for improved precision in cognitive-communication rehabilitation research**. Journal of Speech, Language, and Hearing Research, 65(11), 4159-4171.
+
+-   Nalborczyk, L., Batailler, C., Lœvenbruck, H., Vilain, A., & Bürkner, P. C. (2019). **An introduction to Bayesian multilevel models using brms: A case study of gender effects on vowel variability in standard Indonesian.** Journal of Speech, Language, and Hearing Research, 62(5), 1225-1242
+
+-   Cavanaugh, R., Quique, Y. M., Swiderski, A. M., Kallhoff, L., Terhorst, L., Wambaugh, J., Hula, W.D., & Evans, W. S. (2023). **Reproducibility in small-N treatment research: A tutorial using examples from aphasiology**. Journal of Speech, Language, and Hearing Research, 66(6), 1908-1927.
+    - https://rb-cavanaugh.shinyapps.io/reproducible-small-N/
+    - https://osf.io/7fp3x/
+    - https://robcavanaugh.com/images/cavanaugh2022-reproducibility.pdf
+    
+-   Oleson, J. J., Jones, M. A., Jorgensen, E. J., & Wu, Y. H. (2022). **Statistical considerations for analyzing ecological momentary assessment data.** Journal of speech, language, and hearing research, 65(1), 344-360.
+    
+-   Wiley, R. W., & Rapp, B. (2019). **Statistical analysis in Small-N Designs: using linear mixed-effects modeling for evaluating intervention effectiveness.** Aphasiology, 33(1), 1-30.
+
+-   Brydges, C. R., & Gaeta, L. (2019). **An introduction to calculating Bayes factors in JASP for speech, language, and hearing research.** Journal of speech, language, and hearing research, 62(12), 4523-4533.
+
+-   Max, L., & Onghena, P. (1999). **Some issues in the statistical analysis of completely randomized and repeated measures designs for speech, language, and hearing research.** Journal of Speech, Language, and Hearing Research, 42(2), 261-270.
+
+-   Letué, F., Martinez, M. J., Samson, A., Vilain, A., & Vilain, C. (2018). **Statistical methodology for the analysis of repeated duration data in behavioral studies.** Journal of Speech, Language, and Hearing Research, 61(3), 561-582.
+
+-   Gruber, F. A. (1999). **Tutorial: Survival analysis—A statistic for clinical, efficacy, and theoretical applications.** Journal of speech, language, and hearing research, 42(2), 432-447.
+
+-   **Open CSD**: https://www.open-csd.com/resources
+
+-   **CSD Disseminate**: https://www.csdisseminate.com
+
+## Other modeling approaches
+
+-   Fantastic and accessible primer on longitudinal analysis: McCormick, E. M., Byrne, M. L., Flournoy, J. C., Mills, K. L., & Pfeifer, J. H. (2023). **The Hitchhiker’s guide to longitudinal models: A primer on model selection for repeated-measures methods.** Developmental Cognitive Neuroscience, 63, 101281. doi:10.1016/j.dcn.2023.101281
+
+-   Winter, B., & Wieling, M. (2016). **How to analyze linguistic change using mixed models, Growth Curve Analysis and Generalized Additive Modeling.** Journal of Language Evolution, 1(1), 7-18.
+
+-   Winter, B., & Bürkner, P. C. (2021). **Poisson regression for linguists: A tutorial introduction to modelling count data with brms.** Language and Linguistics Compass, 15(11), e12439
+
+-   Bürkner, P. C. (2019). **Bayesian item response modeling in R with brms and Stan.** arXiv preprint arXiv:1905.09501.
+
+-   Reaction time: https://lindeloev.github.io/shiny-rt/
+
+-   Complex survey analysis: Zimmer, S. A., Powell, R. J., & Velásquez, I. C. (2024). Exploring Complex Survey Data Analysis Using R: A Tidy Introduction with {srvyr} and {survey}. Chapman & Hall: CRC Press. https://tidy-survey-r.github.io/tidy-survey-book/
+
+## Data Viz (please add more to this section!)
+
+-   Nordmann, E., McAleer, P., Toivo, W., Paterson, H., & DeBruine, L. M. (2022). **Data visualization using R for researchers who do not use R**. Advances in Methods and Practices in Psychological Science, 5(2), 25152459221074654.
+
+-   **ggplot2 workshop** (Thomas Lin Pedersen) https://www.youtube.com/watch?v=h29g21z0a68
+
+## Open Science & Reproducibility
+
+-   Strand, J. F. (2023). **Error tight: Exercises for lab groups to prevent research mistakes.** Psychological Methods.\*
+
+-   Brown, V. A., & Strand, J. F. (2023). **Preregistration: Practical Considerations for Speech, Language, and Hearing Research.** Journal of Speech, Language, and Hearing Research, 66(6), 1889-1898.
+
+-   **Stanford Psychology guide to doing open science:** https://poldrack.github.io/psych-open-science-guide/4_reproducibleanalysis.html
+
+-   **The Turing Way:** https://book.the-turing-way.org
+
+-   Alston, J. M., & Rick, J. A. (2021). **A beginner’s guide to conducting reproducible research.** Bulletin of the Ecological Society of America, 102(2), 1-14.
+
+## Blogs & People to follow on Twitter/Bluesky/Mastodon (please add more!)
+
+For me, a good blog post is the necessary on ramp to actually understanding a statistics paper and implementing an approach with my own data. Many of these writers/researchers are fantastic at distilling complex ideas into short(ish) blog posts that almsot anyone can understand.
+
+-   **Solomon Kurz**: https://solomonkurz.netlify.app/blog/
+
+-   **Andrew Heiss**: https://www.andrewheiss.com/blog/
+
+-   **Danielle Navarro**: https://djnavarro.net
+
+-   **Julia Rohrer & colleagues**: https://www.the100.ci
+
+-   **Allison Horst**: https://allisonhorst.com
+
+-   **Richard McElreath**: https://xcelab.net/rm/
+
+-   **Jamie Reilly**: https://www.reilly-coglab.com/reilly
+
+-   **Shravan Vasishth**: https://vasishth.github.io
+
+-   **Julia Silge**: https://juliasilge.com/blog/
+
+-   **Lisa Debruine**: https://debruine.github.io
+
+-   **TJ Mahr**: https://www.tjmahr.com/year-archive/
+
+-   **Michael Clark**: https://m-clark.github.io/code.html
+
+-   **Daniel Lakens**: http://daniellakens.blogspot.com
+
+-   **Gavin Simpson**: https://fromthebottomoftheheap.net
+
+-   **Andrew Gelman**: https://statmodeling.stat.columbia.edu
+
+-   **Kieran Healy**: https://kieranhealy.org
+
+-   **Kristoffer Magnusson**: https://rpsychologist.com/posts
+
+## Workshops (please add more!)
+
+-   https://debruine.github.io/data-sim-workshops/
+
+-   https://smart-workshops.com
+
+-   https://centerstat.org
+
+-   https://causalab.sph.harvard.edu/courses/
+
+-   Annual statistics summer school: https://vasishth.github.io
+
+## R packages
+
+These are R packages that I use frequently.
+
+-   https://tidyverse.tidyverse.org
+
+-   https://easystats.github.io/easystats/
+
+-   https://github.com/sfirke/janitor
+
+-   https://rstudio.github.io/renv/articles/renv.html
+
+-   https://here.r-lib.org
+
+-   https://www.tidytextmining.com
+
+-   https://cran.r-project.org/package=lme4
+
+-   https://paul-buerkner.github.io/brms/
+
+-   https://debruine.github.io/faux/
+
+-   https://mjskay.github.io/ggdist/
+
+-   https://glue.tidyverse.org
+
+-   https://www.tidymodels.org
+
+-   https://strengejacke.github.io/sjPlot/
+
+-   https://usethis.r-lib.org
+
+-   https://books.ropensci.org/targets/

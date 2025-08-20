@@ -2,12 +2,19 @@ project:
   type: website
 
 website:
-  title: "CSD-stats"
+  title: "Home"
   google-analytics: 
     tracking-id: "G-4YDRXVCBFQ"
     storage: "none"
     anonymize-ip: true
   navbar:
+    left: 
+      - text: "Learning R & Stats"
+        href: learning-R.qmd
+      - text: "Quant Methods"
+        href: quant-methods.qmd
+      - text: "Research, Writing, & Other Things"
+        href: research-and-writing.qmd
     search: true
     tools:
       - icon: github
@@ -16,7 +23,6 @@ website:
             href: https://github.com/rbcavanaugh/csd-stats/issues
           - text: Source Repository
             href:  https://github.com/rbcavanaugh/csd-stats
-  
     
 format:
   html:
