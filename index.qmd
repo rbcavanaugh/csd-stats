@@ -4,7 +4,7 @@ format: html
 toc: true
 ---
 
-[*Note: Originally, this website was focused on quantitative methods commonly used by research in Communication Science and Disorders, but I've made an effort to expand the focus to include rehabilitation research more brodaly (i.e., PT/OT and other allied health fields)*]{.aside}
+[*Note: Originally, this website was focused on quantitative methods commonly used by research in Communication Science and Disorders, but I've made an effort to expand the focus to include rehabilitation research more brodaly (i.e., PT/OT and other allied health fields).*]{.aside}
 
 This is a repository for resources related to learning and doing statistics and data analysis and open science and using R and other important things. These resources have been curated for (but certainly not limited to) new and seasoned researchers in rehabilitation research and related fields.
 
@@ -30,10 +30,20 @@ Learning R or any of the stats below, especially for anyone who has never writte
 
 Also, its *really* helpful to have a mentor who knows a little bit more R or stats than you, even if only to check in with occasionally or give yourself some external accountability. If you don't have that person, then its worth spending the time and effort to go find them (small plug for ASHA's [MARC](https://www.asha.org/students/mentoring/marc/) program, which I have benefited greatly from, and the many mentors who have and continue to help me learn).
 
-**A word of caution**
+## Some thoughts on AI
 
-I have not proofread this site closely and you have probably realized by now that it's full of run-on sentences and inconsistent punctuation and grammar and the like.
+Generative AI often provides wrong, inefficient, or overly complex code (especially in R). It is often frequently wrong when asked questions about statistical concepts. It uses R packages that are often not well sutied to your problem, outdated, or poorly maintained. While it can provide correct solutions to many problems, in many cases I think genAI can and will impede learning and retention of the material in this course. Moreover, copying and pasting content from genAI reduces the cognitive load during learning and retention of new material. For these reasons, I recommend anyone new to R or learning a statistical method avoid copying and pasting code.  
 
+However, generative AI can be useful for learning to code (e.g., learning why some code works and other code doesn’t or to explain a frustrating error message or to explain function documentation). Some appropriate and potentially beneficial uses of generative AI for your learning could be:
+
+- Asking genAI to explain an error message to you
+
+"Example prompt: I'm trying to read this CSV file into R, but I'm getting this error message that I pasted below. I've tried X, Y, and Z to fix the issue but none seem to be working. Can you explain the error message to me so that I can learn how to fix it?"
+
+- Asking genAI to explain why one *coding* approach works while another does not
+- Asking genAI to explain unclear documentation
+- Asking genAI to give you feedback on a paragraph you wrote for your results
+- Asking genAI to help you outline an approach to solving a problem *without* proving any code
 
 ## Contributing
 

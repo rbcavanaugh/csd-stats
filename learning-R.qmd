@@ -19,6 +19,14 @@ toc: true
 
 ## General Statistics books
 
+-   **Learning Statistics with R**: https://learningstatisticswithr.com\*
+
+-   **Improving Your Statistical Inferences**: https://lakens.github.io/statistical_inferences/
+
+-   **The Order of the Statistical Jedi: Responsibilities, Routines, and Rituals**:  https://quantpsych.net/stats_modeling\*
+
+-   **Common statistical tests are linear models (or: how to teach stats)**: https://lindeloev.github.io/tests-as-linear/
+
 -   **Statistical Rethinking**: http://xcelab.net/rm/ (2024 online lectures: https://github.com/rmcelreath/stat_rethinking_2024)\*
 
 -   **Regression and other Stories**: https://avehtari.github.io/ROS-Examples/
@@ -27,25 +35,19 @@ toc: true
 
 -   **An introduction to statistical learning**: https://www.statlearning.com
 
--   **The Order of the Statistical Jedi: Responsibilities, Routines, and Rituals**:  https://quantpsych.net/stats_modeling\*
+-   Winter, B. (2019). **Statistics for linguists: An introduction using R.** Routledge. (https://appliedstatisticsforlinguists.org/bwinter_stats_proofs.pdf)
 
--   **Improving Your Statistical Inferences**: https://lakens.github.io/statistical_inferences/
+-   **Statistics of Dom**: https://statisticsofdoom.com
 
--   **Learning Statistics with R**: https://learningstatisticswithr.com\*
+## Data Viz
 
-## General Stats tutorials & resources
-
--   Winter, B. (2019). Statistics for linguists: An introduction using R. Routledge. (https://appliedstatisticsforlinguists.org/bwinter_stats_proofs.pdf)
-
--   **Common statistical tests are linear models (or: how to teach stats)**: https://lindeloev.github.io/tests-as-linear/
-
--   **There is only one test**: http://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html implemented in an R package here: https://infer.netlify.app
-
--   **Contrast Coding**: https://debruine.github.io/faux/articles/contrasts.html (At some point you will have questions about contrast coding for categorical variables, and the answer is inevitably going to be here)
-
-## Data Viz (please add more to this section!)
+-   Wilke, C. O. (2019). **Fundamentals of data visualization: a primer on making informative and compelling figures.** O'Reilly Media. https://clauswilke.com/dataviz/
 
 -   Nordmann, E., McAleer, P., Toivo, W., Paterson, H., & DeBruine, L. M. (2022). **Data visualization using R for researchers who do not use R**. Advances in Methods and Practices in Psychological Science, 5(2), 25152459221074654.
+
+-   Kabacoff, R. (2024). **Modern data visualization with R.** Chapman and Hall/CRC. https://rkabacoff.github.io/datavis/
+
+-   Chang, W. (2018). **R graphics cookbook: practical recipes for visualizing data.** O'Reilly Media. https://r-graphics.org
 
 -   **ggplot2 workshop** (Thomas Lin Pedersen) https://www.youtube.com/watch?v=h29g21z0a68
 

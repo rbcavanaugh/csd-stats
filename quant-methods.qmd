@@ -101,6 +101,8 @@ You should learn how to do Bayesian stats. If you've never tried to use bayes, I
 
 ## Random useful things
 
+-   **There is only one test**: http://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html implemented in an R package here: https://infer.netlify.app
+
 -   **Contrast Coding**: https://debruine.github.io/faux/articles/contrasts.html (At some point you will have questions about contrast coding for categorical variables, and the answer is inevitably going to be here)
 
 -   **Reaction time**: https://lindeloev.github.io/shiny-rt/
