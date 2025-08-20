@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://rbcavanaugh.github.io/csd-stats/resources.html</loc>
+    <lastmod>2025-08-20T14:41:51.405Z</lastmod>
+  </url>
+  <url>
     <loc>https://rbcavanaugh.github.io/csd-stats/index.html</loc>
-    <lastmod>2024-11-22T03:27:58.035Z</lastmod>
+    <lastmod>2025-08-20T15:13:10.270Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rbcavanaugh.github.io/csd-stats/learning-R.html</loc>
+    <lastmod>2025-08-20T15:12:11.846Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rbcavanaugh.github.io/csd-stats/quant-methods.html</loc>
+    <lastmod>2025-08-20T15:12:14.122Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rbcavanaugh.github.io/csd-stats/research-and-writing.html</loc>
+    <lastmod>2025-08-20T15:12:15.468Z</lastmod>
   </url>
 </urlset>
