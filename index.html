@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-07-11">
 
 <title>Statistics Resources for the Rehabilitation Researcher – Home</title>
 <style>
@@ -277,13 +276,20 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 <span class="menu-text">Quant Methods</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resources.html"> 
-<span class="menu-text">Rehab/CSD Methods papers</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./research-and-writing.html"> 
 <span class="menu-text">Research, Writing, &amp; Other Things</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tutorials</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
+        <li>
+    <a class="dropdown-item" href="./tutorials/bayesian-correlation.html">
+ <span class="dropdown-text">Bayesian Basics</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -337,12 +343,6 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Website last updated on:</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 11, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -356,24 +356,22 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 <p>This is a repository for resources related to learning and doing statistics and data analysis and open science and using R and other important things. These resources have been curated for (but certainly not limited to) new and seasoned researchers in rehabilitation research and related fields.</p>
 <p>Before you get bogged down in this overwhelming list of resources, I suggest you entertain yourself with this highly enjoyable scientific article (or at least listen to it during your commute this week, there is an audio version narrated by the authors) and remember that your goal is to do science, and these are just tools you might find useful along the way.</p>
 <p><a href="https://www.experimental-history.com/p/things-could-be-better">Things Could Be Better by Adam Mastroianni</a></p>
+<p><br></p>
 <section id="getting-started" class="level2">
 <h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
 <p>My recommendation is that you use this list of resources in a very ad-hoc fashion. Some of the sections I have ordered so that the resource I find myself recommending most often for the total notice is at the top (indicated with an asterisk). Others are just lists of resources or people that I have learned a great deal from and that I think you might find useful. But if they’re on this list, then minimally I have found them helpful at some point or another.</p>
 <p>If you don’t see what you’re looking for, please consider asking for suggestions or recommendations on the <a href="https://github.com/rbcavanaugh/csd-stats/discussions">discussions page</a> (Yes, you will have to make a github account. It’s free. Students get <a href="https://education.github.com/pack">extra perks</a> and <a href="https://education.github.com/discount_requests/application">so do faculty</a>).</p>
 </section>
-<section id="a-word-of-advice" class="level2 page-columns page-full">
+<section id="a-word-of-advice" class="level2">
 <h2 class="anchored" data-anchor-id="a-word-of-advice">A word of advice</h2>
 <p>These resources are generally based around the statistical programming language R, but this is mostly because its what I was trained in, what I know the most about, and probably the scripted language used most often in CSD research. Python is cool too sometimes. I wish I knew Julia. Perhaps someone will add a section for Python and Julia. If you really don’t want to learn a scripted/statistical language like R (or python, Julia, SQL…), then I suggest you go check out <a href="https://jasp-stats.org">JASP</a>, which is a free and open-source GUI build on top of R.</p>
 <p>Learning R or any of the stats below, especially for anyone who has never written any code before, can be a daunting task. But it is a skill that is worth learning. The best way to learn R is to use it. The best way to use it is to have a project that you need to use it for. The resources below are fantastic - but I highly suggest you use them in tandem with a project you are highly motivated to do in R. For example, you do a few chapters or sections of one of these resources, then you go try to apply that knowledge in your own project and with your own data.</p>
-<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside"><em>Disclosure: github co-pilot wrote most of this section, and I think its pretty spot on, and based on how I understand LLM’s to work, then probably this is the most common advice for learning R, or programming languages, or whatever the internet is saying about learning these days.</em></span></div></div>
 <p>Also, its <em>really</em> helpful to have a mentor who knows a little bit more R or stats than you, even if only to check in with occasionally or give yourself some external accountability. If you don’t have that person, then its worth spending the time and effort to go find them (small plug for ASHA’s <a href="https://www.asha.org/students/mentoring/marc/">MARC</a> program, which I have benefited greatly from, and the many mentors who have and continue to help me learn).</p>
 </section>
-<section id="some-thoughts-on-ai" class="level2 page-columns page-full">
+<section id="some-thoughts-on-ai" class="level2">
 <h2 class="anchored" data-anchor-id="some-thoughts-on-ai">Some thoughts on AI</h2>
-<p>Generative AI often provides wrong, inefficient, or overly complex code (especially in R). It is often frequently wrong when asked questions about statistical concepts. It uses R packages that are often not well suited to your problem, outdated, or poorly maintained. While it can provide correct solutions to many problems, in many cases I think genAI can and will impede learning and retention of new skills. Moreover, copying and pasting content from genAI reduces the cognitive load during learning. For these reasons, I recommend anyone new to R or learning a statistical method be wary of using generative AI.</p>
-<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside">If you’re having a bit of imposter syndrom around coding, my strong opinion is that the idea that some people “just can’t” learn R or stats is total garbage. It’s a new skill, and will take perseverace to learn, and some folks will learn it faster than you and some will learn it slower than you. and that’s ok. And just because a resource is highly recommended, doesn’t mean it’s a good match for you or will meet you at your current level of knowledge and skills. Generative AI is nice in this sense - because it will try to answer your questions helpfully no matter how simple or complex they are.</span></div></div>
-<p>However, generative AI can be extremely useful for learning to code (e.g., learning why some code works and other code doesn’t or to explain a frustrating error message or to explain function documentation). I think this is particularly true for people who are completely new to programming/coding - many tutorials assume too much background knowledge and this can make the initial learning process extremely frustrating and result in new learners abandoning their goals, feeling like they are not skilled or knowledgeable enough to learn R, coding, or statistics.</p>
-<p>Some appropriate and potentially beneficial uses of generative AI for your learning could be:</p>
+<p>Generative AI often provides wrong, inefficient, or overly complex code (especially in R). It is often frequently wrong when asked questions about statistical concepts. It uses R packages that are often not well sutied to your problem, outdated, or poorly maintained. While it can provide correct solutions to many problems, in many cases I think genAI can and will impede learning and retention of the material in this course. Moreover, copying and pasting content from genAI reduces the cognitive load during learning and retention of new material. For these reasons, I recommend anyone new to R or learning a statistical method avoid copying and pasting code.</p>
+<p>However, generative AI can be useful for learning to code (e.g., learning why some code works and other code doesn’t or to explain a frustrating error message or to explain function documentation). Some appropriate and potentially beneficial uses of generative AI for your learning could be:</p>
 <ul>
 <li>Asking genAI to explain an error message to you</li>
 </ul>

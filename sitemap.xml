@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rbcavanaugh.github.io/csd-stats/resources.html</loc>
-    <lastmod>2025-08-25T12:36:02.214Z</lastmod>
+    <lastmod>2025-12-12T21:06:42.134Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rbcavanaugh.github.io/csd-stats/tutorials/bayesian-correlation.html</loc>
+    <lastmod>2026-07-18T21:57:30.783Z</lastmod>
   </url>
   <url>
     <loc>https://rbcavanaugh.github.io/csd-stats/index.html</loc>
-    <lastmod>2026-07-11T13:23:54.892Z</lastmod>
+    <lastmod>2026-07-18T21:41:39.423Z</lastmod>
   </url>
   <url>
     <loc>https://rbcavanaugh.github.io/csd-stats/learning-R.html</loc>
-    <lastmod>2026-07-11T12:30:27.269Z</lastmod>
+    <lastmod>2025-12-12T21:06:42.134Z</lastmod>
   </url>
   <url>
     <loc>https://rbcavanaugh.github.io/csd-stats/quant-methods.html</loc>
-    <lastmod>2026-07-11T13:11:11.009Z</lastmod>
+    <lastmod>2025-12-12T21:06:42.134Z</lastmod>
   </url>
   <url>
     <loc>https://rbcavanaugh.github.io/csd-stats/research-and-writing.html</loc>
-    <lastmod>2026-07-11T13:07:08.555Z</lastmod>
+    <lastmod>2025-12-12T21:06:42.134Z</lastmod>
   </url>
 </urlset>
