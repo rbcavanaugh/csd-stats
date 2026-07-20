@@ -276,6 +276,10 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 <span class="menu-text">Quant Methods</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Rehab/CSD Methods papers</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./research-and-writing.html"> 
 <span class="menu-text">Research, Writing, &amp; Other Things</span></a>
   </li>  
@@ -322,12 +326,19 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mixed-effects-models" id="toc-mixed-effects-models" class="nav-link active" data-scroll-target="#mixed-effects-models">Mixed-effects models</a></li>
+  <li><a href="#multilevel-mixed-effects-models" id="toc-multilevel-mixed-effects-models" class="nav-link active" data-scroll-target="#multilevel-mixed-effects-models">Multilevel / mixed-effects models</a></li>
   <li><a href="#psychometrics" id="toc-psychometrics" class="nav-link" data-scroll-target="#psychometrics">Psychometrics</a></li>
-  <li><a href="#bayesian-statistics" id="toc-bayesian-statistics" class="nav-link" data-scroll-target="#bayesian-statistics">Bayesian statistics</a></li>
-  <li><a href="#basics-of-causal-inference" id="toc-basics-of-causal-inference" class="nav-link" data-scroll-target="#basics-of-causal-inference">Basics of causal inference</a></li>
+  <li><a href="#basics-of-causal-inference-and-related-faux-pas" id="toc-basics-of-causal-inference-and-related-faux-pas" class="nav-link" data-scroll-target="#basics-of-causal-inference-and-related-faux-pas">Basics of causal inference and related faux pas</a></li>
+  <li><a href="#mediation-analysis-causal-inference-cont." id="toc-mediation-analysis-causal-inference-cont." class="nav-link" data-scroll-target="#mediation-analysis-causal-inference-cont.">Mediation Analysis (causal inference cont.)</a></li>
+  <li><a href="#interactions-moderation" id="toc-interactions-moderation" class="nav-link" data-scroll-target="#interactions-moderation">Interactions / Moderation</a></li>
+  <li><a href="#bayesian-statistics" id="toc-bayesian-statistics" class="nav-link" data-scroll-target="#bayesian-statistics">Bayesian statistics</a>
+  <ul class="collapse">
+  <li><a href="#a-section-specific-to-setting-priors" id="toc-a-section-specific-to-setting-priors" class="nav-link" data-scroll-target="#a-section-specific-to-setting-priors">A section specific to setting priors</a></li>
+  </ul></li>
+  <li><a href="#longitudinal-data-analysis" id="toc-longitudinal-data-analysis" class="nav-link" data-scroll-target="#longitudinal-data-analysis">Longitudinal Data Analysis</a></li>
+  <li><a href="#effect-sizes" id="toc-effect-sizes" class="nav-link" data-scroll-target="#effect-sizes">Effect Sizes</a></li>
   <li><a href="#sample-size-planning-and-statistical-power" id="toc-sample-size-planning-and-statistical-power" class="nav-link" data-scroll-target="#sample-size-planning-and-statistical-power">Sample size planning and Statistical Power</a></li>
-  <li><a href="#methods-papers-resources-specific-to-rehabilitaiton-research" id="toc-methods-papers-resources-specific-to-rehabilitaiton-research" class="nav-link" data-scroll-target="#methods-papers-resources-specific-to-rehabilitaiton-research">Methods papers &amp; resources specific to Rehabilitaiton Research</a></li>
+  <li><a href="#multiplicity-and-correcting-for-multiple-comparisons" id="toc-multiplicity-and-correcting-for-multiple-comparisons" class="nav-link" data-scroll-target="#multiplicity-and-correcting-for-multiple-comparisons">Multiplicity and Correcting for Multiple Comparisons</a></li>
   <li><a href="#random-useful-things" id="toc-random-useful-things" class="nav-link" data-scroll-target="#random-useful-things">Random useful things</a></li>
   </ul>
 </nav>
@@ -339,29 +350,70 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 
 
 
-<section id="mixed-effects-models" class="level2">
-<h2 class="anchored" data-anchor-id="mixed-effects-models">Mixed-effects models</h2>
-<p>For better or worse, the bread and butter of psycholinguistic and other CSD research. Conceptually fantastic, but often tricky to implement <em>well</em>. My suggestion is to start with the first link below, and then pick an introductory paper to read and go through examples (e.g., Brown 2021). Then, if you’re feeling good about things, I highly suggest working through the examples in Debruine &amp; Barr (2021). Then go apply what you’ve learned to your own data. Then, when you’re feeling really accomplished, write it up for publication, incorporating recommendations from Meteyard &amp; Davies (2020) as you write. Or take a class at your institution. Or take one of the workshops linked below.</p>
+<section id="multilevel-mixed-effects-models" class="level2">
+<h2 class="anchored" data-anchor-id="multilevel-mixed-effects-models">Multilevel / mixed-effects models</h2>
+<p>For better or worse, the bread and butter of psycholinguistic and other CSD research. Conceptually fantastic, but often tricky to implement <em>well</em>. My suggestion is to start with the first link below, and then pick an introductory paper to read and go through examples (e.g., Brown 2021) or if you prefer textbooks, check out Shaw &amp; Flake. Then, if you’re feeling good about things, I highly suggest working through the examples in Debruine &amp; Barr (2021). Then go apply what you’ve learned to your own data. Then, when you’re feeling really accomplished, write it up for publication, incorporating recommendations from Meteyard &amp; Davies (2020) as you write.</p>
 <ul>
-<li><p><strong>An Introduction to Hierarchical Modeling</strong>: http://mfviz.com/hierarchical-models/* (Fantastic visual demonstration)</p></li>
+<li><p><strong>An Introduction to Hierarchical Modeling</strong>: http://mfviz.com/hierarchical-models/ (Fantastic visual demonstration)</p></li>
+<li><p>Shaw, M. &amp; Flake, J. K. (2023) <strong>Introduction to multilevel measurement modeling</strong>. https://www.learn-mlms.com</p></li>
+<li><p>Roback, P., &amp; Legler, J. (2021). <strong>Beyond multiple linear regression: applied generalized linear models and multilevel models in R.</strong> Chapman and Hall/CRC. (Free: https://bookdown.org/roback/bookdown-BeyondMLR/)</p></li>
 <li><p>Brown VA. <strong>An Introduction to Linear Mixed-Effects Modeling in R.</strong> Advances in Methods and Practices in Psychological Science. 2021;4(1). doi:10.1177/2515245920960351</p></li>
 <li><p>DeBruine, L. M., &amp; Barr, D. J. (2021). U<strong>nderstanding mixed-effects models through data simulation.</strong> Advances in Methods and Practices in Psychological Science, 4(1), 2515245920965119.</p></li>
 <li><p>Meteyard, L., &amp; Davies, R. A. (2020). <strong>Best practice guidance for linear mixed-effects models in psychological science.</strong> Journal of Memory and Language, 112, 104092.</p></li>
 <li><p>Winter, B. (2013). <strong>Linear models and linear mixed effects models in R with linguistic applications.</strong> arXiv preprint arXiv:1308.5499.</p></li>
-<li><p>Mirman, D. (2017). <strong>Growth curve analysis and visualization using R.</strong> Chapman and Hall/CRC.</p></li>
+<li><p>Quené, H., &amp; Van Den Bergh, H. (2008). <strong>Examples of mixed-effects modeling with crossed random effects and with binomial data.</strong> Journal of Memory and Language, 59(4), 413–425. https://doi.org/10.1016/j.jml.2008.02.002</p></li>
+<li><p>Barr, D. J., Levy, R., Scheepers, C., &amp; Tily, H. J. (2013). <strong>Random effects structure for confirmatory hypothesis testing: Keep it maximal.</strong> Journal of Memory and Language, 68(3), 255–278. https://doi.org/10.1016/j.jml.2012.11.001</p></li>
+<li><p>Matuschek, H., Kliegl, R., Vasishth, S., Baayen, H., &amp; Bates, D. (2017). <strong>Balancing Type I error and power in linear mixed models.</strong> Journal of Memory and Language, 94, 305–315. https://doi.org/10.1016/j.jml.2017.01.001</p></li>
 </ul>
 </section>
 <section id="psychometrics" class="level2">
 <h2 class="anchored" data-anchor-id="psychometrics">Psychometrics</h2>
 <ul>
+<li><p>Revelle, W. (2009). <strong>An introduction to psychometric theory with applications in R.</strong> https://personality-project.org/r/book/</p></li>
 <li><p>Ten Hove, D., Jorgensen, T. D., &amp; van der Ark, L. A. (2022). <em>Updated guidelines on selecting an intraclass correlation coefficient for interrater reliability, with applications to incomplete observational designs.</em> Psychological Methods.</p></li>
 <li><p>Ten Hove, D., Jorgensen, T. D., &amp; Van der Ark, L. A. (2025). <em>How to estimate intraclass correlation coefficients for interrater reliability from planned incomplete data.</em> Multivariate Behavioral Research, 1-20.</p></li>
 <li><p>Bürkner, P. C. (2019). <strong>Bayesian item response modeling in R with brms and Stan.</strong> arXiv preprint arXiv:1905.09501.</p></li>
+<li><p>McNeish, D. (2018). <strong>Thanks coefficient alpha, we’ll take it from here.</strong> Psychological methods, 23(3), 412.</p></li>
+</ul>
+</section>
+<section id="basics-of-causal-inference-and-related-faux-pas" class="level2">
+<h2 class="anchored" data-anchor-id="basics-of-causal-inference-and-related-faux-pas">Basics of causal inference and related faux pas</h2>
+<p><em>Might be the most important content in this entire site</em></p>
+<ul>
+<li><p>Regression, Fire, and Dangerous Things by Richard McElreath: https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/</p></li>
+<li><p>Rohrer, J. M. (2024). <em>Causal inference for psychologists who think that causal inference is not for them.</em> Social and Personality Psychology Compass, 18(3), e12948. (See )</p></li>
+<li><p>Wysocki AC, Lawson KM, Rhemtulla M. <strong>Statistical Control Requires Causal Justification. Advances in Methods and Practices in Psychological Science.</strong> 2022;5(2). doi:10.1177/25152459221095823</p></li>
+<li><p><strong>Why Adjusted Regression Coefficients Are Less Descriptive Than They Look</strong>. https://rpsychologist.com/descriptive-adjustment/</p></li>
+<li><p>Lewer, D., Brothers, T., O’Nions, E., &amp; Pickavance, J. (2025). <strong>Factors associated with: Problems of using exploratory multivariable regression to identify causal risk factors.</strong> BMJ Medicine, 4(1), e001375. https://doi.org/10.1136/bmjmed-2025-001375</p></li>
+<li><p>Rohrer JM, Murayama K. <strong>These Are Not the Effects You Are Looking for: Causality and the Within-/Between-Persons Distinction in Longitudinal Data Analysis.</strong> Advances in Methods and Practices in Psychological Science. 2023;6(1). doi:10.1177/25152459221140842</p></li>
+<li><p>Rohrer, J. M. (2018). <strong>Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data.</strong> Advances in Methods and Practices in Psychological Science, 1(1), 27–42. https://doi.org/10.1177/2515245917745629</p></li>
+<li><p><strong>The Table 2 Fallacy</strong>: Westreich, D., &amp; Greenland, S. (2013). <strong>The table 2 fallacy: presenting and interpreting confounder and modifier coefficients.</strong> American journal of epidemiology, 177(4), 292-298.</p></li>
+<li><p>Lundberg, I., Johnson, R., &amp; Stewart, B. M. (2021). <em>What is your estimand? Defining the target quantity connects statistical evidence to theory.</em> American Sociological Review, 86(3), 532-565.</p></li>
+</ul>
+</section>
+<section id="mediation-analysis-causal-inference-cont." class="level2">
+<h2 class="anchored" data-anchor-id="mediation-analysis-causal-inference-cont.">Mediation Analysis (causal inference cont.)</h2>
+<p>These resources are intended to be useful to get you started with mediation, but I also recommend carefully reading the first article by Julia Rohrer and colleagues before deciding to undertake a mediation analysis.</p>
+<ul>
+<li><p>Rohrer JM, Hünermund P, Arslan RC, Elson M. <strong>That’s a Lot to Process! Pitfalls of Popular Path Models. Advances in Methods and Practices in Psychological Science.</strong> 2022;5(2). doi:10.1177/25152459221095827</p></li>
+<li><p>Rohrer JM. <strong>Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data. Advances in Methods and Practices in Psychological Science.</strong> 2018;1(1):27-42. doi:10.1177/2515245917745629</p></li>
+<li><p>Imai, K., Keele, L., Tingley, D., &amp; Yamamoto, T. (2011). <strong>Unpacking the black box of causality: Learning about causal mechanisms from experimental and observational studies.</strong> American Political Science Review, 105(4), 765-789. https://imai.fas.harvard.edu/research/files/mediationP.pdf</p></li>
+<li><p>Nguyen, T. Q., Schmid, I., &amp; Stuart, E. A. (2021). <strong>Clarifying causal mediation analysis for the applied researcher: Defining effects based on what we want to learn.</strong> Psychological Methods, 26(2), 255–271. https://doi.org/10.1037/met0000299</p></li>
+<li><p>Kline, R. B. (2015). <strong>The Mediation Myth.</strong> Basic and Applied Social Psychology, 37(4), 202–213. https://doi.org/10.1080/01973533.2015.1049349</p></li>
+</ul>
+</section>
+<section id="interactions-moderation" class="level2">
+<h2 class="anchored" data-anchor-id="interactions-moderation">Interactions / Moderation</h2>
+<ul>
+<li><p>Mize, T. D. (2019). <strong>Best practices for estimating, interpreting, and presenting nonlinear interaction effects.</strong> Sociological Science, 6, 81-117.</p></li>
+<li><p>Garofalo, S., Giovagnoli, S., Orsoni, M., Starita, F., &amp; Benassi, M. (2022). <strong>Interaction effect: Are you doing the right thing?</strong> PLOS ONE, 17(7), e0271668. https://doi.org/10.1371/journal.pone.0271668</p></li>
+<li><p>Rohrer JM, Arslan RC. <strong>Precise Answers to Vague Questions: Issues With Interactions.</strong> Advances in Methods and Practices in Psychological Science. 2021;4(2). doi:10.1177/25152459211007368</p></li>
+<li><p>Rohrer, J. M., &amp; Arel-Bundock, V. (2026). <strong>Models as Prediction Machines: How to Convert Confusing Coefficients Into Clear Quantities.</strong> Advances in Methods and Practices in Psychological Science, 9(2), 25152459261424825. https://doi.org/10.1177/25152459261424825</p></li>
 </ul>
 </section>
 <section id="bayesian-statistics" class="level2">
 <h2 class="anchored" data-anchor-id="bayesian-statistics">Bayesian statistics</h2>
-<p>You should learn how to do Bayesian stats. If you’ve never tried to use bayes, I promise it’s more intuitive than you think. And because of modern computing and R packages like {brms}, its arguably just as easy to implement as frequentist mixed models. If you know how to use lme4, then you’re already 75% of the way to using {brms}.</p>
+<p>You should learn how to do Bayesian stats. If you’ve never tried to use bayes, I promise it’s more intuitive than you think. And because of modern computing and R packages like {brms} and {rstanarm}, its arguably just as easy to implement as frequentist mixed models. If you know how to use lme4, then you’re already 75% of the way to using {brms}.</p>
 <ul>
 <li><p><strong>Get Started with Bayesian Analysis</strong>: https://easystats.github.io/bayestestR/articles/bayestestR.html*</p></li>
 <li><p><strong>Bayesian Basics</strong>: https://m-clark.github.io/bayesian-basics</p></li>
@@ -371,13 +423,32 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 <li><p>Schad, D. J., Betancourt, M., &amp; Vasishth, S. (2021). <strong>Toward a principled Bayesian workflow in cognitive science</strong>. Psychological methods, 26(1), 103.</p></li>
 <li><p><strong>Statistical Rethinking</strong>: https://xcelab.net/rm/statistical-rethinking/ (Statistical Rethinking by Richard McElreath)</p></li>
 </ul>
-</section>
-<section id="basics-of-causal-inference" class="level2">
-<h2 class="anchored" data-anchor-id="basics-of-causal-inference">Basics of causal inference</h2>
+<section id="a-section-specific-to-setting-priors" class="level3">
+<h3 class="anchored" data-anchor-id="a-section-specific-to-setting-priors">A section specific to setting priors</h3>
 <ul>
-<li><p>Regression, Fire, and Dangerous Things by Richard McElreath: https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/</p></li>
-<li><p>Rohrer, J. M. (2024). <em>Causal inference for psychologists who think that causal inference is not for them.</em> Social and Personality Psychology Compass, 18(3), e12948.</p></li>
-<li><p>Wysocki AC, Lawson KM, Rhemtulla M. <strong>Statistical Control Requires Causal Justification. Advances in Methods and Practices in Psychological Science.</strong> 2022;5(2). doi:10.1177/25152459221095823</p></li>
+<li><p>see this blue sky post: https://bsky.app/profile/bartlettje.bsky.social/post/3mhxeep3d222w</p></li>
+<li><p><strong>How Should You Think About Your Priors for a Bayesian Analysis?</strong>. https://svmiller.com/blog/2021/02/thinking-about-your-priors-bayesian-analysis/</p></li>
+<li><p>Lüdecke, D., Makowski, A. C., Klein, J., Ben-Shachar, M. S., &amp; Makowski, D. (2026). <strong>Choosing informative priors in Bayesian regression models: A simulation study and tutorial using Stan and R.</strong> Frontiers in Psychology, 17, 1856582. https://doi.org/10.3389/fpsyg.2026.1856582</p></li>
+<li><p><strong>Prior choice recommendations</strong>. https://github.com/stan-dev/stan/wiki/prior-choice-recommendations</p></li>
+<li><p><strong>How to Set Priors for Hypothesis Testing in Generalized Linear Models: A Three-Step Workflow with an Application to Binomial Models</strong> https://osf.io/preprints/psyarxiv/q7byw_v1</p></li>
+<li><p><strong>Workshop on Bayesian Inference: Priors and workflow</strong>. https://4ccoxau.github.io/PriorsWorkshop/. https://www.youtube.com/watch?v=kMSrRd4f2As</p></li>
+<li><p><strong>Different Priors, Different Posteriors</strong>. https://www.bayesrulesbook.com/chapter-4#ch4-priors</p></li>
+<li><p>Zondervan-Zwijnenburg, M., Peeters, M., Depaoli, S., &amp; Van De Schoot, R. (2017). <strong>Where Do Priors Come From? Applying Guidelines to Construct Informative Priors in Small Sample Research.</strong> Research in Human Development, 14(4), 305–320. https://doi.org/10.1080/15427609.2017.1370966</p></li>
+</ul>
+</section>
+</section>
+<section id="longitudinal-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="longitudinal-data-analysis">Longitudinal Data Analysis</h2>
+<ul>
+<li><p><strong>Fantastic and accessible primer on longitudinal analysis:</strong> McCormick, E. M., Byrne, M. L., Flournoy, J. C., Mills, K. L., &amp; Pfeifer, J. H. (2023). <strong>The Hitchhiker’s guide to longitudinal models: A primer on model selection for repeated-measures methods.</strong> Developmental Cognitive Neuroscience, 63, 101281. doi:10.1016/j.dcn.2023.101281</p></li>
+<li><p>Mirman, D. (2017). <strong>Growth curve analysis and visualization using R.</strong> Chapman and Hall/CRC.</p></li>
+</ul>
+</section>
+<section id="effect-sizes" class="level2">
+<h2 class="anchored" data-anchor-id="effect-sizes">Effect Sizes</h2>
+<ul>
+<li><p><strong>Guide to Effect Sizes and Confidence Intervals</strong>. https://matthewbjane.quarto.pub</p></li>
+<li><p><strong>Effectsize: indices of effect size.</strong> https://easystats.github.io/effectsize/</p></li>
 </ul>
 </section>
 <section id="sample-size-planning-and-statistical-power" class="level2 page-columns page-full">
@@ -389,29 +460,13 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 <li><p>Powering Your Interaction: https://approachingblog.wordpress.com/2018/01/24/powering-your-interaction-2/</p></li>
 </ul>
 </section>
-<section id="methods-papers-resources-specific-to-rehabilitaiton-research" class="level2">
-<h2 class="anchored" data-anchor-id="methods-papers-resources-specific-to-rehabilitaiton-research">Methods papers &amp; resources specific to Rehabilitaiton Research</h2>
+<section id="multiplicity-and-correcting-for-multiple-comparisons" class="level2">
+<h2 class="anchored" data-anchor-id="multiplicity-and-correcting-for-multiple-comparisons">Multiplicity and Correcting for Multiple Comparisons</h2>
+<p><em>note that this is a topic that has quite a bit of debate</em></p>
 <ul>
-<li><p><strong>Stats/Methods JSLHR Special issue</strong>: https://pubs.asha.org/toc/jslhr/62/3</p></li>
-<li><p>Bothe, A. K., &amp; Richardson, J. D. (2011). <strong>Statistical, Practical, Clinical, and Personal Significance: Definitions and Applications in Speech-Language Pathology.</strong> In American Journal of Speech-Language Pathology (Vol. 20, Issue 3, pp.&nbsp;233–242). American Speech Language Hearing Association. https://doi.org/10.1044/1058-0360(2011/10-0034)</p></li>
-<li><p>Morrow, E. L., Duff, M. C., &amp; Mayberry, L. S. (2022). <strong>Mediators, moderators, and covariates: Matching analysis approach for improved precision in cognitive-communication rehabilitation research</strong>. Journal of Speech, Language, and Hearing Research, 65(11), 4159-4171.</p></li>
-<li><p>Nalborczyk, L., Batailler, C., Lœvenbruck, H., Vilain, A., &amp; Bürkner, P. C. (2019). <strong>An introduction to Bayesian multilevel models using brms: A case study of gender effects on vowel variability in standard Indonesian.</strong> Journal of Speech, Language, and Hearing Research, 62(5), 1225-1242</p></li>
-<li><p>Cavanaugh, R., Quique, Y. M., Swiderski, A. M., Kallhoff, L., Terhorst, L., Wambaugh, J., Hula, W.D., &amp; Evans, W. S. (2023). <strong>Reproducibility in small-N treatment research: A tutorial using examples from aphasiology</strong>. Journal of Speech, Language, and Hearing Research, 66(6), 1908-1927.</p>
-<ul>
-<li>https://rb-cavanaugh.shinyapps.io/reproducible-small-N/</li>
-<li>https://osf.io/7fp3x/</li>
-<li>https://robcavanaugh.com/images/cavanaugh2022-reproducibility.pdf</li>
-</ul></li>
-<li><p>Oleson, J. J., Jones, M. A., Jorgensen, E. J., &amp; Wu, Y. H. (2022). <strong>Statistical considerations for analyzing ecological momentary assessment data.</strong> Journal of speech, language, and hearing research, 65(1), 344-360.</p></li>
-<li><p>Wiley, R. W., &amp; Rapp, B. (2019). <strong>Statistical analysis in Small-N Designs: using linear mixed-effects modeling for evaluating intervention effectiveness.</strong> Aphasiology, 33(1), 1-30.</p></li>
-<li><p>Brydges, C. R., &amp; Gaeta, L. (2019). <strong>An introduction to calculating Bayes factors in JASP for speech, language, and hearing research.</strong> Journal of speech, language, and hearing research, 62(12), 4523-4533.</p></li>
-<li><p>Max, L., &amp; Onghena, P. (1999). <strong>Some issues in the statistical analysis of completely randomized and repeated measures designs for speech, language, and hearing research.</strong> Journal of Speech, Language, and Hearing Research, 42(2), 261-270.</p></li>
-<li><p>Letué, F., Martinez, M. J., Samson, A., Vilain, A., &amp; Vilain, C. (2018). <strong>Statistical methodology for the analysis of repeated duration data in behavioral studies.</strong> Journal of Speech, Language, and Hearing Research, 61(3), 561-582.</p></li>
-<li><p>Gruber, F. A. (1999). <strong>Tutorial: Survival analysis—A statistic for clinical, efficacy, and theoretical applications.</strong> Journal of speech, language, and hearing research, 42(2), 432-447.</p></li>
-<li><p>Winter, B., &amp; Bürkner, P. C. (2021). <strong>Poisson regression for linguists: A tutorial introduction to modelling count data with brms.</strong> Language and Linguistics Compass, 15(11), e12439</p></li>
-<li><p>Winter, B., &amp; Wieling, M. (2016). <strong>How to analyze linguistic change using mixed models, Growth Curve Analysis and Generalized Additive Modeling.</strong> Journal of Language Evolution, 1(1), 7-18.</p></li>
-<li><p><strong>Open CSD</strong>: https://www.open-csd.com/resources</p></li>
-<li><p><strong>CSD Disseminate</strong>: https://www.csdisseminate.com</p></li>
+<li><p>Greenland, S., &amp; Hofman, A. (2019). Multiple comparisons controversies are about context and costs, not frequentism versus Bayesianism. European Journal of Epidemiology, 34(9), 801–808. https://doi.org/10.1007/s10654-019-00552-z</p></li>
+<li><p>Hoffmann, S., Lemster, S., Collins, G., Hapfelmeier, A., Heinze, G., Mayr, A., Schmid, M., Wilcke, J. C., &amp; Boulesteix, A. (2026). <strong>When to Adjust for Multiple Testing: A Unifying Guiding Principle.</strong> Biometrical Journal, 68(4), e70148. https://doi.org/10.1002/bimj.70148</p></li>
+<li><p>Hooper, R. (2025). To adjust, or not to adjust, for multiple comparisons. Journal of Clinical Epidemiology, 180, 111688. https://doi.org/10.1016/j.jclinepi.2025.111688</p></li>
 </ul>
 </section>
 <section id="random-useful-things" class="level2">
@@ -421,7 +476,6 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 <li><p><strong>Contrast Coding</strong>: https://debruine.github.io/faux/articles/contrasts.html (At some point you will have questions about contrast coding for categorical variables, and the answer is inevitably going to be here)</p></li>
 <li><p><strong>Reaction time</strong>: https://lindeloev.github.io/shiny-rt/</p></li>
 <li><p><strong>Complex survey analysis:</strong> Zimmer, S. A., Powell, R. J., &amp; Velásquez, I. C. (2024). Exploring Complex Survey Data Analysis Using R: A Tidy Introduction with {srvyr} and {survey}. Chapman &amp; Hall: CRC Press. https://tidy-survey-r.github.io/tidy-survey-book/</p></li>
-<li><p><strong>Fantastic and accessible primer on longitudinal analysis:</strong> McCormick, E. M., Byrne, M. L., Flournoy, J. C., Mills, K. L., &amp; Pfeifer, J. H. (2023). <strong>The Hitchhiker’s guide to longitudinal models: A primer on model selection for repeated-measures methods.</strong> Developmental Cognitive Neuroscience, 63, 101281. doi:10.1016/j.dcn.2023.101281</p></li>
 </ul>
 
 
