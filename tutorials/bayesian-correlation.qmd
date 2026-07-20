@@ -1,0 +1,924 @@
+---
+title: "Bayesian Basics: Prior, Likelihood, Posterior"
+subtitle: "An interactive walkthrough of Bayesian concepts using a correlation coefficient"
+page-layout: full
+---
+
+Statistical inference is generally approached in one of two ways. Traditional (frequentist) statistics produce a fixed point estimate and describe uncertainty through long-run frequency properties (confidence intervals), and test hypotheses by asking how probable the observed data (or something more extreme) would be if the null hypothesis (no difference, no correlation, etc.) were true. This approach has led to substantial critical discussion and calls for change, though it is rarely a criticism of the method and more often the ways in which is it (mis)applied.
+
+The Bayesian method is one such alternative approach. Rather than treating the parameter of interest as a fixed but unknown quantity to be estimated, it treats it as uncertain, and describes that uncertainty as a full probability distribution. That distribution combines a starting belief (the prior) and the observed data (via the likelihood) to produce an updated belief (the posterior). The Bayesian method is built on Bayes' theorem, which says that our updated belief about something (the posterior) is proportional to how well the data fit each possible value (the likelihood), weighted by how plausible we thought each value was to begin with (the prior).
+
+
+$$
+P(H \mid \text{data}) \propto P(\text{data} \mid H) \times P(H)
+$$
+
+> *Bayes Theorem: $P(H \mid \text{data})$ is the **posterior**, the probability of a hypothesis $H$ given the
+> data; $P(\text{data} \mid H)$ is the **likelihood**, the probability of the observed data given that
+> hypothesis; and $P(H)$ is the **prior**, the probability of that hypothesis before seeing any data.
+> Frequentist statistics (e.g., p-values) give us something different, $P(\text{data} \mid H)$, though this is
+> often misinterpreted as $P(H \mid \text{data})$.*
+
+
+This page covers these Bayesian concepts using a simple correlation as a concrete example. The controls below let you explore how sample size, the true underlying correlation, and the choice of prior all shape the posterior.
+
+```{=html}
+<style>
+  /* Widget-scoped theme tokens. Matches the site's cosmo (light) / superhero
+     (dark) Bootswatch themes; driven by html[data-bs-theme], with an OS-level
+     fallback for any context where that attribute isn't set. */
+  .bayes-widget{
+    --ink:#373a3c; --muted:#6c757d; --panel-bg:#f8f9fa; --panel-border:#dee2e6;
+    --prior:#F8766D; --likelihood:#00BA38; --posterior:#619CFF;
+    --accent:#2b6cb0;
+    --select-bg:#fff; --btn-bg:#fff; --btn-border:#ced4da; --btn-color:#373a3c;
+    --btn-hover-bg:#f1f3f5; --stat-value-color:#212529; --label-color:#373a3c;
+    --axis-text:#6c757d; --axis-line:#ced4da; --gridline:#eee; --arrow-label:#6c757d;
+    --legend-color:#495057; --quote-color:#6c757d; --tick-color:#adb5bd;
+    --stats-box-border:#dee2e6;
+  }
+  :root[data-bs-theme="dark"] .bayes-widget{
+    --ink:#ebebeb; --muted:#adb5bd; --panel-bg:#1b3349; --panel-border:#2c4a63;
+    --select-bg:#1b3349; --btn-bg:#1b3349; --btn-border:#3a5872; --btn-color:#ebebeb;
+    --btn-hover-bg:#24425a; --stat-value-color:#ffffff; --label-color:#ebebeb;
+    --axis-text:#adb5bd; --axis-line:#3a5872; --gridline:#24425a; --arrow-label:#adb5bd;
+    --legend-color:#cdd6dd; --quote-color:#b8c2ca; --tick-color:#8fa3b3;
+    --stats-box-border:#2c4a63;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-bs-theme]) .bayes-widget{
+      --ink:#ebebeb; --muted:#adb5bd; --panel-bg:#1b3349; --panel-border:#2c4a63;
+      --select-bg:#1b3349; --btn-bg:#1b3349; --btn-border:#3a5872; --btn-color:#ebebeb;
+      --btn-hover-bg:#24425a; --stat-value-color:#ffffff; --label-color:#ebebeb;
+      --axis-text:#adb5bd; --axis-line:#3a5872; --gridline:#24425a; --arrow-label:#adb5bd;
+      --legend-color:#cdd6dd; --quote-color:#b8c2ca; --tick-color:#8fa3b3;
+      --stats-box-border:#2c4a63;
+    }
+  }
+
+  .bayes-widget .control-panel{
+    background-color:var(--panel-bg); border:1px solid var(--panel-border); border-radius:8px;
+    padding:20px 24px 12px; margin: 28px 0 22px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  .bayes-widget .control-row{ display:flex; flex-wrap:wrap; gap:22px; margin-bottom:14px; }
+  .bayes-widget .control-row.row2{ align-items:flex-start; }
+  .bayes-widget .control{ flex:1 1 200px; min-width:180px; }
+  .bayes-widget .control label{ display:block; font-weight:600; color:var(--label-color); font-size:0.88em; margin-bottom:6px; }
+  .bayes-widget .control .value-row{ display:flex; align-items:center; gap:8px; }
+  .bayes-widget .control input[type=range]{ flex:1; accent-color:var(--accent); }
+  .bayes-widget .control .bubble{
+    background:var(--accent); color:#fff; font-size:0.78em; font-weight:600;
+    border-radius:4px; padding:2px 6px; min-width:2.4em; text-align:center;
+  }
+  .bayes-widget .control .ticks{ display:flex; justify-content:space-between; font-size:0.72em; color:var(--tick-color); margin-top:2px; padding: 0 2px;}
+  .bayes-widget .control select{
+    width:100%; padding:7px 8px; border-radius:6px; border:1px solid var(--panel-border);
+    background:var(--select-bg); color:var(--ink); font-size:0.9em;
+  }
+  .bayes-widget .btn{
+    background:var(--btn-bg); border:1px solid var(--btn-border); color:var(--btn-color); border-radius:6px;
+    padding:8px 14px; font-size:0.85em; cursor:pointer; transition:background .12s,border-color .12s;
+  }
+  .bayes-widget .btn:hover{ background:var(--btn-hover-bg); }
+  .bayes-widget .btn.primary{ border-color:var(--accent); color:var(--accent); }
+  .bayes-widget .btn.primary:hover{ background:var(--btn-hover-bg); }
+  .bayes-widget .randomize-cell{ text-align:center; }
+
+  .bayes-widget .label-row{ display:flex; align-items:center; gap:6px; margin-bottom:6px; }
+  .bayes-widget .label-row label{ margin-bottom:0; }
+  .bayes-widget .info-wrap{ position:relative; display:inline-flex; align-items:center; }
+  .bayes-widget .info-icon{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:15px; height:15px; border-radius:50%; font-size:11px; font-style:italic; font-weight:700;
+    line-height:1; color:var(--accent); border:1px solid var(--accent); cursor:help;
+  }
+  .bayes-widget .info-tooltip{
+    position:absolute; left:0; top:135%; z-index:20;
+    width:260px; max-width:70vw;
+    background:var(--panel-bg); color:var(--ink); border:1px solid var(--panel-border);
+    border-radius:6px; padding:10px 12px; font-size:0.82em; font-weight:400; line-height:1.4;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+    opacity:0; visibility:hidden; transition:opacity .12s ease;
+    pointer-events:none;
+  }
+  .bayes-widget .info-wrap:hover .info-tooltip,
+  .bayes-widget .info-wrap:focus-within .info-tooltip{
+    opacity:1; visibility:visible;
+  }
+
+  .bayes-widget .chart-wrap{ width:100%; }
+  .bayes-widget svg#triplot{ width:100%; height:auto; display:block; overflow:visible; }
+  .bayes-widget .density-path{ stroke-width:1.6; }
+  .bayes-widget .legend{ display:flex; justify-content:center; gap:26px; margin-top:6px; font-size:0.88em; color:var(--legend-color);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
+  .bayes-widget .legend .swatch{ display:inline-block; width:13px; height:13px; border-radius:3px; margin-right:6px; vertical-align:-2px; }
+  .bayes-widget .arrow-label{ font-size:11px; fill:var(--arrow-label); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+  .bayes-widget .axis text{ font-size:11px; fill:var(--axis-text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
+  .bayes-widget .axis path, .bayes-widget .axis line{ stroke:var(--axis-line); }
+  .bayes-widget .axis-title{ font-size:13px; fill:var(--legend-color); font-style:italic; }
+  .bayes-widget .gridline{ stroke:var(--gridline); stroke-width:1; }
+
+  .bayes-widget .stats-box{
+    max-width:1200px; margin:44px auto 0; border:1px solid var(--stats-box-border); border-radius:10px;
+    padding:22px 24px; background-color:var(--panel-bg); box-shadow:0 1px 3px rgba(0,0,0,.06);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  .bayes-widget .stats-row{ display:flex; flex-wrap:wrap; gap:16px; }
+  .bayes-widget .stat-block{ flex:1 1 200px; text-align:center; }
+  .bayes-widget .stat-btn{
+    width:100%; white-space:normal; line-height:1.25; font-size:0.92em; padding:10px 14px;
+    background:var(--btn-bg); border:1px solid var(--btn-border); border-radius:6px; cursor:pointer; color:var(--btn-color);
+  }
+  .bayes-widget .stat-btn.active{ background:var(--posterior); border-color:var(--posterior); color:#fff; }
+  .bayes-widget .stat-value{ margin-top:8px; font-size:1.15em; font-weight:700; color:var(--stat-value-color); }
+  .bayes-widget .reset-row{ text-align:center; margin-top:18px; }
+</style>
+```
+
+
+```{ojs}
+//| echo: false
+d3 = require("d3@7")
+```
+
+```{ojs}
+//| echo: false
+bayesTutorial = {
+  /* =========================================================================
+   * MATH
+   * Exact analytic posterior for Pearson's rho under BayesFactor's
+   * "Jeffreys-beta*" model (Ly, Marsman & Wagenmakers, 2018):
+   *
+   *   posterior(rho | r, n) proportional to
+   *     (1-rho^2)^((n-1)/2 + 1/rscale - 1) * (1-rho*r)^(-(n-3/2))
+   *       * 2F1(1/2, 1/2; n-1/2; (rho*r+1)/2)
+   *
+   * Prior on rho is a shifted/scaled Beta(1/rscale, 1/rscale) on [-1,1].
+   * The "likelihood" curve shown is the standard Fisher-z approximation to
+   * the sampling distribution of r (matching the reference R/Shiny app),
+   * transformed back to the rho scale.
+   *
+   * All three curves are rendered as closed-form densities (no MCMC/KDE),
+   * validated against BayesFactor::correlationBF()+posterior() in R to
+   * within MCMC noise.
+   * ========================================================================= */
+
+  const RSCALE = {
+    "medium.narrow": 1 / Math.sqrt(27),
+    medium: 1 / 3,
+    wide: 1 / Math.sqrt(3),
+    ultrawide: 1,
+  };
+
+  // Lanczos approximation for log(Gamma(x))
+  const LANCZOS_G = 7;
+  const LANCZOS_COEF = [
+    0.99999999999980993, 676.5203681218851, -1259.1392167224028,
+    771.32342877765313, -176.61502916214059, 12.507343278686905,
+    -0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7,
+  ];
+  function lgamma(x) {
+    if (x < 0.5) {
+      return Math.log(Math.PI / Math.sin(Math.PI * x)) - lgamma(1 - x);
+    }
+    x -= 1;
+    let a = LANCZOS_COEF[0];
+    const t = x + LANCZOS_G + 0.5;
+    for (let i = 1; i < LANCZOS_COEF.length; i++) a += LANCZOS_COEF[i] / (x + i);
+    return 0.5 * Math.log(2 * Math.PI) + (x + 0.5) * Math.log(t) - t + Math.log(a);
+  }
+  function logBeta(a, b) {
+    return lgamma(a) + lgamma(b) - lgamma(a + b);
+  }
+  function atanh(x) {
+    return 0.5 * Math.log((1 + x) / (1 - x));
+  }
+
+  // log 2F1(1/2, 1/2; c; z) via term-ratio series, z in (0,1)
+  function log2F1Half(c, z, maxTerms = 3000, tol = 1e-13) {
+    let term = 1.0;
+    let sum = 1.0;
+    for (let k = 0; k < maxTerms; k++) {
+      term *= ((0.5 + k) * (0.5 + k) * z) / ((c + k) * (k + 1));
+      sum += term;
+      if (Math.abs(term) < tol * Math.abs(sum)) break;
+    }
+    return Math.log(sum);
+  }
+
+  function priorLogDensity(rho, a) {
+    const constant = (2 * a - 1) * Math.LN2 + logBeta(a, a);
+    return (a - 1) * Math.log(1 - rho * rho) - constant;
+  }
+
+  function likelihoodLogDensity(rho, r, n) {
+    const zr = atanh(r);
+    const se = 1 / Math.sqrt(n - 3);
+    const z = atanh(rho);
+    const logNormal = -0.5 * Math.log(2 * Math.PI) - Math.log(se) - 0.5 * Math.pow((z - zr) / se, 2);
+    return logNormal - Math.log(1 - rho * rho); // + log|dz/drho|
+  }
+
+  function posteriorLogKernel(rho, r, n, a) {
+    const thetaExp = (n - 1) / 2 + a - 1;
+    const c = n - 0.5;
+    const z = (rho * r + 1) / 2;
+    return (
+      thetaExp * Math.log(1 - rho * rho) -
+      (n - 1.5) * Math.log(1 - rho * r) +
+      log2F1Half(c, z)
+    );
+  }
+
+  function trapNormalize(xs, unnorm) {
+    let area = 0;
+    for (let i = 0; i < xs.length - 1; i++) {
+      area += ((unnorm[i] + unnorm[i + 1]) / 2) * (xs[i + 1] - xs[i]);
+    }
+    return unnorm.map((v) => v / area);
+  }
+
+  function cumulativeTrap(xs, pdf) {
+    const cdf = new Array(xs.length).fill(0);
+    for (let i = 1; i < xs.length; i++) {
+      cdf[i] = cdf[i - 1] + ((pdf[i - 1] + pdf[i]) / 2) * (xs[i] - xs[i - 1]);
+    }
+    return cdf;
+  }
+
+  function quantile(xs, cdf, q) {
+    if (q <= cdf[0]) return xs[0];
+    for (let i = 1; i < cdf.length; i++) {
+      if (cdf[i] >= q) {
+        const t = (q - cdf[i - 1]) / (cdf[i] - cdf[i - 1] || 1e-12);
+        return xs[i - 1] + t * (xs[i] - xs[i - 1]);
+      }
+    }
+    return xs[xs.length - 1];
+  }
+
+  function interpCdf(xs, cdf, x0) {
+    if (x0 <= xs[0]) return 0;
+    if (x0 >= xs[xs.length - 1]) return 1;
+    for (let i = 1; i < xs.length; i++) {
+      if (xs[i] >= x0) {
+        const t = (x0 - xs[i - 1]) / (xs[i] - xs[i - 1]);
+        return cdf[i - 1] + t * (cdf[i] - cdf[i - 1]);
+      }
+    }
+    return 1;
+  }
+
+  function densityAt(xs, pdf, x0) {
+    if (x0 <= xs[0]) return pdf[0];
+    if (x0 >= xs[xs.length - 1]) return pdf[pdf.length - 1];
+    for (let i = 1; i < xs.length; i++) {
+      if (xs[i] >= x0) {
+        const t = (x0 - xs[i - 1]) / (xs[i] - xs[i - 1]);
+        return pdf[i - 1] + t * (pdf[i] - pdf[i - 1]);
+      }
+    }
+    return pdf[pdf.length - 1];
+  }
+
+  // ---- seeded RNG (mulberry32) + Box-Muller gaussian, mirrors the R app's
+  // set.seed(); x <- rnorm(n); y <- rho*x + sqrt(1-rho^2)*rnorm(n) pipeline ----
+  function mulberry32(seed) {
+    let a = seed >>> 0;
+    return function () {
+      a |= 0;
+      a = (a + 0x6d2b79f5) | 0;
+      let t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  function makeGaussian(rng) {
+    let spare = null;
+    return function () {
+      if (spare !== null) {
+        const v = spare;
+        spare = null;
+        return v;
+      }
+      let u, v, s;
+      do {
+        u = rng() * 2 - 1;
+        v = rng() * 2 - 1;
+        s = u * u + v * v;
+      } while (s >= 1 || s === 0);
+      const mul = Math.sqrt((-2 * Math.log(s)) / s);
+      spare = v * mul;
+      return u * mul;
+    };
+  }
+  function pearson(x, y) {
+    const n = x.length;
+    const mx = x.reduce((a, b) => a + b, 0) / n;
+    const my = y.reduce((a, b) => a + b, 0) / n;
+    let sxy = 0, sxx = 0, syy = 0;
+    for (let i = 0; i < n; i++) {
+      const dx = x[i] - mx, dy = y[i] - my;
+      sxy += dx * dy; sxx += dx * dx; syy += dy * dy;
+    }
+    return sxy / Math.sqrt(sxx * syy);
+  }
+  function simulateRObs(n, trueRho, seed) {
+    const rng = mulberry32(seed);
+    const gauss = makeGaussian(rng);
+    const x = new Array(n), y = new Array(n);
+    const s = Math.sqrt(1 - trueRho * trueRho);
+    for (let i = 0; i < n; i++) {
+      x[i] = gauss();
+      y[i] = trueRho * x[i] + s * gauss();
+    }
+    return pearson(x, y);
+  }
+
+  const GRID_N = 1201;
+  function makeGrid() {
+    const lo = -0.9995, hi = 0.9995;
+    const xs = new Array(GRID_N);
+    for (let i = 0; i < GRID_N; i++) xs[i] = lo + ((hi - lo) * i) / (GRID_N - 1);
+    return xs;
+  }
+  const XS = makeGrid();
+
+  function computeState(params) {
+    const { trueRho, n, ropeRange, ciWidth, priorChoice, seed } = params;
+    const rscale = RSCALE[priorChoice];
+    const a = 1 / rscale;
+    const rObs = simulateRObs(n, trueRho, seed);
+
+    const priorPdfUnnorm = XS.map((rho) => Math.exp(priorLogDensity(rho, a)));
+    const priorPdf = trapNormalize(XS, priorPdfUnnorm);
+
+    const likPdfUnnorm = XS.map((rho) => Math.exp(likelihoodLogDensity(rho, rObs, n)));
+    const likPdf = trapNormalize(XS, likPdfUnnorm);
+
+    const postLogK = XS.map((rho) => posteriorLogKernel(rho, rObs, n, a));
+    const maxLog = Math.max(...postLogK);
+    const postUnnorm = postLogK.map((l) => Math.exp(l - maxLog));
+    const postPdf = trapNormalize(XS, postUnnorm);
+    const postCdf = cumulativeTrap(XS, postPdf);
+
+    const median = quantile(XS, postCdf, 0.5);
+    const ciLow = quantile(XS, postCdf, (1 - ciWidth) / 2);
+    const ciHigh = quantile(XS, postCdf, 1 - (1 - ciWidth) / 2);
+    const massAtZero = interpCdf(XS, postCdf, 0);
+    const posMass = 1 - massAtZero;
+    const pdPct = Math.max(posMass, 1 - posMass) * 100;
+    const pdDirection = posMass >= 0.5 ? 1 : -1;
+    const ropeLow = -ropeRange, ropeHigh = ropeRange;
+    const ropePct = (interpCdf(XS, postCdf, ropeHigh) - interpCdf(XS, postCdf, ropeLow)) * 100;
+    const medianDensity = densityAt(XS, postPdf, median);
+
+    return {
+      xs: XS, priorPdf, likPdf, postPdf,
+      median, medianDensity, ciLow, ciHigh, pdPct, pdDirection,
+      ropeLow, ropeHigh, ropePct, rObs,
+    };
+  }
+
+  /* =========================================================================
+   * UI
+   * ========================================================================= */
+
+  const root = document.createElement("div");
+  root.className = "bayes-widget";
+
+  const params = {
+    trueRho: 0.5,
+    n: 25,
+    ropeRange: 0.1,
+    ciWidth: 0.95,
+    priorChoice: "medium",
+    seed: 609,
+  };
+  let highlightMode = "none"; // none | median | ci | pd | rope
+
+  function fmt(v, d) {
+    return Number(v).toFixed(d);
+  }
+
+  function tickLabels(min, max, step, count) {
+    const labels = [];
+    for (let i = 0; i < count; i++) {
+      let v = min + ((max - min) * i) / (count - 1);
+      // snap to step grid for clean labels
+      v = Math.round(v / step) * step;
+      labels.push(v);
+    }
+    return labels;
+  }
+
+  function slider({ key, label, min, max, step, decimals, tickCount = 9 }) {
+    const wrap = document.createElement("div");
+    wrap.className = "control";
+    const lab = document.createElement("label");
+    lab.textContent = label;
+    const valueRow = document.createElement("div");
+    valueRow.className = "value-row";
+    const input = document.createElement("input");
+    input.type = "range";
+    input.min = min; input.max = max; input.step = step; input.value = params[key];
+    const bubble = document.createElement("span");
+    bubble.className = "bubble";
+    bubble.textContent = fmt(params[key], decimals);
+    valueRow.appendChild(input);
+    valueRow.appendChild(bubble);
+
+    const ticks = document.createElement("div");
+    ticks.className = "ticks";
+    tickLabels(min, max, step, tickCount).forEach((v) => {
+      const s = document.createElement("span");
+      s.textContent = fmt(v, decimals);
+      ticks.appendChild(s);
+    });
+
+    input.addEventListener("input", () => {
+      params[key] = +input.value;
+      bubble.textContent = fmt(params[key], decimals);
+      update();
+    });
+
+    wrap.appendChild(lab);
+    wrap.appendChild(valueRow);
+    wrap.appendChild(ticks);
+    return { wrap, input, bubble };
+  }
+
+  const panel = document.createElement("div");
+  panel.className = "control-panel";
+
+  const row1 = document.createElement("div");
+  row1.className = "control-row";
+  const sTrueRho = slider({ key: "trueRho", label: "True correlation", min: -0.99, max: 0.99, step: 0.01, decimals: 2 });
+  const sN = slider({ key: "n", label: "Sample size (n)", min: 5, max: 500, step: 1, decimals: 0 });
+  const sRope = slider({ key: "ropeRange", label: "ROPE range (+/-)", min: 0.01, max: 0.5, step: 0.01, decimals: 2 });
+  const sCi = slider({ key: "ciWidth", label: "Credible interval width", min: 0.5, max: 0.99, step: 0.01, decimals: 2 });
+  row1.appendChild(sTrueRho.wrap);
+  row1.appendChild(sN.wrap);
+  row1.appendChild(sRope.wrap);
+  row1.appendChild(sCi.wrap);
+
+  const row2 = document.createElement("div");
+  row2.className = "control-row row2";
+
+  const priorDescriptions = {
+    "medium.narrow": "correlations stronger than about ±0.6 become increasingly implausible.",
+    "medium": "correlations stronger than about ±0.7 become increasingly implausible.",
+    "wide": "correlations stronger than about ±0.85 become increasingly implausible, though even these aren't ruled out.",
+    "ultrawide": "every possible correlation, from -1 to 1, is considered equally plausible before seeing the data.",
+  };
+
+  const priorWrap = document.createElement("div");
+  priorWrap.className = "control";
+  const priorLabelRow = document.createElement("div");
+  priorLabelRow.className = "label-row";
+  const priorLabel = document.createElement("label");
+  priorLabel.textContent = "Prior Distribution";
+  const infoWrap = document.createElement("span");
+  infoWrap.className = "info-wrap";
+  const infoIcon = document.createElement("span");
+  infoIcon.className = "info-icon";
+  infoIcon.textContent = "i";
+  infoIcon.tabIndex = 0;
+  const infoTooltip = document.createElement("span");
+  infoTooltip.className = "info-tooltip";
+  infoWrap.appendChild(infoIcon);
+  infoWrap.appendChild(infoTooltip);
+  priorLabelRow.appendChild(priorLabel);
+  priorLabelRow.appendChild(infoWrap);
+
+  function updatePriorTooltip() {
+    infoTooltip.textContent = `The current prior says that ${priorDescriptions[params.priorChoice]}`;
+  }
+  updatePriorTooltip();
+
+  const prioSelect = document.createElement("select");
+  ["medium.narrow", "medium", "wide", "ultrawide"].forEach((choice) => {
+    const opt = document.createElement("option");
+    opt.value = choice; opt.textContent = choice;
+    if (choice === params.priorChoice) opt.selected = true;
+    prioSelect.appendChild(opt);
+  });
+  prioSelect.addEventListener("change", () => {
+    params.priorChoice = prioSelect.value;
+    updatePriorTooltip();
+    update();
+  });
+  priorWrap.appendChild(priorLabelRow);
+  priorWrap.appendChild(prioSelect);
+
+  const sSeed = slider({ key: "seed", label: "Random seed", min: 1, max: 1000, step: 1, decimals: 0 });
+
+  const randWrap = document.createElement("div");
+  randWrap.className = "control randomize-cell";
+  const randSpacerLabel = document.createElement("label");
+  randSpacerLabel.textContent = "Random seed";
+  randSpacerLabel.style.visibility = "hidden";
+  const randBtn = document.createElement("button");
+  randBtn.className = "btn";
+  randBtn.textContent = "Random Seed";
+  randBtn.addEventListener("click", () => {
+    params.seed = 1 + Math.floor(Math.random() * 1000);
+    sSeed.input.value = params.seed;
+    sSeed.bubble.textContent = fmt(params.seed, 0);
+    update();
+  });
+  randWrap.appendChild(randSpacerLabel);
+  randWrap.appendChild(randBtn);
+
+  row2.appendChild(priorWrap);
+  row2.appendChild(sSeed.wrap);
+  row2.appendChild(randWrap);
+
+  panel.appendChild(row1);
+  panel.appendChild(row2);
+  root.appendChild(panel);
+
+  // ---- chart ----
+  const chartWrap = document.createElement("div");
+  chartWrap.className = "chart-wrap";
+  root.appendChild(chartWrap);
+
+  const W = 1200, H = 634;
+  const MARGIN = { top: 20, right: 30, bottom: 40, left: 30 };
+  const ARROWS_H = 118;
+  const plotTop = MARGIN.top;
+  const plotBottom = H - MARGIN.bottom - ARROWS_H;
+  const plotHeight = plotBottom - plotTop;
+  const axisY = plotBottom + 24;
+  const arrowRowY = [axisY + 55, axisY + 80, axisY + 105];
+
+  const svg = d3.select(chartWrap)
+    .append("svg")
+    .attr("id", "triplot")
+    .attr("viewBox", `0 0 ${W} ${H}`);
+
+  const xScale = d3.scaleLinear().domain([-1, 1]).range([MARGIN.left, W - MARGIN.right]);
+  let yScale = d3.scaleLinear().range([plotBottom, plotTop]);
+
+  // defs: arrowheads
+  const defs = svg.append("defs");
+  function addMarker(id, color) {
+    defs.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 10")
+      .attr("refX", 5).attr("refY", 5)
+      .attr("markerWidth", 6).attr("markerHeight", 6)
+      .attr("orient", "auto-start-reverse")
+      .append("path")
+      .attr("d", "M0,0 L10,5 L0,10 Z")
+      .attr("fill", color);
+  }
+  addMarker("arrow-grey", "#888");
+  addMarker("arrow-blue", "#2b6cb0");
+
+  // gridlines
+  const gGridX = svg.append("g").attr("class", "gridlines");
+  const gGridY = svg.append("g").attr("class", "gridlines");
+
+  // rope band
+  const ropeRect = svg.append("rect").attr("fill", "#808080");
+
+  // density areas + lines
+  const areaGen = () =>
+    d3.area()
+      .x((d, i) => xScale(XS[i]))
+      .y0(plotBottom)
+      .y1((d) => yScale(d));
+  const lineGen = () =>
+    d3.line()
+      .x((d, i) => xScale(XS[i]))
+      .y((d) => yScale(d));
+
+  const distGroups = {};
+  ["prior", "likelihood", "posterior"].forEach((key) => {
+    const g = svg.append("g").attr("class", `dist-${key}`);
+    const area = g.append("path").attr("class", "density-area");
+    const line = g.append("path").attr("class", "density-path");
+    distGroups[key] = { g, area, line };
+  });
+
+  const highlightArea = svg.append("path")
+    .attr("class", "highlight-area")
+    .attr("fill", "#619CFF")
+    .attr("fill-opacity", 0);
+
+  const zeroLine = svg.append("line").attr("stroke-width", 1.3);
+  const ciLine1 = svg.append("line").attr("stroke-width", 1.2).attr("stroke-dasharray", "5,4");
+  const ciLine2 = svg.append("line").attr("stroke-width", 1.2).attr("stroke-dasharray", "5,4");
+
+  const medianDot = svg.append("circle")
+    .attr("r", 7)
+    .attr("fill", "black")
+    .attr("stroke", "white")
+    .attr("stroke-width", 2.2);
+
+  const gAxis = svg.append("g").attr("class", "axis").attr("transform", `translate(0, ${axisY})`);
+  svg.append("text")
+    .attr("class", "axis-title")
+    .attr("x", W / 2)
+    .attr("y", axisY + 34)
+    .attr("text-anchor", "middle")
+    .text("ρ"); // rho
+
+  // arrow rows (CI, ROPE, PD)
+  function makeArrowRow(y, labelText) {
+    const g = svg.append("g");
+    const label = g.append("text")
+      .attr("class", "arrow-label")
+      .attr("x", MARGIN.left - 4)
+      .attr("y", y + 4)
+      .attr("text-anchor", "start")
+      .text(labelText);
+    const line = g.append("line")
+      .attr("y1", y).attr("y2", y)
+      .attr("stroke", "#888")
+      .attr("stroke-width", 2);
+    return { g, line, label };
+  }
+  const ciArrow = makeArrowRow(arrowRowY[0], "CI");
+  const ropeArrow = makeArrowRow(arrowRowY[1], "ROPE");
+  const pdArrow = makeArrowRow(arrowRowY[2], "PD");
+  ciArrow.line.attr("x1", MARGIN.left + 26);
+  ropeArrow.line.attr("x1", MARGIN.left + 26);
+  pdArrow.line.attr("x1", MARGIN.left + 26);
+  ciArrow.label.attr("x", MARGIN.left + 26);
+  ropeArrow.label.attr("x", MARGIN.left + 26);
+  pdArrow.label.attr("x", MARGIN.left + 26);
+  // reposition labels to sit just left of the plot, arrows start at plot left edge
+  ciArrow.label.attr("x", 2).attr("text-anchor", "start");
+  ropeArrow.label.attr("x", 2).attr("text-anchor", "start");
+  pdArrow.label.attr("x", 2).attr("text-anchor", "start");
+  ciArrow.line.attr("x1", xScale(-1));
+  ropeArrow.line.attr("x1", xScale(-1));
+  pdArrow.line.attr("x1", xScale(-1));
+
+  // legend
+  const legend = document.createElement("div");
+  legend.className = "legend";
+  legend.innerHTML = `
+    <span><span class="swatch" style="background:var(--prior)"></span>Prior</span>
+    <span><span class="swatch" style="background:var(--likelihood)"></span>Likelihood</span>
+    <span><span class="swatch" style="background:var(--posterior)"></span>Posterior</span>
+  `;
+  chartWrap.appendChild(legend);
+
+  // ---- stats box ----
+  const statsBox = document.createElement("div");
+  statsBox.className = "stats-box";
+  root.appendChild(statsBox);
+  const statsRow = document.createElement("div");
+  statsRow.className = "stats-row";
+  statsBox.appendChild(statsRow);
+
+  function statBlock(mode, labelText) {
+    const block = document.createElement("div");
+    block.className = "stat-block";
+    const btn = document.createElement("button");
+    btn.className = "stat-btn";
+    btn.textContent = labelText;
+    const val = document.createElement("div");
+    val.className = "stat-value";
+    btn.addEventListener("click", () => {
+      highlightMode = highlightMode === mode ? "none" : mode;
+      render(lastState);
+    });
+    block.appendChild(btn);
+    block.appendChild(val);
+    statsRow.appendChild(block);
+    return { block, btn, val };
+  }
+  const stMedian = statBlock("median", "Median of the Posterior Distribution");
+  const stCi = statBlock("ci", "Credible Interval");
+  const stPd = statBlock("pd", "Probability of Direction");
+  const stRope = statBlock("rope", "% in Region of Practical Equivalence");
+
+  const resetRow = document.createElement("div");
+  resetRow.className = "reset-row";
+  const resetBtn = document.createElement("button");
+  resetBtn.className = "btn primary";
+  resetBtn.textContent = "Show All";
+  resetBtn.addEventListener("click", () => {
+    highlightMode = "none";
+    render(lastState);
+  });
+  resetRow.appendChild(resetBtn);
+  statsBox.appendChild(resetRow);
+
+  // ---- render ----
+  let lastState = null;
+
+  function cssVar(name) {
+    return getComputedStyle(root).getPropertyValue(name).trim();
+  }
+
+  function render(state) {
+    lastState = state;
+    const yMax = d3.max(state.postPdf) * 1.15;
+    yScale = d3.scaleLinear().domain([0, yMax]).range([plotBottom, plotTop]);
+
+    // theme-aware line colors (read live so a Quarto dark/light toggle
+    // without a page reload still updates the chart's reference lines)
+    const inkColor = cssVar("--ink") || "#222";
+    const mutedColor = cssVar("--muted") || "#555";
+    zeroLine.attr("stroke", inkColor);
+    ciLine1.attr("stroke", mutedColor);
+    ciLine2.attr("stroke", mutedColor);
+
+    // gridlines
+    gGridX.selectAll("line")
+      .data(xScale.ticks(5))
+      .join("line")
+      .attr("class", "gridline")
+      .attr("x1", (d) => xScale(d)).attr("x2", (d) => xScale(d))
+      .attr("y1", plotTop).attr("y2", plotBottom);
+    gGridY.selectAll("line")
+      .data(yScale.ticks(4))
+      .join("line")
+      .attr("class", "gridline")
+      .attr("x1", MARGIN.left).attr("x2", W - MARGIN.right)
+      .attr("y1", (d) => yScale(d)).attr("y2", (d) => yScale(d));
+
+    const mode = highlightMode;
+    const baseAlpha = mode === "none" ? 0.4 : 0.2;
+    const ciLineAlpha = mode === "none" || mode === "ci" ? 0.7 : 0.08;
+    const zeroLineAlpha = mode === "none" || mode === "pd" ? 1 : 0.08;
+    const medianAlpha = mode === "none" || mode === "median" ? 1 : 0.1;
+    const ropeAlpha = mode === "none" || mode === "rope" ? 0.35 : 0.05;
+
+    const colors = { prior: "#F8766D", likelihood: "#00BA38", posterior: "#619CFF" };
+    const dataByKey = { prior: state.priorPdf, likelihood: state.likPdf, posterior: state.postPdf };
+    Object.entries(distGroups).forEach(([key, g]) => {
+      const d = dataByKey[key];
+      g.area.datum(d)
+        .attr("d", areaGen())
+        .attr("fill", colors[key])
+        .attr("fill-opacity", baseAlpha);
+      g.line.datum(d)
+        .attr("d", lineGen())
+        .attr("fill", "none")
+        .attr("stroke", colors[key])
+        .attr("stroke-opacity", baseAlpha + 0.3);
+    });
+
+    // rope band
+    ropeRect
+      .attr("x", xScale(state.ropeLow))
+      .attr("width", Math.max(0, xScale(state.ropeHigh) - xScale(state.ropeLow)))
+      .attr("y", plotTop)
+      .attr("height", plotHeight)
+      .attr("fill-opacity", ropeAlpha);
+
+    // highlight slice (ci / pd / rope)
+    let hiXs = [], hiYs = [];
+    if (mode === "ci") {
+      hiXs = XS.filter((x) => x >= state.ciLow && x <= state.ciHigh);
+    } else if (mode === "pd") {
+      hiXs = state.pdDirection === 1 ? XS.filter((x) => x > 0) : XS.filter((x) => x < 0);
+    } else if (mode === "rope") {
+      hiXs = XS.filter((x) => x >= state.ropeLow && x <= state.ropeHigh);
+    }
+    if (hiXs.length > 1) {
+      const idxLo = XS.indexOf(hiXs[0]);
+      const idxHi = idxLo + hiXs.length;
+      const sliceY = state.postPdf.slice(idxLo, idxHi);
+      const area = d3.area()
+        .x((d, i) => xScale(hiXs[i]))
+        .y0(plotBottom)
+        .y1((d) => yScale(d));
+      highlightArea.datum(sliceY).attr("d", area).attr("fill-opacity", 0.7);
+    } else {
+      highlightArea.attr("fill-opacity", 0);
+    }
+
+    // lines
+    zeroLine
+      .attr("x1", xScale(0)).attr("x2", xScale(0))
+      .attr("y1", plotTop).attr("y2", plotBottom)
+      .attr("stroke-opacity", zeroLineAlpha);
+    ciLine1
+      .attr("x1", xScale(state.ciLow)).attr("x2", xScale(state.ciLow))
+      .attr("y1", plotTop).attr("y2", plotBottom)
+      .attr("stroke-opacity", ciLineAlpha);
+    ciLine2
+      .attr("x1", xScale(state.ciHigh)).attr("x2", xScale(state.ciHigh))
+      .attr("y1", plotTop).attr("y2", plotBottom)
+      .attr("stroke-opacity", ciLineAlpha);
+
+    medianDot
+      .attr("cx", xScale(state.median))
+      .attr("cy", yScale(state.medianDensity))
+      .attr("opacity", medianAlpha);
+
+    // axis
+    gAxis.call(d3.axisBottom(xScale).ticks(10));
+
+    // annotation arrows
+    const ciActive = mode === "none" || mode === "ci";
+    const ropeActive = mode === "none" || mode === "rope";
+    const pdActive = mode === "none" || mode === "pd";
+
+    ciArrow.line
+      .attr("x1", xScale(state.ciLow)).attr("x2", xScale(state.ciHigh))
+      .attr("stroke", ciActive ? "#2b6cb0" : "#ccc")
+      .attr("marker-start", "url(#arrow-blue)").attr("marker-end", "url(#arrow-blue)")
+      .attr("opacity", ciActive ? 1 : 0.35);
+    ciArrow.label.text(`CI [${fmt(state.ciLow, 2)}, ${fmt(state.ciHigh, 2)}]`).attr("opacity", ciActive ? 1 : 0.35);
+
+    ropeArrow.line
+      .attr("x1", xScale(state.ropeLow)).attr("x2", xScale(state.ropeHigh))
+      .attr("stroke", ropeActive ? "#666" : "#ccc")
+      .attr("marker-start", "url(#arrow-grey)").attr("marker-end", "url(#arrow-grey)")
+      .attr("opacity", ropeActive ? 1 : 0.35);
+    ropeArrow.label.text(`ROPE [${fmt(state.ropeLow, 2)}, ${fmt(state.ropeHigh, 2)}]`).attr("opacity", ropeActive ? 1 : 0.35);
+
+    const pdTarget = state.pdDirection === 1 ? Math.max(state.ciHigh, 0.05) : Math.min(state.ciLow, -0.05);
+    pdArrow.line
+      .attr("x1", xScale(0)).attr("x2", xScale(pdTarget))
+      .attr("stroke", pdActive ? "#2b6cb0" : "#ccc")
+      .attr("marker-start", null).attr("marker-end", "url(#arrow-blue)")
+      .attr("opacity", pdActive ? 1 : 0.35);
+    pdArrow.label.text(`PD ${fmt(state.pdPct, 1)}% (${state.pdDirection === 1 ? "+" : "−"})`).attr("opacity", pdActive ? 1 : 0.35);
+
+    // stat button active/value states
+    [stMedian, stCi, stPd, stRope].forEach((s) => s.btn.classList.remove("active"));
+    if (mode === "median") stMedian.btn.classList.add("active");
+    if (mode === "ci") stCi.btn.classList.add("active");
+    if (mode === "pd") stPd.btn.classList.add("active");
+    if (mode === "rope") stRope.btn.classList.add("active");
+
+    stMedian.val.textContent = fmt(state.median, 2);
+    stCi.btn.firstChild.textContent = `${Math.round(params.ciWidth * 100)}% Credible Interval`;
+    stCi.val.textContent = `[${fmt(state.ciLow, 2)}, ${fmt(state.ciHigh, 2)}]`;
+    stPd.val.textContent = `${fmt(state.pdPct, 1)}%`;
+    stRope.val.textContent = `${fmt(state.ropePct, 1)}%`;
+  }
+
+  function update() {
+    const state = computeState(params);
+    render(state);
+  }
+
+  update();
+
+  // Quarto's dark/light toggle flips html[data-bs-theme] without a page
+  // reload; CSS-driven elements update instantly, but the SVG's
+  // getComputedStyle-based line colors need an explicit re-render.
+  new MutationObserver(() => {
+    if (lastState) render(lastState);
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-bs-theme"] });
+
+  return root;
+}
+```
+
+Three distributions are shown above. The **prior** reflects the assumed distribution for the correlation
+before seeing any data, based on the chosen default prior. The **likelihood** reflects what the observed data
+alone suggest about the correlation, independent of the prior. The **posterior** combines the two into an
+updated estimate, and is what all summary statistics (median, ci, pd, percent in ROPE) below are calculated
+from.
+
+The single black dot marks the **median** of the posterior distribution, one measure of central tendency for
+the estimated correlation.
+
+The horizontal arrow marks the **Credible Interval (ci)**: the range of most credible values for the true
+correlation, given the selected width (e.g., a 95% ci means there is a 95% probability the true correlation
+falls within these bounds, given the model and prior used).
+
+The shaded band and its arrow mark the **Region of Practical Equivalence (ROPE)**: a range of correlation
+values, set by you, that are considered negligible or practically equivalent to no correlation at all. This is
+different from testing whether the correlation is exactly zero; instead, it asks whether the estimated
+correlation is small enough to not matter in practice. The percent of the posterior falling inside this band
+is reported below as '% in ROPE': a high percentage suggests the data are consistent with a negligible effect,
+while a low percentage suggests the correlation is likely large enough to be practically meaningful. In this
+case, the default range is +/- 0.1, but there might be many cases where even larger correlations (0.2 or 0.3)
+would be too small to care about.
+
+The one-sided arrow pointing away from zero reflects the **probability of direction (pd)**: the percentage of
+the posterior distribution that falls on the positive (or negative) side of zero. A high pd indicates strong
+confidence in the direction of the effect, but says nothing about its size, that is the role of the ROPE and
+ci above.
+
+**Picking a prior can feel intimidating,** but I find that challenges with picking priors are based on misconceptions about what priors actually are. Priors rarely involve committing to a specific hypothesis. We almost always know *something* about what effects might be reasonable and what effects are so large to be implausible.
+
+- Picking a prior isn't necessarily encoding your belief about the *exact* value of the correlation (for
+  example, hypothesizing a modest correlation of rho = 0.5). It's about encoding a **distribution** of
+  plausible values.
+- A tighter prior around zero (like `medium.narrow`, the default here) encodes some skepticism that the true
+  correlation is much larger than about 0.6. It's saying: "based on what I know about this study, these
+  measures, this design, and the population and prior literature, a correlation much stronger than this would
+  be surprising."
+- Maybe that feels too skeptical. You might instead choose `medium` or `wide`, saying something more like:
+  "correlations around 0.6 to 0.8 seem plausible, but much beyond that would be unlikely."
+- Or you might not want to encode any skepticism at all, and treat every possible strength of correlation as
+  equally plausible. That's what `ultrawide` does, though in most real research contexts, this is rarely a
+  realistic assumption. Consider how often you actually expect to see correlations > 0.9 (not often!).
+- Notice that in each case, we're not shifting the prior's center toward a positive or negative correlation,
+  we're defining the **range** of plausible values.
+
+*Note: This page drew inspiration from https://rpsychologist.com/d3/bayes/, with some added thoughts based on my experience introducing researchers to bayes.*

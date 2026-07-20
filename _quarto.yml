@@ -15,6 +15,10 @@ website:
         href: quant-methods.qmd
       - text: "Research, Writing, & Other Things"
         href: research-and-writing.qmd
+      - text: "Tutorials"
+        menu:
+          - text: "Bayesian Basics"
+            href: tutorials/bayesian-correlation.qmd
     search: true
     tools:
       - icon: github
