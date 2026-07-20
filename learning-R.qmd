@@ -11,23 +11,25 @@ toc: true
 
 -   **R for Reproducible Scientific Analysis by Software Carpentry**: https://swcarpentry.github.io/r-novice-gapminder. Step-by-step guide on introducing R and R-studio with the basic fundamentals. The information is pretty replicable to tutorials found in R for Data Science, but I found it slightly more approachable for novices (-Courtney Jewell).
 
--   **Workflow recommendations**: https://www.tidyverse.org/blog/2017/12/workflow-vs-script/, https://here.r-lib.org. These are not really R resources but these are things everyone should do when using R, so I'm just going to plug them here.
+-   **(Strong) workflow recommendations**: https://www.tidyverse.org/blog/2017/12/workflow-vs-script/, https://here.r-lib.org. These are not really R resources but these are things everyone should do when using R, so I'm just going to plug them here. see also: https://rstats.wtf/projects. 
 
 -   **How to ask for help**: https://reprex.tidyverse.org. When you're stuck on something and want to ask for help from someone, if you do it this way, you will get the most helpful response but also probably you will figure out why you're stuck halfway through doing this.
 
 -   **Happy Git with R**: https://happygitwithr.com In case you want/need to also incorporate git into your workflow.
 
-## General Statistics books
+## General Statistics books and resources
 
--   **Learning Statistics with R**: https://learningstatisticswithr.com\*
+-   **Learning Statistics with R**: https://learningstatisticswithr.com
+
+-   **Experimentology: An Open Science Approach to Experimental Psychology Methods.** https://experimentology.io. 
+
+-   **Statistical Rethinking**: http://xcelab.net/rm/ (2024 online lectures: https://github.com/rmcelreath/stat_rethinking_2024)
 
 -   **Improving Your Statistical Inferences**: https://lakens.github.io/statistical_inferences/
 
--   **The Order of the Statistical Jedi: Responsibilities, Routines, and Rituals**:  https://quantpsych.net/stats_modeling\*
-
 -   **Common statistical tests are linear models (or: how to teach stats)**: https://lindeloev.github.io/tests-as-linear/
 
--   **Statistical Rethinking**: http://xcelab.net/rm/ (2024 online lectures: https://github.com/rmcelreath/stat_rethinking_2024)\*
+-   **Discovering Statistics Using R and RStudio 2nd ed** (Field). https://profandyfield.com/discoverse/dsur/
 
 -   **Regression and other Stories**: https://avehtari.github.io/ROS-Examples/
 
@@ -35,9 +37,13 @@ toc: true
 
 -   **An introduction to statistical learning**: https://www.statlearning.com
 
+-   **The Order of the Statistical Jedi: Responsibilities, Routines, and Rituals**:  https://quantpsych.net/stats_modeling
+
 -   Winter, B. (2019). **Statistics for linguists: An introduction using R.** Routledge. (https://appliedstatisticsforlinguists.org/bwinter_stats_proofs.pdf)
 
--   **Statistics of Dom**: https://statisticsofdoom.com
+-   **Statistics of Doom**: https://statisticsofdoom.com
+
+*Some of these are free, others require money. I don't have any relationships with these authors*.
 
 ## Data Viz
 

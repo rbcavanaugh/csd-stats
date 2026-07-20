@@ -2,6 +2,10 @@
 title: "Statistics Resources for the Rehabilitation Researcher"
 format: html
 toc: true
+date: last-modified
+date-format: "MMMM DD, YYYY"
+language:
+  title-block-published: "Website last updated on:"
 ---
 
 [*Note: Originally, this website was focused on quantitative methods commonly used by research in Communication Science and Disorders, but I've made an effort to expand the focus to include rehabilitation research more brodaly (i.e., PT/OT and other allied health fields).*]{.aside}
@@ -11,8 +15,6 @@ This is a repository for resources related to learning and doing statistics and 
 Before you get bogged down in this overwhelming list of resources, I suggest you entertain yourself with this highly enjoyable scientific article (or at least listen to it during your commute this week, there is an audio version narrated by the authors) and remember that your goal is to do science, and these are just tools you might find useful along the way.
 
 [Things Could Be Better by Adam Mastroianni](https://www.experimental-history.com/p/things-could-be-better)
-
-<br>
 
 ## Getting started
 
@@ -32,9 +34,13 @@ Also, its *really* helpful to have a mentor who knows a little bit more R or sta
 
 ## Some thoughts on AI
 
-Generative AI often provides wrong, inefficient, or overly complex code (especially in R). It is often frequently wrong when asked questions about statistical concepts. It uses R packages that are often not well sutied to your problem, outdated, or poorly maintained. While it can provide correct solutions to many problems, in many cases I think genAI can and will impede learning and retention of the material in this course. Moreover, copying and pasting content from genAI reduces the cognitive load during learning and retention of new material. For these reasons, I recommend anyone new to R or learning a statistical method avoid copying and pasting code.  
+Generative AI often provides wrong, inefficient, or overly complex code (especially in R). It is often frequently wrong when asked questions about statistical concepts. It uses R packages that are often not well suited to your problem, outdated, or poorly maintained. While it can provide correct solutions to many problems, in many cases I think genAI can and will impede learning and retention of new skills. Moreover, copying and pasting content from genAI reduces the cognitive load during learning. For these reasons, I recommend anyone new to R or learning a statistical method be wary of using generative AI. 
 
-However, generative AI can be useful for learning to code (e.g., learning why some code works and other code doesn’t or to explain a frustrating error message or to explain function documentation). Some appropriate and potentially beneficial uses of generative AI for your learning could be:
+[If you're having a bit of imposter syndrom around coding, my strong opinion is that the idea that some people "just can't" learn R or stats is total garbage. It's a new skill, and will take perseverace to learn, and some folks will learn it faster than you and some will learn it slower than you. and that's ok. And just because a resource is highly recommended, doesn't mean it's a good match for you or will meet you at your current level of knowledge and skills. Generative AI is nice in this sense - because it will try to answer your questions helpfully no matter how simple or complex they are.]{.aside}
+
+However, generative AI can be extremely useful for learning to code (e.g., learning why some code works and other code doesn’t or to explain a frustrating error message or to explain function documentation). I think this is particularly true for people who are completely new to programming/coding - many tutorials assume too much background knowledge and this can make the initial learning process extremely frustrating and result in new learners abandoning their goals, feeling like they are not skilled or knowledgeable enough to learn R, coding, or statistics.
+
+Some appropriate and potentially beneficial uses of generative AI for your learning could be:
 
 - Asking genAI to explain an error message to you
 

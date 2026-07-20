@@ -13,6 +13,8 @@ website:
         href: learning-R.qmd
       - text: "Quant Methods"
         href: quant-methods.qmd
+      - text: "Rehab/CSD Methods papers"
+        href: resources.qmd
       - text: "Research, Writing, & Other Things"
         href: research-and-writing.qmd
     search: true

@@ -3,11 +3,15 @@ format: html
 toc: true
 ---
 
-## Mixed-effects models
+## Multilevel / mixed-effects models
 
-For better or worse, the bread and butter of psycholinguistic and other CSD research. Conceptually fantastic, but often tricky to implement *well*. My suggestion is to start with the first link below, and then pick an introductory paper to read and go through examples (e.g., Brown 2021). Then, if you're feeling good about things, I highly suggest working through the examples in Debruine & Barr (2021). Then go apply what you've learned to your own data. Then, when you're feeling really accomplished, write it up for publication, incorporating recommendations from Meteyard & Davies (2020) as you write. Or take a class at your institution. Or take one of the workshops linked below.
+For better or worse, the bread and butter of psycholinguistic and other CSD research. Conceptually fantastic, but often tricky to implement *well*. My suggestion is to start with the first link below, and then pick an introductory paper to read and go through examples (e.g., Brown 2021) or if you prefer textbooks, check out Shaw & Flake. Then, if you're feeling good about things, I highly suggest working through the examples in Debruine & Barr (2021). Then go apply what you've learned to your own data. Then, when you're feeling really accomplished, write it up for publication, incorporating recommendations from Meteyard & Davies (2020) as you write. 
 
--   **An Introduction to Hierarchical Modeling**: http://mfviz.com/hierarchical-models/\* (Fantastic visual demonstration)
+-   **An Introduction to Hierarchical Modeling**: http://mfviz.com/hierarchical-models/ (Fantastic visual demonstration)
+
+-   Shaw, M. & Flake, J. K. (2023) **Introduction to multilevel measurement modeling**. https://www.learn-mlms.com
+
+-   Roback, P., & Legler, J. (2021). **Beyond multiple linear regression: applied generalized linear models and multilevel models in R.** Chapman and Hall/CRC. (Free: https://bookdown.org/roback/bookdown-BeyondMLR/)
 
 -   Brown VA. **An Introduction to Linear Mixed-Effects Modeling in R.** Advances in Methods and Practices in Psychological Science. 2021;4(1). doi:10.1177/2515245920960351
 
@@ -17,9 +21,15 @@ For better or worse, the bread and butter of psycholinguistic and other CSD rese
 
 -   Winter, B. (2013). **Linear models and linear mixed effects models in R with linguistic applications.** arXiv preprint arXiv:1308.5499.
 
--   Mirman, D. (2017). **Growth curve analysis and visualization using R.** Chapman and Hall/CRC.
+- Quené, H., & Van Den Bergh, H. (2008). **Examples of mixed-effects modeling with crossed random effects and with binomial data.** Journal of Memory and Language, 59(4), 413–425. https://doi.org/10.1016/j.jml.2008.02.002
+
+- Barr, D. J., Levy, R., Scheepers, C., & Tily, H. J. (2013). **Random effects structure for confirmatory hypothesis testing: Keep it maximal.** Journal of Memory and Language, 68(3), 255–278. https://doi.org/10.1016/j.jml.2012.11.001
+
+- Matuschek, H., Kliegl, R., Vasishth, S., Baayen, H., & Bates, D. (2017). **Balancing Type I error and power in linear mixed models.** Journal of Memory and Language, 94, 305–315. https://doi.org/10.1016/j.jml.2017.01.001
 
 ## Psychometrics
+
+- Revelle, W. (2009). **An introduction to psychometric theory with applications in R.** https://personality-project.org/r/book/
 
 - Ten Hove, D., Jorgensen, T. D., & van der Ark, L. A. (2022). *Updated guidelines on selecting an intraclass correlation coefficient for interrater reliability, with applications to incomplete observational designs.* Psychological Methods.
 
@@ -27,9 +37,58 @@ For better or worse, the bread and butter of psycholinguistic and other CSD rese
 
 - Bürkner, P. C. (2019). **Bayesian item response modeling in R with brms and Stan.** arXiv preprint arXiv:1905.09501.
 
+- McNeish, D. (2018). **Thanks coefficient alpha, we’ll take it from here.** Psychological methods, 23(3), 412.
+
+## Basics of causal inference and related faux pas
+
+*Might be the most important content in this entire site*
+
+- Regression, Fire, and Dangerous Things by Richard McElreath: https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/
+
+- Rohrer, J. M. (2024). *Causal inference for psychologists who think that causal inference is not for them.* Social and Personality Psychology Compass, 18(3), e12948. (See )
+
+- Wysocki AC, Lawson KM, Rhemtulla M. **Statistical Control Requires Causal Justification. Advances in Methods and Practices in Psychological Science.** 2022;5(2). doi:10.1177/25152459221095823
+
+- **Why Adjusted Regression Coefficients Are Less Descriptive Than They Look**.  https://rpsychologist.com/descriptive-adjustment/
+
+- Lewer, D., Brothers, T., O’Nions, E., & Pickavance, J. (2025). **Factors associated with: Problems of using exploratory multivariable regression to identify causal risk factors.** BMJ Medicine, 4(1), e001375. https://doi.org/10.1136/bmjmed-2025-001375
+
+- Rohrer JM, Murayama K. **These Are Not the Effects You Are Looking for: Causality and the Within-/Between-Persons Distinction in Longitudinal Data Analysis.** Advances in Methods and Practices in Psychological Science. 2023;6(1). doi:10.1177/25152459221140842
+
+- Rohrer, J. M. (2018). **Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data.** Advances in Methods and Practices in Psychological Science, 1(1), 27–42. https://doi.org/10.1177/2515245917745629
+
+- **The Table 2 Fallacy**: Westreich, D., & Greenland, S. (2013). **The table 2 fallacy: presenting and interpreting confounder and modifier coefficients.** American journal of epidemiology, 177(4), 292-298.
+
+- Lundberg, I., Johnson, R., & Stewart, B. M. (2021). *What is your estimand? Defining the target quantity connects statistical evidence to theory.* American Sociological Review, 86(3), 532-565.
+
+
+## Mediation Analysis (causal inference cont.)
+
+These resources are intended to be useful to get you started with mediation, but I also recommend carefully reading the first article by Julia Rohrer and colleagues before deciding to undertake a mediation analysis. 
+
+- Rohrer JM, Hünermund P, Arslan RC, Elson M. **That’s a Lot to Process! Pitfalls of Popular Path Models. Advances in Methods and Practices in Psychological Science.** 2022;5(2). doi:10.1177/25152459221095827
+
+- Rohrer JM. **Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data. Advances in Methods and Practices in Psychological Science.** 2018;1(1):27-42. doi:10.1177/2515245917745629
+
+- Imai, K., Keele, L., Tingley, D., & Yamamoto, T. (2011). **Unpacking the black box of causality: Learning about causal mechanisms from experimental and observational studies.** American Political Science Review, 105(4), 765-789. https://imai.fas.harvard.edu/research/files/mediationP.pdf
+
+- Nguyen, T. Q., Schmid, I., & Stuart, E. A. (2021). **Clarifying causal mediation analysis for the applied researcher: Defining effects based on what we want to learn.** Psychological Methods, 26(2), 255–271. https://doi.org/10.1037/met0000299
+
+- Kline, R. B. (2015). **The Mediation Myth.** Basic and Applied Social Psychology, 37(4), 202–213. https://doi.org/10.1080/01973533.2015.1049349
+
+## Interactions / Moderation
+
+-   Mize, T. D. (2019). **Best practices for estimating, interpreting, and presenting nonlinear interaction effects.** Sociological Science, 6, 81-117.
+
+- Garofalo, S., Giovagnoli, S., Orsoni, M., Starita, F., & Benassi, M. (2022). **Interaction effect: Are you doing the right thing?** PLOS ONE, 17(7), e0271668. https://doi.org/10.1371/journal.pone.0271668
+
+- Rohrer JM, Arslan RC. **Precise Answers to Vague Questions: Issues With Interactions.** Advances in Methods and Practices in Psychological Science. 2021;4(2). doi:10.1177/25152459211007368
+
+- Rohrer, J. M., & Arel-Bundock, V. (2026). **Models as Prediction Machines: How to Convert Confusing Coefficients Into Clear Quantities.** Advances in Methods and Practices in Psychological Science, 9(2), 25152459261424825. https://doi.org/10.1177/25152459261424825
+
 ## Bayesian statistics
 
-You should learn how to do Bayesian stats. If you've never tried to use bayes, I promise it's more intuitive than you think. And because of modern computing and R packages like {brms}, its arguably just as easy to implement as frequentist mixed models. If you know how to use lme4, then you're already 75% of the way to using {brms}.
+You should learn how to do Bayesian stats. If you've never tried to use bayes, I promise it's more intuitive than you think. And because of modern computing and R packages like {brms} and {rstanarm}, its arguably just as easy to implement as frequentist mixed models. If you know how to use lme4, then you're already 75% of the way to using {brms}.
 
 -   **Get Started with Bayesian Analysis**: https://easystats.github.io/bayestestR/articles/bayestestR.html\*
 
@@ -45,13 +104,35 @@ You should learn how to do Bayesian stats. If you've never tried to use bayes, I
 
 -   **Statistical Rethinking**: https://xcelab.net/rm/statistical-rethinking/ (Statistical Rethinking by Richard McElreath)
 
-## Basics of causal inference
+### A section specific to setting priors
 
-- Regression, Fire, and Dangerous Things by Richard McElreath: https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/
+- see this blue sky post: https://bsky.app/profile/bartlettje.bsky.social/post/3mhxeep3d222w
 
-- Rohrer, J. M. (2024). *Causal inference for psychologists who think that causal inference is not for them.* Social and Personality Psychology Compass, 18(3), e12948.
+- **How Should You Think About Your Priors for a Bayesian Analysis?**. https://svmiller.com/blog/2021/02/thinking-about-your-priors-bayesian-analysis/
 
-- Wysocki AC, Lawson KM, Rhemtulla M. **Statistical Control Requires Causal Justification. Advances in Methods and Practices in Psychological Science.** 2022;5(2). doi:10.1177/25152459221095823
+- Lüdecke, D., Makowski, A. C., Klein, J., Ben-Shachar, M. S., & Makowski, D. (2026). **Choosing informative priors in Bayesian regression models: A simulation study and tutorial using Stan and R.** Frontiers in Psychology, 17, 1856582. https://doi.org/10.3389/fpsyg.2026.1856582
+
+- **Prior choice recommendations**. https://github.com/stan-dev/stan/wiki/prior-choice-recommendations
+
+- **How to Set Priors for Hypothesis Testing in Generalized Linear Models: A Three-Step Workflow with an Application to Binomial Models** https://osf.io/preprints/psyarxiv/q7byw_v1
+
+- **Workshop on Bayesian Inference: Priors and workflow**. https://4ccoxau.github.io/PriorsWorkshop/. https://www.youtube.com/watch?v=kMSrRd4f2As
+
+- **Different Priors, Different Posteriors**. https://www.bayesrulesbook.com/chapter-4#ch4-priors
+
+- Zondervan-Zwijnenburg, M., Peeters, M., Depaoli, S., & Van De Schoot, R. (2017). **Where Do Priors Come From? Applying Guidelines to Construct Informative Priors in Small Sample Research.** Research in Human Development, 14(4), 305–320. https://doi.org/10.1080/15427609.2017.1370966
+
+## Longitudinal Data Analysis
+
+-   **Fantastic and accessible primer on longitudinal analysis:** McCormick, E. M., Byrne, M. L., Flournoy, J. C., Mills, K. L., & Pfeifer, J. H. (2023). **The Hitchhiker’s guide to longitudinal models: A primer on model selection for repeated-measures methods.** Developmental Cognitive Neuroscience, 63, 101281. doi:10.1016/j.dcn.2023.101281
+
+-   Mirman, D. (2017). **Growth curve analysis and visualization using R.** Chapman and Hall/CRC.
+
+## Effect Sizes
+
+- **Guide to Effect Sizes and Confidence Intervals**. https://matthewbjane.quarto.pub
+
+- **Effectsize: indices of effect size.** https://easystats.github.io/effectsize/
 
 ## Sample size planning and Statistical Power
 
@@ -63,41 +144,16 @@ You should learn how to do Bayesian stats. If you've never tried to use bayes, I
 
 - Powering Your Interaction: https://approachingblog.wordpress.com/2018/01/24/powering-your-interaction-2/
 
+## Multiplicity and Correcting for Multiple Comparisons
 
-## Methods papers & resources specific to Rehabilitaiton Research
+*note that this is a topic that has quite a bit of debate*
 
--   **Stats/Methods JSLHR Special issue**: https://pubs.asha.org/toc/jslhr/62/3
+- Greenland, S., & Hofman, A. (2019). Multiple comparisons controversies are about context and costs, not frequentism versus Bayesianism. European Journal of Epidemiology, 34(9), 801–808. https://doi.org/10.1007/s10654-019-00552-z
 
--   Bothe, A. K., & Richardson, J. D. (2011). **Statistical, Practical, Clinical, and Personal Significance: Definitions and Applications in Speech-Language Pathology.** In American Journal of Speech-Language Pathology (Vol. 20, Issue 3, pp. 233–242). American Speech Language Hearing Association. https://doi.org/10.1044/1058-0360(2011/10-0034)
+- Hoffmann, S., Lemster, S., Collins, G., Hapfelmeier, A., Heinze, G., Mayr, A., Schmid, M., Wilcke, J. C., & Boulesteix, A. (2026). **When to Adjust for Multiple Testing: A Unifying Guiding Principle.** Biometrical Journal, 68(4), e70148. https://doi.org/10.1002/bimj.70148
 
--   Morrow, E. L., Duff, M. C., & Mayberry, L. S. (2022). **Mediators, moderators, and covariates: Matching analysis approach for improved precision in cognitive-communication rehabilitation research**. Journal of Speech, Language, and Hearing Research, 65(11), 4159-4171.
+- Hooper, R. (2025). To adjust, or not to adjust, for multiple comparisons. Journal of Clinical Epidemiology, 180, 111688. https://doi.org/10.1016/j.jclinepi.2025.111688
 
--   Nalborczyk, L., Batailler, C., Lœvenbruck, H., Vilain, A., & Bürkner, P. C. (2019). **An introduction to Bayesian multilevel models using brms: A case study of gender effects on vowel variability in standard Indonesian.** Journal of Speech, Language, and Hearing Research, 62(5), 1225-1242
-
--   Cavanaugh, R., Quique, Y. M., Swiderski, A. M., Kallhoff, L., Terhorst, L., Wambaugh, J., Hula, W.D., & Evans, W. S. (2023). **Reproducibility in small-N treatment research: A tutorial using examples from aphasiology**. Journal of Speech, Language, and Hearing Research, 66(6), 1908-1927.
-    - https://rb-cavanaugh.shinyapps.io/reproducible-small-N/
-    - https://osf.io/7fp3x/
-    - https://robcavanaugh.com/images/cavanaugh2022-reproducibility.pdf
-    
--   Oleson, J. J., Jones, M. A., Jorgensen, E. J., & Wu, Y. H. (2022). **Statistical considerations for analyzing ecological momentary assessment data.** Journal of speech, language, and hearing research, 65(1), 344-360.
-    
--   Wiley, R. W., & Rapp, B. (2019). **Statistical analysis in Small-N Designs: using linear mixed-effects modeling for evaluating intervention effectiveness.** Aphasiology, 33(1), 1-30.
-
--   Brydges, C. R., & Gaeta, L. (2019). **An introduction to calculating Bayes factors in JASP for speech, language, and hearing research.** Journal of speech, language, and hearing research, 62(12), 4523-4533.
-
--   Max, L., & Onghena, P. (1999). **Some issues in the statistical analysis of completely randomized and repeated measures designs for speech, language, and hearing research.** Journal of Speech, Language, and Hearing Research, 42(2), 261-270.
-
--   Letué, F., Martinez, M. J., Samson, A., Vilain, A., & Vilain, C. (2018). **Statistical methodology for the analysis of repeated duration data in behavioral studies.** Journal of Speech, Language, and Hearing Research, 61(3), 561-582.
-
--   Gruber, F. A. (1999). **Tutorial: Survival analysis—A statistic for clinical, efficacy, and theoretical applications.** Journal of speech, language, and hearing research, 42(2), 432-447.
-
--   Winter, B., & Bürkner, P. C. (2021). **Poisson regression for linguists: A tutorial introduction to modelling count data with brms.** Language and Linguistics Compass, 15(11), e12439
-
--   Winter, B., & Wieling, M. (2016). **How to analyze linguistic change using mixed models, Growth Curve Analysis and Generalized Additive Modeling.** Journal of Language Evolution, 1(1), 7-18.
-
--   **Open CSD**: https://www.open-csd.com/resources
-
--   **CSD Disseminate**: https://www.csdisseminate.com
 
 ## Random useful things
 
@@ -109,4 +165,4 @@ You should learn how to do Bayesian stats. If you've never tried to use bayes, I
 
 -   **Complex survey analysis:** Zimmer, S. A., Powell, R. J., & Velásquez, I. C. (2024). Exploring Complex Survey Data Analysis Using R: A Tidy Introduction with {srvyr} and {survey}. Chapman & Hall: CRC Press. https://tidy-survey-r.github.io/tidy-survey-book/
 
--   **Fantastic and accessible primer on longitudinal analysis:** McCormick, E. M., Byrne, M. L., Flournoy, J. C., Mills, K. L., & Pfeifer, J. H. (2023). **The Hitchhiker’s guide to longitudinal models: A primer on model selection for repeated-measures methods.** Developmental Cognitive Neuroscience, 63, 101281. doi:10.1016/j.dcn.2023.101281
+

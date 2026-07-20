@@ -3,11 +3,13 @@ format: html
 toc: true
 ---
 
-## Philosophy of science and writing research questions
+## Some bigger picture stuff
 
 - Horoscopes (Richard McElreath), https://share.eva.mpg.de/index.php/s/9KEzTJg6oZ5dZZb
  
 - Writing research questions: Peters, M.A.K. *How to develop good research questions.* Nat Hum Behav (2025). https://doi.org/10.1038/s41562-025-02292-5 (a.k.a., read...a lot)
+
+- Scheel, A. M., Tiokhin, L., Isager, P. M., & Lakens, D. (2020). Why Hypothesis Testers Should Spend Less Time Testing Hypotheses. Perspectives on Psychological Science, 16(4), 744-755. https://doi.org/10.1177/1745691620966795 
 
 ## Writing about statistics
 
@@ -15,27 +17,34 @@ toc: true
 
 -   **Guidance on Statistical Reporting to Help Improve Your Chances of a Favorable Statistical Review** https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7193848/pdf/rccm.202003-0477ED.pdf
 
+- **Top tier guidance from a top rehab journal:** Lohse, Keith R. PhD, PStat; Kliethermes, Stephanie PhD. Approaching Significance: Statistical Guidance for Authors and Reviewers. Journal of Neurologic Physical Therapy ():10.1097/NPT.0000000000000526, July 16, 2025. | DOI: 10.1097/NPT.0000000000000526
+
 ## Common statistical errors I've come across in CSD research
 
-- **Questionable interpretations of p-values** - https://pubmed.ncbi.nlm.nih.gov/31829657/
+- **Questionable interpretations of p-values** Anderson, S. F. (2020). Misinterpreting p: The discrepancy between p values and the probability the null hypothesis is true, the influence of multiple testing, and implications for the replication crisis. Psychological Methods, 25(5), 596–609. https://doi.org/10.1037/met0000248
+
+- **Many of the other NHST myths:** Greenland, S., Senn, S. J., Rothman, K. J., Carlin, J. B., Poole, C., Goodman, S. N., & Altman, D. G. (2016). Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. European journal of epidemiology, 31(4), 337-350.
 
 - **And questionable reporting of p-values** - https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/
 
 - **The Difference Between “Significant” and “Not Significant” is not Itself Statistically Significant. Often known as, 'yes you do need that interaction in your model'.** - http://www.stat.columbia.edu/\~gelman/research/published/signif4.pdf
 
-- **But do your best to interpret interactions correctly** - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0271668
-
-- **Failing to report contrast coding or incorrect interpretation of contrasts** - https://www.sciencedirect.com/science/article/abs/pii/S0749596X22000213
+- **Failing to report contrast coding or incorrect interpretation of contrasts** Brehm, L., & Alday, P. M. (2022). Contrast coding choices in a decade of mixed models. Journal of Memory and Language, 125, 104334. https://doi.org/10.1016/j.jml.2022.104334
 
 - **A long list of common statistical myths**: https://discourse.datamethods.org/t/reference-collection-to-push-back-against-common-statistical-myths/1787
 
-- **Ill-defined esimands**: 
-  - Lundberg, I., Johnson, R., & Stewart, B. M. (2021). *What is your estimand? Defining the target quantity connects statistical evidence to theory.* American Sociological Review, 86(3), 532-565.
-  - Kahan, B. C., Hindley, J., Edwards, M., Cro, S., & Morris, T. P. (2024). *The estimands framework: a primer on the ICH E9 (R1) addendum.* bmj, 384.
+- Liddell, T. M., & Kruschke, J. K. (2018). **Analyzing ordinal data with metric models: What could possibly go wrong?.** Journal of Experimental Social Psychology, 79, 328-348. and https://media.dlib.indiana.edu/media_objects/mp48sh50s
 
-## Open Science & Reproducibility
+- **The Table 2 Fallacy**: Westreich, D., & Greenland, S. (2013). The table 2 fallacy: presenting and interpreting confounder and modifier coefficients. American journal of epidemiology, 177(4), 292-298.
 
--   Strand, J. F. (2023). **Error tight: Exercises for lab groups to prevent research mistakes.** Psychological Methods.\*
+
+## Data Management, Open Science & Reproducibility
+
+- **A great resource with lots of information that could in many sections on this site**. Frank, M. C., Braginsky, M., Cachia, J., Coles, N. A., Hardwicke, T. E., Hawkins, R. D., Mathur, M. B., & Williams, R. 2025. Experimentology: An Open Science Approach to Experimental Psychology Methods. Stanford University. https://doi.org/10.25936/3JP6-5M50. (Also published by MIT Press, ISBN 978-0-262-55256-1). free at: https://experimentology.io. 
+
+- Lewis, C. (2024). **Data Management in Large-Scale Education Research (1st ed.)**. Chapman and Hall/CRC. https://doi.org/10.1201/9781032622835 (free at: https://datamgmtinedresearch.com)
+
+-   Strand, J. F. (2023). **Error tight: Exercises for lab groups to prevent research mistakes.** Psychological Methods.
 
 -   Brown, V. A., & Strand, J. F. (2023). **Preregistration: Practical Considerations for Speech, Language, and Hearing Research.** Journal of Speech, Language, and Hearing Research, 66(6), 1889-1898.
 
