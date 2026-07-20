@@ -1,0 +1,10 @@
+---
+format: html
+toc: true
+draft: true
+---
+
+**Goal**: I'm trying to build a database of rehabilitation research studies with open data to support teaching students with real, meaningful data. 
+
+The form to submit studies is here: https://docs.google.com/forms/d/e/1FAIpQLSfw96hZ1w7OkbnaUdZzaFr4xFTc4cqIpC2mEGdcVnVdppY_Gw/viewform?usp=header
+
