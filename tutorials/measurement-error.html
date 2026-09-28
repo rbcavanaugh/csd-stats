@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-09-28">
 
-<title>research-and-writing – Home</title>
+<title>Ignoring compounding measurement error leads to overconfidence in reliability – Home</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +27,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-799b2e67dced8356c059a1018004f018.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-799b2e67dced8356c059a1018004f018.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -86,8 +87,39 @@ gtag('js', new Date());
   });
 gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
 </script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="measurement-css.css">
 </head>
 
 <body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
@@ -257,7 +289,7 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Home</span>
     </a>
   </div>
@@ -268,19 +300,19 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./learning-R.html"> 
+    <a class="nav-link" href="../learning-R.html"> 
 <span class="menu-text">Learning R &amp; Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./quant-methods.html"> 
+    <a class="nav-link" href="../quant-methods.html"> 
 <span class="menu-text">Quant Methods</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resources.html"> 
+    <a class="nav-link" href="../resources.html"> 
 <span class="menu-text">Rehab/CSD Methods papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./research-and-writing.html" aria-current="page"> 
+    <a class="nav-link" href="../research-and-writing.html"> 
 <span class="menu-text">Research, Writing, &amp; Other Things</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -289,11 +321,11 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
         <li>
-    <a class="dropdown-item" href="./tutorials/bayesian-correlation.html">
+    <a class="dropdown-item" href="../tutorials/bayesian-correlation.html">
  <span class="dropdown-text">Bayesian Basics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./tutorials/measurement-error.html">
+    <a class="dropdown-item" href="../tutorials/measurement-error.html">
  <span class="dropdown-text">Compounding Measurement Error</span></a>
   </li>  
     </ul>
@@ -330,101 +362,107 @@ gtag('config', 'G-4YDRXVCBFQ', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#some-bigger-picture-stuff" id="toc-some-bigger-picture-stuff" class="nav-link active" data-scroll-target="#some-bigger-picture-stuff">Some bigger picture stuff</a></li>
-  <li><a href="#writing-about-statistics" id="toc-writing-about-statistics" class="nav-link" data-scroll-target="#writing-about-statistics">Writing about statistics</a></li>
-  <li><a href="#common-statistical-errors-ive-come-across-in-csd-research" id="toc-common-statistical-errors-ive-come-across-in-csd-research" class="nav-link" data-scroll-target="#common-statistical-errors-ive-come-across-in-csd-research">Common statistical errors I’ve come across in CSD research</a></li>
-  <li><a href="#data-management-open-science-reproducibility" id="toc-data-management-open-science-reproducibility" class="nav-link" data-scroll-target="#data-management-open-science-reproducibility">Data Management, Open Science &amp; Reproducibility</a></li>
-  <li><a href="#blogs-podcasts-people-to-follow-on-socials-please-add-more" id="toc-blogs-podcasts-people-to-follow-on-socials-please-add-more" class="nav-link" data-scroll-target="#blogs-podcasts-people-to-follow-on-socials-please-add-more">Blogs &amp; Podcasts &amp; People to follow on Socials (please add more!)</a></li>
-  <li><a href="#workshops-please-add-more" id="toc-workshops-please-add-more" class="nav-link" data-scroll-target="#workshops-please-add-more">Workshops (please add more!)</a></li>
+  <li><a href="#part-1.-compounding-sources-of-measurement-error" id="toc-part-1.-compounding-sources-of-measurement-error" class="nav-link active" data-scroll-target="#part-1.-compounding-sources-of-measurement-error">Part 1. Compounding sources of measurement error</a></li>
+  <li><a href="#part-2-when-both-variables-are-unreliable" id="toc-part-2-when-both-variables-are-unreliable" class="nav-link" data-scroll-target="#part-2-when-both-variables-are-unreliable">Part 2: When Both Variables Are Unreliable</a></li>
+  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway">Takeaway</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Ignoring compounding measurement error leads to overconfidence in reliability</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 28, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
-<section id="some-bigger-picture-stuff" class="level2">
-<h2 class="anchored" data-anchor-id="some-bigger-picture-stuff">Some bigger picture stuff</h2>
+</header>
+
+
+<hr>
+<p><br></p>
+<p><em>This vignette was motivated by the students projects I mentored this past year (2025-2026). Many students seek to measure new things, explicitly or implicitly, in their research projects. However, measuring new things is hard and requires thoughtfulness and care and lots of work to do well. When the effects found in studies with new or adapted measures are small and uncertain, there is a temptation to draw conclusions around the constructs being measured (e.g., “perhaps there is no relationship between x and y in the world”), but this conclusion is neither defensible statistically, nor psychometrically (unsure if this is a real word) without a detailed evaluation of the instruments employed. This vignette is intended to highly why understanding the measurement properties of measures is so important, and just how much sampling error we can see in small studies when error comes from multiple sources.</em></p>
+<section id="part-1.-compounding-sources-of-measurement-error" class="level2">
+<h2 class="anchored" data-anchor-id="part-1.-compounding-sources-of-measurement-error">Part 1. Compounding sources of measurement error</h2>
+<p>Every measurement mixes a <strong>true score</strong> (what we want to know) with <strong>error</strong> (random or systematic noise that distorts measurement). Classical Test Theory writes this as observed = true + error. But “error” is rarely one thing and often comes from different sources:</p>
 <ul>
-<li><p>Horoscopes (Richard McElreath), https://share.eva.mpg.de/index.php/s/9KEzTJg6oZ5dZZb</p></li>
-<li><p>Writing research questions: Peters, M.A.K. <em>How to develop good research questions.</em> Nat Hum Behav (2025). https://doi.org/10.1038/s41562-025-02292-5 (a.k.a., read…a lot)</p></li>
-<li><p>Scheel, A. M., Tiokhin, L., Isager, P. M., &amp; Lakens, D. (2020). Why Hypothesis Testers Should Spend Less Time Testing Hypotheses. Perspectives on Psychological Science, 16(4), 744-755. https://doi.org/10.1177/1745691620966795</p></li>
+<li><strong>Inter-rater</strong>: different raters score the same performance differently.</li>
+<li><strong>Intra-rater</strong>: the same rater scores the same performance inconsistently.</li>
+<li><strong>Test-retest</strong>: the same person scores differently on a different day, even when the target of measurement should be stable.</li>
+<li><strong>Alternate-forms</strong>: two supposedly equivalent versions of a test return different scores.</li>
 </ul>
-</section>
-<section id="writing-about-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="writing-about-statistics">Writing about statistics</h2>
+<p><strong>Reliability</strong> characterizes this measurement error: how much of what we observe is real, and how much is noise?</p>
+<p><span class="math display">\[\rho = \dfrac{\text{Var(True)}}{\text{Var(True)} + \text{Var(Error)}}\]</span></p>
+<p>Most instruments report reliability as separate correlations, each against established benchmarks<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <ul>
-<li><p><strong>Basic Statistical Reporting for Articles Published in Biomedical Journals: The “Statistical Analyses and Methods in the Published Literature” or The SAMPL Guidelines”</strong> https://www.equator-network.org/wp-content/uploads/2013/03/SAMPL-Guidelines-3-13-13.pdf</p></li>
-<li><p><strong>Guidance on Statistical Reporting to Help Improve Your Chances of a Favorable Statistical Review</strong> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7193848/pdf/rccm.202003-0477ED.pdf</p></li>
-<li><p><strong>Top tier guidance from a top rehab journal:</strong> Lohse, Keith R. PhD, PStat; Kliethermes, Stephanie PhD. Approaching Significance: Statistical Guidance for Authors and Reviewers. Journal of Neurologic Physical Therapy ():10.1097/NPT.0000000000000526, July 16, 2025. | DOI: 10.1097/NPT.0000000000000526</p></li>
+<li>Less than 0.50: Poor reliability</li>
+<li>0.50 to 0.75: Moderate reliability</li>
+<li>0.75 to 0.90: Good reliability</li>
+<li>Greater than 0.90: Excellent reliability</li>
 </ul>
+<p>If each of these reliability coefficients separately achieves a sufficient value (e.g., all are &gt;=0.75 or have “good” reliability), then the conclusion is often that the test is reliable. However, measurement error <strong>compounds</strong> across the different sources of error, such that the overall reliability of the instrument falls well below any one reliability estimate. The extent to which it compounds depends on the degree to which the sources of error overlap, but because error sources are characterized separately, this is rarely known.</p>
+<p>This page starts from the assumption that the four sources are completely independent, and visualizes how error compounds under this assumption. Scores below use the <strong>T-score</strong> scale (mean 50, SD 10), the same scale used by many standardized instruments. A perfectly reliable test would produce scores with exactly that spread. However, each source of measurement error affects the sample drawn, and returns a more realistic distribution given the population and measurement instrument.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>Set a reliability for each source, then hit <strong>Redraw</strong> to simulate a new sample measured under those conditions. Change the reliability sliders to see how changing one or more sources of error affects the overall estimate.</p>
+<div id="reliability-app">
+
+</div>
+<p><br></p>
+<p>The dashed grey curve is the <strong>true score distribution</strong>: the real variability across people. Each <strong>Redraw</strong> simulates a fresh sample of N respondents and plots their observed scores as a solid curve. The four sources here are treated as fully independent, the most conservative case. True overall reliability is usually at least this good, and often better, since real sources of error typically share some of the same underlying cause. Unless a dedicated study tells you otherwise, though, assuming independence is the safer default.</p>
+<hr>
 </section>
-<section id="common-statistical-errors-ive-come-across-in-csd-research" class="level2">
-<h2 class="anchored" data-anchor-id="common-statistical-errors-ive-come-across-in-csd-research">Common statistical errors I’ve come across in CSD research</h2>
-<ul>
-<li><p><strong>Questionable interpretations of p-values</strong> Anderson, S. F. (2020). Misinterpreting p: The discrepancy between p values and the probability the null hypothesis is true, the influence of multiple testing, and implications for the replication crisis. Psychological Methods, 25(5), 596–609. https://doi.org/10.1037/met0000248</p></li>
-<li><p><strong>Many of the other NHST myths:</strong> Greenland, S., Senn, S. J., Rothman, K. J., Carlin, J. B., Poole, C., Goodman, S. N., &amp; Altman, D. G. (2016). Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. European journal of epidemiology, 31(4), 337-350.</p></li>
-<li><p><strong>And questionable reporting of p-values</strong> - https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/</p></li>
-<li><p><strong>The Difference Between “Significant” and “Not Significant” is not Itself Statistically Significant. Often known as, ‘yes you do need that interaction in your model’.</strong> - http://www.stat.columbia.edu/~gelman/research/published/signif4.pdf</p></li>
-<li><p><strong>Failing to report contrast coding or incorrect interpretation of contrasts</strong> Brehm, L., &amp; Alday, P. M. (2022). Contrast coding choices in a decade of mixed models. Journal of Memory and Language, 125, 104334. https://doi.org/10.1016/j.jml.2022.104334</p></li>
-<li><p><strong>A long list of common statistical myths</strong>: https://discourse.datamethods.org/t/reference-collection-to-push-back-against-common-statistical-myths/1787</p></li>
-<li><p>Liddell, T. M., &amp; Kruschke, J. K. (2018). <strong>Analyzing ordinal data with metric models: What could possibly go wrong?.</strong> Journal of Experimental Social Psychology, 79, 328-348. and https://media.dlib.indiana.edu/media_objects/mp48sh50s</p></li>
-<li><p><strong>The Table 2 Fallacy</strong>: Westreich, D., &amp; Greenland, S. (2013). The table 2 fallacy: presenting and interpreting confounder and modifier coefficients. American journal of epidemiology, 177(4), 292-298.</p></li>
-</ul>
+<section id="part-2-when-both-variables-are-unreliable" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-when-both-variables-are-unreliable">Part 2: When Both Variables Are Unreliable</h2>
+<p>Part 1 looked at one unreliable variable. But most applied research asks about bivariate reliationships. “Does physical function correlation with quality of life?” or “Do people with higher self-efficacy report greater well-being?”. However, if <strong>both</strong> X and Y are measured with error, the correlation you’d observe is not only more uncertain - but it is likely to be substantially smaller than the true correlation. This idea, that poor reliability <em>attenuates</em> correlations has been well established for well over a century,<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> but (at least in my experience), does not get anywhere near the attention it deserves in today’s statistics education or use.</p>
+<p><span class="math display">\[\rho_{\text{observed}} = \rho_{\text{true}} \times \sqrt{\rho_{xx} \times \rho_{yy}}\]</span></p>
+<p>Below, X and Y each both have sources of test-retest and inter-rater error. Set a true correlation below, choose both dimensions of reliability for X and Y, and examine how far the observed correlation falls from the true relationship.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<div id="attenuation-app">
+
+</div>
+<p><br> The dashed grey line is the <strong>true correlation</strong>: what you’d see if X and Y were measured perfectly. Its slope matches your true-correlation slider exactly, since both axes use the same T-score scale no matter how much error inflates either variable’s spread. Each <strong>Redraw</strong> plots a fresh sample and a line through it with slope set to the observed correlation r. As reliability drops, the solid line has a tendency to be flatter than the true correlation. The shaded band is the 95% CI on r, shown as the range of slopes consistent with that draw.</p>
+<p>The <strong>attenuation factor</strong> <code>√(relₓ·relᵧ)</code> is the fraction of the true correlation you should expect to recover, on average, given the current reliability settings. The same independence caveat from Part 1 applies here: X’s and Y’s sources are treated as fully independent, so the attenuation shown is a conservative estimate. Real attenuation is often somewhat milder, for the same reasons.</p>
+<script src="reliability-app.js"></script>
+<script src="attenuation-app.js"></script>
 </section>
-<section id="data-management-open-science-reproducibility" class="level2">
-<h2 class="anchored" data-anchor-id="data-management-open-science-reproducibility">Data Management, Open Science &amp; Reproducibility</h2>
+<section id="takeaway" class="level2">
+<h2 class="anchored" data-anchor-id="takeaway">Takeaway</h2>
 <ul>
-<li><p><strong>A great resource with lots of information that could in many sections on this site</strong>. Frank, M. C., Braginsky, M., Cachia, J., Coles, N. A., Hardwicke, T. E., Hawkins, R. D., Mathur, M. B., &amp; Williams, R. 2025. Experimentology: An Open Science Approach to Experimental Psychology Methods. Stanford University. https://doi.org/10.25936/3JP6-5M50. (Also published by MIT Press, ISBN 978-0-262-55256-1). free at: https://experimentology.io.</p></li>
-<li><p>Lewis, C. (2024). <strong>Data Management in Large-Scale Education Research (1st ed.)</strong>. Chapman and Hall/CRC. https://doi.org/10.1201/9781032622835 (free at: https://datamgmtinedresearch.com)</p></li>
-<li><p>Strand, J. F. (2023). <strong>Error tight: Exercises for lab groups to prevent research mistakes.</strong> Psychological Methods.</p></li>
-<li><p>Brown, V. A., &amp; Strand, J. F. (2023). <strong>Preregistration: Practical Considerations for Speech, Language, and Hearing Research.</strong> Journal of Speech, Language, and Hearing Research, 66(6), 1889-1898.</p></li>
-<li><p><strong>Stanford Psychology guide to doing open science:</strong> https://poldrack.github.io/psych-open-science-guide/4_reproducibleanalysis.html</p></li>
-<li><p><strong>The Turing Way:</strong> https://book.the-turing-way.org</p></li>
-<li><p>Alston, J. M., &amp; Rick, J. A. (2021). <strong>A beginner’s guide to conducting reproducible research.</strong> Bulletin of the Ecological Society of America, 102(2), 1-14.</p></li>
-</ul>
-</section>
-<section id="blogs-podcasts-people-to-follow-on-socials-please-add-more" class="level2">
-<h2 class="anchored" data-anchor-id="blogs-podcasts-people-to-follow-on-socials-please-add-more">Blogs &amp; Podcasts &amp; People to follow on Socials (please add more!)</h2>
-<p>For me, a good blog post is the necessary on ramp to actually understanding a statistics paper and implementing an approach with my own data. Many of these writers/researchers are fantastic at distilling complex ideas into short(ish) blog posts that almsot anyone can understand.</p>
-<ul>
-<li><p><strong>Quantitude</strong>: https://quantitudepod.org</p></li>
-<li><p><strong>Solomon Kurz</strong>: https://solomonkurz.netlify.app/blog/</p></li>
-<li><p><strong>Andrew Heiss</strong>: https://www.andrewheiss.com/blog/</p></li>
-<li><p><strong>Danielle Navarro</strong>: https://djnavarro.net</p></li>
-<li><p><strong>Julia Rohrer &amp; colleagues</strong>: https://www.the100.ci</p></li>
-<li><p><strong>Allison Horst</strong>: https://allisonhorst.com</p></li>
-<li><p><strong>Richard McElreath</strong>: https://xcelab.net/rm/</p></li>
-<li><p><strong>Jamie Reilly</strong>: https://www.reilly-coglab.com/reilly</p></li>
-<li><p><strong>Shravan Vasishth</strong>: https://vasishth.github.io</p></li>
-<li><p><strong>Julia Silge</strong>: https://juliasilge.com/blog/</p></li>
-<li><p><strong>Lisa Debruine</strong>: https://debruine.github.io</p></li>
-<li><p><strong>TJ Mahr</strong>: https://www.tjmahr.com/year-archive/</p></li>
-<li><p><strong>Michael Clark</strong>: https://m-clark.github.io/code.html</p></li>
-<li><p><strong>Daniel Lakens</strong>: http://daniellakens.blogspot.com</p></li>
-<li><p><strong>Gavin Simpson</strong>: https://fromthebottomoftheheap.net</p></li>
-<li><p><strong>Andrew Gelman</strong>: https://statmodeling.stat.columbia.edu</p></li>
-<li><p><strong>Kieran Healy</strong>: https://kieranhealy.org</p></li>
-<li><p><strong>Kristoffer Magnusson</strong>: https://rpsychologist.com/posts</p></li>
-</ul>
-</section>
-<section id="workshops-please-add-more" class="level2">
-<h2 class="anchored" data-anchor-id="workshops-please-add-more">Workshops (please add more!)</h2>
-<ul>
-<li><p>https://debruine.github.io/data-sim-workshops/</p></li>
-<li><p>https://smart-workshops.com</p></li>
-<li><p>https://centerstat.org</p></li>
-<li><p>https://causalab.sph.harvard.edu/courses/</p></li>
-<li><p>Annual statistics summer school: https://vasishth.github.io</p></li>
+<li><p>Meeting individual reliability benchmarks is not the same as having a reliable instrument. If four sources each achieve “good” reliability (≥0.75), the overall instrument may still fall well below that threshold once error compounds.</p></li>
+<li><p>The independence assumption used here is conservative and real error sources likely share some underlying cause, so true overall reliability is usually somewhat better than these simulations suggest. But without a dedicated joint study, we can’t know by how much.</p></li>
+<li><p>Poor reliability doesn’t only increase uncertainty, it also results in bias. In this case, it pulls correlations systematically toward zero. A weak observed correlation between two constructs can reflect poor measurement rather than a weak relationship.</p></li>
+<li><p>The cost of unreliability compounds when studying relationships. A study can have adequate power on paper and still be underpowered in practice if the reliability of both variables was not factored in when planning the study.</p></li>
 </ul>
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>These benchmarks are not intended as blanket thresholds across all instruments, but are often used and reported as such. Koo, T. K., &amp; Li, M. Y. (2016). A guideline of selecting and reporting intraclass correlation coefficients for reliability research. Journal of chiropractic medicine, 15(2), 155-163.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Each simulated draw generates a sample of <span class="math inline">\(N\)</span> people. For each person, a true score <span class="math inline">\(T_i \sim N(0,1)\)</span> is drawn, then four independent error terms are added — one for each reliability source — where each error term is <span class="math inline">\(e \sim N(0, \sigma^2)\)</span> with <span class="math inline">\(\sigma = \sqrt{1/\rho - 1}\)</span>, derived by inverting the single-source reliability identity <span class="math inline">\(\rho = 1/(1 + \sigma^2)\)</span>. The observed score is <span class="math inline">\(X_i = T_i + e_{\text{rater}} + e_{\text{intra}} + e_{\text{occasion}} + {\text{forms}}\)</span>, and overall reliability across the four independent sources is <span class="math inline">\(\rho_{\text{overall}} = 1/(1 + \sum \sigma^2_k)\)</span>. Scores are displayed on the T-score scale (<span class="math inline">\(\mu = 50\)</span>, SD <span class="math inline">\(= 10\)</span>).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Spearman, C. (1904). The proof and measurement of association between two things. The American Journal of Psychology, 15(1), 72–101. https://doi.org/10.2307/1412159<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Each simulated draw generates a sample of <span class="math inline">\(N\)</span> bivariate observations. True scores are drawn from a bivariate normal distribution: <span class="math inline">\(T_x \sim N(0,1)\)</span> and <span class="math inline">\(T_y = \rho_{\text{true}} \cdot T_x + \sqrt{1 - \rho_{\text{true}}^2} \cdot Z\)</span> where <span class="math inline">\(Z \sim N(0,1)\)</span>, which preserves the specified true correlation. Each variable then accumulates independent error from two sources — test-retest and inter-rater — using the same <span class="math inline">\(\sigma = \sqrt{1/\rho - 1}\)</span> conversion as Part 1, giving <span class="math inline">\(X_i = T_{x_i} + e_{\text{tr},x} + e_{\text{ir},x}\)</span> and <span class="math inline">\(Y_i = T_{y_i} + e_{\text{tr},y} + e_{\text{ir},y}\)</span>. The observed correlation <span class="math inline">\(r\)</span> is computed from the <span class="math inline">\(N\)</span> <span class="math inline">\((X, Y)\)</span> pairs, and the fit line drawn through the sample has slope fixed to <span class="math inline">\(r\)</span> rather than the OLS slope — keeping it directly comparable to the true-correlation reference line regardless of asymmetries in <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> reliability.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
